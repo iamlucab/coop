@@ -23,7 +23,7 @@ jobs:
             echo "${GITHUB_REF#refs/heads/}-$(git rev-parse --short HEAD)" > DEPLOY_VERSION.txt
           fi
 
-      - name: Deploy via FTP
+          - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -49,4 +49,4 @@ jobs:
             .fleet
             .idea
             .vscode
-          security: insecure
+          security: loose
