@@ -1,0 +1,46 @@
+name: Deploy to GoDaddy via FTP (tag-based)
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Trigger only on version tags like v1.0.0
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set deployment version file
+        # Extract the tag name (strip refs/tags/) and save it to DEPLOY_VERSION.txt
+        run: echo "${GITHUB_REF#refs/tags/}" > DEPLOY_VERSION.txt
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /public_html/coop
+          exclude: |
+            node_modules
+            resources
+            tests
+            .git
+            .github
+            .env
+            package.json
+            package-lock.json
+            deploy.php
+            public/build
+            public/hot
+            public/storage
+            storage/*.key
+            vendor
+            .fleet
+            .idea
+            .vscode
+          git-ftp-args: --insecure
