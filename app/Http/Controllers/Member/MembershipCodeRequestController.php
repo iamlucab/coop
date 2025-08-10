@@ -13,10 +13,23 @@ class MembershipCodeRequestController extends Controller
     public function create()
     {
         $member = auth()->user()->member;
+        $user = auth()->user();
         $amountPerCode = Setting::where('key', 'membership_code_price')->value('value') ?? 100;
         $wallet = $member->wallet;
         
-        return view('members.membership-code-request.create', compact('member', 'amountPerCode', 'wallet'));
+        // Get reserved membership codes for the member (only reserved and not used)
+        $reservedCodes = \App\Models\MembershipCode::where('reserved_by', $user->id)
+            ->where('reserved', true)
+            ->where('used', false)
+            ->orderBy('reserved_at', 'desc')
+            ->get();
+
+        // Get membership code requests for the member
+        $membershipCodeRequests = \App\Models\MembershipCodeRequest::where('member_id', $member->id)
+            ->orderBy('created_at', 'desc')
+            ->get();
+        
+        return view('members.membership-code-request.create', compact('member', 'amountPerCode', 'wallet', 'reservedCodes', 'membershipCodeRequests'));
     }
 
     public function store(Request $request)
