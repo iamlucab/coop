@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to E-Bili Online</title>
+    <title>Welcome to Amigos Community Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{-- PWA & Icons --}}
@@ -23,7 +23,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: #fff;
+            background: #e1f3ff;
             color: #212529;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
@@ -45,13 +45,13 @@
 
         .btn-primary {
             border-radius: 12px;
-            background-color: #63189e !important;
-            border-color: #63189e !important;
+            background-color: #1e62e1 !important;
+            border-color: #1b5cce !important;
         }
         
         .btn-primary:hover {
-            background-color: #531185 !important;
-            border-color: #531185 !important;
+            background-color: #114f85 !important;
+            border-color: #2c72da !important;
         }
 
         .card-disclaimer {
@@ -143,7 +143,7 @@
         }
         
         .mobile-footer .nav-link.active {
-            color: #63189e;
+            color: #1f6dc7;
         }
         
         body.dark-mode .mobile-footer .nav-link.active {

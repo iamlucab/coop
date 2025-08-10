@@ -184,12 +184,12 @@
                     <div class="d-flex align-items-center">
                         <i class="bi bi-exclamation-triangle fs-1 me-3"></i>
                         <div>
-                            <h6 class="fw-bold mb-1">No Active Configuration</h6>
-                            <p class="mb-0">No active referral configuration found.</p>
+                            <h6 class="fw-bold mb-1"> No Active Configuration</h6>
+                            <p class="mb-0"> No active referral configuration found.</p>
                         </div>
                     </div>
                     <div class="mt-3">
-                        <a href="{{ route('admin.referral-configurations.create') }}" class="btn btn-info">
+                        <a href="{{ route('admin.referral-configurations.create') }}" class="btn btn-warning">
                             <i class="bi bi-plus me-2"></i>Create Configuration
                         </a>
                     </div>

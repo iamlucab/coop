@@ -34,58 +34,105 @@
     <style>
 :root,
 [data-bs-theme="light"] {
-    --bs-body-bg: #f8f9ff;
-    --bs-body-color: #0f773c;
-    --primary-purple: #47b783;
-    --secondary-purple: #0d712b;
-    --accent-gold: #2b9259;
-    --light-purple: #f3f0ff;
-    --dark-purple: #076d1b;
+    --bs-body-bg: #f2f4f8;
+    --bs-body-color: #000000;
+
+    /* New blues */
+    --primary-blue: #0084fe;
+    --secondary-blue: #0b2f6c;
+    --accent-color: #0b2f6c;
+    --light-bg: #f2f4f8;
+    --dark-text: #000000;
+
+    /* Optionally tie into Bootstrap's primary */
+    --bs-primary: var(--primary-blue);
+    --bs-primary-hover: var(--secondary-blue);
 }
 
 [data-bs-theme="dark"] {
     --bs-body-bg: #1a0d2e;
     --bs-body-color: #e8e3ff;
-    --primary-purple: #0f7b2e;
-    --secondary-purple: #237d4a;
-    --accent-gold: #61a112;
-    --light-purple: #6f9951;
-    --dark-purple: #115a2c;
+
+    /* Blues in dark mode (slightly lighter for contrast) */
+    --primary-blue: #0b78df;
+    --secondary-blue: #0b2f6c;
+    --accent-color: #0b2f6c;
+    --light-bg: #1a3d6b;
+    --dark-text: #e8e3ff;
+
+    --bs-primary: var(--primary-blue);
+    --bs-primary-hover: var(--secondary-blue);
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, var(--bs-body-bg) 0%, var(--light-purple) 100%);
-    color: var(--bs-body-color);
-    transition: all 0.3s ease;
-    min-height: 100vh;
-}
-
+/* Example usage for buttons */
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
-    border: none;
-    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--primary-purple) 100%);
+    background-color: var(--bs-primary-hover);
+    border-color: var(--bs-primary-hover);
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    transition: all 0.3s ease;
+    min-height: 100vh;
+    font-size: 16px; /* Base font size for better mobile readability */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+/* Mobile Font Adjustments */
+@media (max-width: 767px) {
+    h1 { font-size: 1.75rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.35rem !important; }
+    h4 { font-size: 1.25rem !important; }
+    h5 { font-size: 1.15rem !important; }
+    h6 { font-size: 1.1rem !important; }
+    
+    p, div, span {
+        font-size: 0.95rem !important;
+    }
+    
+    .small, small {
+        font-size: 0.85rem !important;
+    }
+    
+    .btn {
+        font-size: 1rem !important;
+    }
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 132, 254, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--secondary-blue);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(111, 66, 193, 0.4);
+    box-shadow: 0 6px 20px rgba(11, 47, 108, 0.4);
 }
 
 .btn-outline-primary {
-    border: 2px solid var(--primary-purple);
-    color: var(--primary-purple);
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 .btn-outline-primary:hover {
-    background: var(--primary-purple);
-    border-color: var(--primary-purple);
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
     color: white;
 }
 
 .logo-container {
-    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+    background: var(--primary-blue);
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -93,18 +140,18 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1rem;
-    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 132, 254, 0.3);
 }
 
 .logo-text {
-    color: var(--accent-gold);
+    color: white;
     font-size: 2.5rem;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .slogan {
-    color: var(--accent-gold);
+    color: var(--primary-blue);
     font-weight: 600;
     font-size: 1.1rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -114,7 +161,7 @@ body {
 .carousel-inner {
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 132, 254, 0.2);
 }
 
 .carousel-item img {
@@ -124,7 +171,7 @@ body {
 
 .carousel-placeholder {
     height: 200px;
-    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+    background: var(--primary-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,15 +183,28 @@ body {
 .product-card {
     background: white;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 132, 254, 0.1);
     transition: all 0.3s ease;
     overflow: hidden;
-    border: 1px solid rgba(111, 66, 193, 0.1);
+    border: 1px solid rgba(0, 132, 254, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .p-3 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .p-3 .mt-2 {
+    margin-top: auto !important;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 132, 254, 0.2);
 }
 
 .product-image {
@@ -155,7 +215,7 @@ body {
 
 .product-placeholder {
     height: 150px;
-    background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--primary-blue) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,7 +224,7 @@ body {
 }
 
 .price-tag {
-    color: var(--primary-purple);
+    color: var(--primary-blue);
     font-weight: 700;
     font-size: 1.1rem;
 }
@@ -174,23 +234,23 @@ body {
     top: 1rem;
     right: 1rem;
     background: rgba(255, 255, 255, 0.9);
-    border: 1px solid var(--primary-purple);
-    color: var(--primary-purple);
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 .btn-toggle:hover {
-    background: var(--primary-purple);
+    background: var(--primary-blue);
     color: white;
 }
 
 .feature-icons i {
     font-size: 2rem;
-    color: var(--primary-purple);
+    color: var(--primary-blue);
     transition: all 0.3s ease;
 }
 
 .feature-icons div:hover i {
-    color: var(--accent-gold);
+    color: var(--accent-color);
     transform: scale(1.1);
 }
 
@@ -202,7 +262,7 @@ body {
 }
 
 .section-title {
-    color: var(--primary-purple);
+    color: var(--primary-blue);
     font-weight: 700;
     margin-bottom: 1.5rem;
     position: relative;
@@ -216,7 +276,7 @@ body {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--accent-gold) 100%);
+    background: var(--primary-blue);
     border-radius: 2px;
 }
 
@@ -233,6 +293,7 @@ body {
 .swiper-slide {
     flex: 0 0 auto;
     margin-right: 15px;
+    min-width: 280px; /* Ensure minimum width for uniform sizing */
 }
 
 @media (max-width: 768px) {
@@ -250,11 +311,11 @@ body {
 .modal-content {
     border: none;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(111, 66, 193, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 132, 254, 0.2);
 }
 
 .modal-header {
-    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+    background: var(--primary-blue);
     color: white;
     border-radius: 15px 15px 0 0;
 }
@@ -274,20 +335,20 @@ body {
 }
 
 .get-started-btn {
-    background: linear-gradient(135deg, var(--accent-gold) 0%, #ffed4e 100%);
-    color: var(--dark-purple);
+    background: var(--primary-blue);
+    color: white;
     border: none;
     font-weight: 700;
     padding: 12px 30px;
     font-size: 1.1rem;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 132, 254, 0.3);
 }
 
 .get-started-btn:hover {
-    background: linear-gradient(135deg, #ffed4e 0%, var(--accent-gold) 100%);
-    color: var(--dark-purple);
+    background: var(--secondary-blue);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(11, 47, 108, 0.4);
 }
 
 /* Dark mode adjustments */
@@ -298,10 +359,12 @@ body {
 
 [data-bs-theme="dark"] .btn-toggle {
     background: rgba(0, 0, 0, 0.3);
-    border-color: var(--accent-gold);
-    color: var(--accent-gold);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 </style>
+
+
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh;">
 
@@ -336,8 +399,8 @@ body {
         <img src="{{ asset('storage/icons/ebili-logo.png') }}" alt="eBILI Logo" style="width: 100px; height: 100px; object-fit: contain;">
     </div>
     
-    <h2 class="mb-2 fw-bold" style="color: var(--primary-purple);">Amigos 98 Community Online</h2>
-    <p class="slogan">Shop to Save, Share to Earn</p>
+    <h2 class="mb-2 fw-bold" style="color: var(--primary-blue);">Amigos 98 Community Online</h2>
+    <p class="slogan text-success">Buy to Save, Share to Earn</p>
 
     {{-- Get Started Button --}}
     <div class="mb-4">
@@ -483,8 +546,8 @@ body {
         </a>
     </div>
 
-    <hr style="border-color: var(--primary-purple); opacity: 0.3;">
-    <p class="small" style="color: var(--primary-purple);"> More than just a member. Be an Amigos 98 Community. &copy; 2025</p> 
+    <hr style="border-color: var(--primary-blue); opacity: 0.3;">
+    <p class="small" style="color: var(--primary-blue);"> More than just a member. Be an Amigos 98 Community. &copy; 2025</p>
 </div>
 
 {{-- Reusable Modals --}}

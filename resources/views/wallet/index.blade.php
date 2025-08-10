@@ -56,7 +56,7 @@
             <div class="wallet-card p-3 text-center h-100" style="color: white !important;">
                 <small class="text-uppercase d-block" style="font-size: 75%; opacity: 0.9; color: white !important;">Available Balance</small>
                 @isset($wallet)
-                    <h3 class="fw-bold mt-2 mb-2" style="color: white !important;">₱{{ number_format($wallet->balance, 2) }}</h3>
+                    <h6 class="fw-bold mt-2 mb-2" style="color: white !important;">₱{{ number_format($wallet->balance, 2) }}</h6>
                 @endisset
                 <div class="mt-1 small" style="color: white !important;"><i class="bi bi-clock-history me-1"></i> View History</div>
             </div>
@@ -67,7 +67,7 @@
                 <div class="col-6">
                     <div class="bg-warning text-dark rounded-lg p-3 shadow-sm text-center h-100">
                         <small class="text-uppercase" style="font-size: 75%;">Cashback Wallet</small>
-                        <h4 class="fw-bold mt-1">₱{{ number_format($cashbackBalance, 2) }}</h4>
+                        <h6 class="fw-bold text-white mt-1">₱{{ number_format($cashbackBalance, 2) }}</h6>
                         <div class="mt-1 small">
                             <a href="{{ route('wallet.history', ['type' => 'cashback']) }}" class="text-dark">
                                 <i class="bi bi-clock-history"></i> View Cashback

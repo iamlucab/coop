@@ -243,7 +243,7 @@
 .cart-product-placeholder {
     width: 100%;
     height: 80px;
-    background: linear-gradient(135deg, var(--light-purple) 0%, var(--primary-purple) 100%);
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--primary-blue) 100%);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -255,7 +255,7 @@
 /* Product Name */
 .cart-product-name {
     font-weight: 600 !important;
-    color: var(--primary-purple) !important;
+    color: var(--primary-blue) !important;
     font-size: 0.95rem !important;
     line-height: 1.3 !important;
     margin-bottom: 0.25rem !important;
@@ -270,7 +270,7 @@
 
 .quantity-display {
     font-size: 1.1rem;
-    color: var(--primary-purple);
+    color: var(--primary-blue);
     min-width: 30px;
     text-align: center;
 }
@@ -284,7 +284,7 @@
 
 .cart-subtotal {
     font-weight: 700;
-    color: var(--primary-purple);
+    color: var(--primary-blue);
     font-size: 1.1rem;
 }
 

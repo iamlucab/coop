@@ -2,7 +2,7 @@
     <html lang="en" data-bs-theme="light">
     <head>
         <meta charset="UTF-8">
-        <title>Join E-Bili Online - Referral Registration</title>
+        <title>Join Amigos '98  - Referral Registration</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {{-- PWA & Icons --}}
@@ -205,7 +205,7 @@
         </div>
 
         <img src="{{ asset('images/ebili-logo.png') }}" class="img-fluid mb-4" style="max-width: 100px; display: block; margin: auto;" alt="Logo">
-        <h1><strong>E-BILI ONLINE</strong></h1>
+        <h1><strong>Amigos '98 Community </strong></h1>
         <hr>
         
         @if(isset($sponsor))

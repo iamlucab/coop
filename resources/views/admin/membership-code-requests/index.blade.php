@@ -3,7 +3,7 @@
 @section('title', 'Membership Code Requests')
 
 @section('content_header')
-    <h4>Membership Code Requests</h4>
+    <h5>Membership Code Requests</h5>
 @stop
 
 @section('content')
@@ -22,7 +22,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h5 class="card-title">Pending Requests</h5>
+            <h6 class="card-title text-white">Pending Requests</h6>
         </div>
         <div class="card-body">
             @if($requests->count() > 0)

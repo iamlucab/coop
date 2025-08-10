@@ -12,11 +12,6 @@ class ProfileController extends Controller
     public function edit()
     {
         $member = Auth::user()->member;
-        
-        if (!$member) {
-            return redirect()->route('member.dashboard')->with('error', 'Member profile not found.');
-        }
-        
         return view('profile.edit', compact('member'));
     }
 
@@ -24,10 +19,6 @@ class ProfileController extends Controller
 {
     $user = Auth::user();
     $member = $user->member;
-
-    if (!$member) {
-        return back()->with('error', 'Member profile not found.');
-    }
 
     $request->validate([
         'first_name'     => 'required|string|max:255',

@@ -179,11 +179,11 @@
     }
 
     .social-icon.facebook {
-        background-color: #0c81d5;
+        background-color: #160d97;
     }
 
     .social-icon.facebook:hover {
-        background-color: #103689;
+        background-color: #1650ce;
         color: white;
     }
 
@@ -197,9 +197,9 @@
         display: inline-block;
         padding: 8px 16px;
         margin: 5px;
-        border: 1px solid #63189e;
+        border: 1px solid #103dc4;
         border-radius: 20px;
-        color: #63189e;
+        color: #1324d8;
         text-decoration: none;
         font-size: 0.8rem;
         font-weight: 500;
@@ -207,7 +207,7 @@
     }
 
     .alt-login-btn:hover {
-        background-color: #63189e;
+        background-color: #149bea;
         color: white;
         text-decoration: none;
     }
@@ -225,13 +225,13 @@
     }
 
     .small-links a {
-        color: #7207a0;
+        color: #175480;
         text-decoration: none;
         margin: 0 8px;
     }
 
     .small-links a:hover {
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     /* OTP Modal Styles */
@@ -409,14 +409,14 @@
                 <span>or continue with</span>
             </div>
             
-            <div class="social-icons">
+            {{-- <div class="social-icons">
                 <a href="{{ route('social.redirect', 'google') }}" class="social-icon google" title="Login with Google">
                     <i class="fab fa-google"></i>
                 </a>
                 <a href="{{ route('social.redirect', 'facebook') }}" class="social-icon facebook" title="Login with Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-            </div>
+            </div> --}}
         </div>
 
         <!-- Alternative Login Options -->

@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('title', 'Genealogy Tree')
 @section('content_header')
-    <h1>My Network</h1>
+    <h5>My Network</h5>
 @stop
 
 @section('content')

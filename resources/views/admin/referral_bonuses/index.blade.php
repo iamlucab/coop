@@ -1,8 +1,8 @@
 @extends('adminlte::page')
 @section('title', 'Referral Bonus Logs')
-@section('content')
+@section('content')<br>
 <div class="container-fluid">
-    <h3 class="mb-3">Referral Bonus Logs</h3>
+    <h5 class="mb-3">Referral Bonus Logs</h5>
 <form method="GET" class="row mb-3 g-2">
     <div class="col-md-3">
         <input type="text" name="sponsor" value="{{ request('sponsor') }}" class="form-control" placeholder="Sponsor Name">
@@ -15,7 +15,7 @@
     </div>
     <div class="col-md-3">
         <button class="btn btn-primary"><i class="bi bi-search"></i> Filter</button>
-        <a href="{{ route('admin.referral-bonuses') }}" class="btn btn-secondary">Reset</a>
+        <a href="{{ route('admin.referral-bonuses') }}" class="btn btn-warning">Reset</a>
     </div>
 </form>
 <div class="mb-2">
@@ -64,7 +64,7 @@
         </li>
     @endforeach
 </ul>
-<a href="{{ route('admin.referral-bonuses.export') }}" class="btn btn-success mb-3">
+<a href="{{ route('admin.referral-bonuses.export') }}" class="btn btn-success text-white mb-3">
     <i class="bi bi-filetype-csv"></i> Export CSV
 </a>
    </div>

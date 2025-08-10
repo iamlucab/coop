@@ -10,10 +10,10 @@
 <style>
     /* Category Filter Styles */
     .category-filter-container {
-        background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+        background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
         border-radius: 15px;
         padding: 15px;
-        box-shadow: 0 4px 15px rgba(100, 24, 158, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 132, 254, 0.2);
         margin: 0 auto;
         max-width: 800px;
     }
@@ -37,7 +37,7 @@
     }
 
     .category-scroll::-webkit-scrollbar-thumb {
-        background: var(--primary-gold);
+        background: var(--accent-color);
         border-radius: 3px;
     }
 
@@ -56,20 +56,20 @@
         color: white;
         backdrop-filter: blur(10px);
     }
-
+    
     .category-item:hover {
         background: rgba(255, 255, 255, 0.2);
-        border-color: var(--primary-gold);
+        border-color: var(--accent-color);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        box-shadow: 0 4px 12px rgba(11, 47, 108, 0.3);
     }
-
+    
     .category-item.active {
-        background: var(--primary-gold);
-        color: var(--primary-purple);
-        border-color: var(--primary-gold);
+        background: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
         font-weight: bold;
-        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        box-shadow: 0 4px 15px rgba(11, 47, 108, 0.4);
     }
 
     .category-item i {
@@ -86,14 +86,14 @@
     /* Products Info */
     .products-info .badge {
         font-size: 0.9rem;
-        background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple)) !important;
-        border: 2px solid var(--primary-gold);
+        background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+        border: 2px solid var(--accent-color);
     }
 
     /* Load More Button */
     .load-more-btn {
-        background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
-        border: 2px solid var(--primary-gold);
+        background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+        border: 2px solid var(--accent-color);
         color: white;
         padding: 12px 30px;
         font-size: 1.1rem;
@@ -103,13 +103,13 @@
         position: relative;
         overflow: hidden;
     }
-
+    
     .load-more-btn:hover {
-        background: linear-gradient(135deg, var(--dark-purple), var(--primary-purple));
-        border-color: var(--primary-gold);
+        background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+        border-color: var(--accent-color);
         color: white;
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(100, 24, 158, 0.3);
+        box-shadow: 0 8px 25px rgba(11, 47, 108, 0.3);
     }
 
     .load-more-btn:active {
@@ -156,7 +156,7 @@
 
 @section('content_header')
 <div class="text-center mb-4 fade-in">
-    <h2 class="fw-bold mb-2" style="color: var(--primary-purple);">
+    <h2 class="fw-bold mb-2" style="color: var(--primary-blue);">
         <i class="bi bi-shop me-2"></i> Amigos '98 Marketplace
     </h2>
     <p class="slogan mb-0" style="font-size: 0.9rem;">Buy to Save, Share to Earn</p>
@@ -234,8 +234,8 @@
         @endif
     @else
         <div class="alert alert-info text-center fade-in">
-            <i class="bi bi-search fs-1 mb-3" style="color: var(--primary-purple);"></i>
-            <h5 class="fw-bold" style="color: var(--primary-purple);">No Products Found</h5>
+            <i class="bi bi-search fs-1 mb-3" style="color: var(--primary-blue);"></i>
+            <h5 class="fw-bold" style="color: var(--primary-blue);">No Products Found</h5>
             <p class="mb-0">Try adjusting your search terms or browse all products.</p>
             @if(request('q') || request('category'))
                 <div class="mt-3">
@@ -257,11 +257,11 @@
 <style>
     /* CSS Variables for E-Bili Theme */
     :root {
-        --primary-purple: #64189e;
-        --secondary-purple: #4e117c;
-        --accent-gold: #ffd900a2;
-        --light-purple: #f3f0ff;
-        --dark-purple: #4a1570;
+        --primary-blue: #0084fe;
+        --secondary-blue: #0b2f6c;
+        --accent-color: #0b2f6c;
+        --light-bg: #f2f4f8;
+        --dark-text: #000000;
     }
 
     /* SUPER STRONG Enhanced pagination styling - Override everything! */
@@ -292,8 +292,8 @@
     .pagination li a,
     .pagination li span {
         border-radius: 12px !important;
-        border: 2px solid rgba(111, 66, 193, 0.2) !important;
-        color: #64189e !important;
+        border: 2px solid rgba(0, 132, 254, 0.2) !important;
+        color: #0084fe !important;
         font-family: 'Poppins', sans-serif !important;
         font-weight: 600 !important;
         padding: 12px 16px !important;
@@ -302,7 +302,7 @@
         transition: all 0.3s ease !important;
         background: white !important;
         background-color: white !important;
-        box-shadow: 0 2px 8px rgba(111, 66, 193, 0.1) !important;
+        box-shadow: 0 2px 8px rgba(0, 132, 254, 0.1) !important;
         text-decoration: none !important;
         display: flex !important;
         align-items: center !important;
@@ -317,12 +317,12 @@
     .fade-in .pagination .page-link:hover,
     .pagination li a:hover,
     .pagination li span:hover {
-        background: linear-gradient(135deg, #f3f0ff 0%, rgba(111, 66, 193, 0.1) 100%) !important;
-        background-color: #f3f0ff !important;
-        border-color: #64189e !important;
-        color: #64189e !important;
+        background: linear-gradient(135deg, #f2f4f8 0%, rgba(0, 132, 254, 0.1) 100%) !important;
+        background-color: #f2f4f8 !important;
+        border-color: #0084fe !important;
+        color: #0084fe !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 15px rgba(111, 66, 193, 0.2) !important;
+        box-shadow: 0 4px 15px rgba(0, 132, 254, 0.2) !important;
         text-decoration: none !important;
     }
 
@@ -332,12 +332,12 @@
     .fade-in .pagination .page-item.active .page-link,
     .pagination li.active a,
     .pagination li.active span {
-        background: linear-gradient(135deg, #64189e 0%, #4e117c 100%) !important;
-        background-color: #64189e !important;
-        border-color: #64189e !important;
+        background: linear-gradient(135deg, #0084fe 0%, #0b2f6c 100%) !important;
+        background-color: #0084fe !important;
+        border-color: #0084fe !important;
         color: white !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(0, 132, 254, 0.3) !important;
     }
 
     .content-wrapper .pagination .page-item.disabled .page-link,
@@ -370,10 +370,10 @@
     .pagination li:last-child span {
         font-weight: 700 !important;
         padding: 12px 20px !important;
-        background: linear-gradient(135deg, #ffd700 0%, #ffc30f 100%) !important;
-        background-color: #ffd700 !important;
-        color: #4a1570 !important;
-        border-color: #ffd700 !important;
+        background: linear-gradient(135deg, #0084fe 0%, #0b2f6c 100%) !important;
+        background-color: #0084fe !important;
+        color: white !important;
+        border-color: #0084fe !important;
     }
 
     .content-wrapper .pagination .page-item:first-child .page-link:hover,
@@ -388,11 +388,11 @@
     .pagination li:first-child span:hover,
     .pagination li:last-child a:hover,
     .pagination li:last-child span:hover {
-        background: linear-gradient(135deg, #ffbb00 0%, #ffd700 100%) !important;
-        background-color: #ffbb00 !important;
-        color: #4a1570 !important;
+        background: linear-gradient(135deg, #0b2f6c 0%, #0084fe 100%) !important;
+        background-color: #0b2f6c !important;
+        color: white !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(11, 47, 108, 0.3) !important;
     }
 
     /* Pagination container styling */
@@ -447,7 +447,7 @@
     /* Pagination info text */
     .pagination-info {
         text-align: center !important;
-        color: #64189e !important;
+        color: #0084fe !important;
         font-family: 'Poppins', sans-serif !important;
         font-weight: 500 !important;
         margin-bottom: 1rem !important;

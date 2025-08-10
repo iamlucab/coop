@@ -28,19 +28,19 @@ class AuthServiceProvider extends ServiceProvider
 {
     $this->registerPolicies();
 
-    // Admin-only menu access
+    // Admin-only menu access - ONLY for Admin role
     Gate::define('admin-only', function ($user) {
-        return $user->role === 'Admin';
+        return $user && $user->role === 'Admin';
     });
 
-    // Staff-only menu access (includes Admin)
+    // Staff-only menu access - ONLY for Staff role, NOT for Admin
     Gate::define('staff-only', function ($user) {
-        return $user->role === 'Staff' || $user->role === 'Admin';
+        return $user && $user->role === 'Staff';
     });
 
-    // Member-only menu access
+    // Member-only menu access - ONLY for Member role
     Gate::define('member-only', function ($user) {
-        return $user->role === 'Member';
+        return $user && $user->role === 'Member';
     });
 }
 

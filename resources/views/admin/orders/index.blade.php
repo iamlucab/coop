@@ -38,7 +38,7 @@
                 </div>
                 <div class="text-right mt-2">
                     <button type="submit" class="btn btn-sm btn-success"><i class="bi bi-funnel"></i> Filter</button>
-                    <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-secondary">Reset</a>
+                    <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-warning">Reset</a>
                 </div>
             </form>
 

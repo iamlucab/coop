@@ -34,8 +34,8 @@
 @endsection
 
 @section('content')
-<div class="container-fluid">
-    <h4 class="mb-3 text-primary fw-bold"> My Purchase History</h4>
+<div class="container-fluid"><br>
+    <h5 class="mb-3 text-primary fw-bold"> My Purchase History</h4>
 
     {{-- Filters --}}
     <form method="GET" class="row gy-2 gx-2 mb-4 align-items-end">
@@ -85,7 +85,7 @@
             <button class="btn btn-primary rounded-pill shadow-sm w-100" type="submit">
                 <i class="bi bi-search"></i> Search
             </button>
-            <a href="{{ route('orders.index') }}" class="btn btn-secondary rounded-pill shadow-sm w-100">
+            <a href="{{ route('orders.index') }}" class="btn btn-info rounded-pill shadow-sm w-100 text-white">
                 Reset
             </a>
         </div>
@@ -100,7 +100,7 @@
                         <div>
 
                             
-                            <div class="fw-bold">Total Purchases</div>
+                            <div class="fw-bold text-white">Total Purchases</div>
                             <small class="text-white-50">Orders you've paid for</small>
                         </div>
                         <div class="fs-5">₱{{ number_format($totalSales ?? 0, 2) }}</div>
@@ -128,7 +128,7 @@
         <div class="card-body py-3">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
-                    <div class="fw-bold">Cashback On Hold</div>
+                    <div class="fw-bold text-white">Cashback On Hold</div>
                     <small class="text-white-50">Pending credit</small>
                 </div>
                 <div class="fs-5">₱{{ number_format($cashbackOnHold, 2) }}</div>
@@ -156,8 +156,8 @@
         <div class="card-body py-3">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
-                    <div class="fw-bold">Cashback Credited</div>
-                    <small class="text-muted">***</small>
+                    <div class="fw-bold text-white ">Cashback Credited</div>
+                    <small class="text-muted">Cashback earned</small>
                 </div>
                 <div class="fs-5">₱{{ number_format($walletCashback, 2) }}</div>
             </div>
@@ -169,70 +169,90 @@
 
     </div>
 
-    {{-- Desktop Table --}}
-    <div class="d-none d-md-block table-responsive">
-        <table class="table table-bordered table-hover" id="ordersTable">
-            <thead class="table-light">
-                <tr>
-                    <th>Date</th>
-                    <th>Product</th>
-                    <th>Description</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                    <th>Cashback</th>
-                    <th>Method</th>
-                    <th>Status</th>
-                    <th>Proof</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>
+   {{-- Desktop Table --}}
+<div class="d-none d-md-block table-responsive" style="max-height: 70vh; overflow-y: auto;">
+    <table class="table table-hover align-middle text-center" id="ordersTable">
+        <thead class="sticky-top shadow-sm">
+            <tr>
+                <th>Date</th>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Cashback</th>
+                <th>Method</th>
+                <th>Status</th>
+                <th>Proof</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($orders as $order)
+                @foreach($order->items as $item)
+                    <tr>
+                        <td class="text-muted small">{{ $order->created_at->format('Y-m-d H:i') }}</td>
+                        
+                        <td>
+                            @if($item->product->thumbnail)
+                                <img src="{{ asset('storage/' . $item->product->thumbnail) }}" 
+                                     class="img-thumbnail shadow-sm" 
+                                     style="width: 50px; height: 50px; object-fit: cover;" 
+                                     loading="lazy">
+                            @endif
+                        </td>
+                        
+                        <td class="fw-semibold">{{ $item->product->name }}</td>
+                        <td>{{ $item->quantity }}</td>
+                        <td class="text-success fw-bold">₱{{ number_format($item->price, 2) }}</td>
+                        <td class="fw-bold">₱{{ number_format($item->price * $item->quantity, 2) }}</td>
+                        <td class="text-primary">₱{{ number_format($item->cashback * $item->quantity, 2) }}</td>
+                        <td><span class="badge bg-secondary">{{ $order->payment_method }}</span></td>
 
+                        <td>
+                            @php
+                                $badgeColor = match($order->status) {
+                                    'Pending' => 'warning',
+                                    'Processing' => 'info',
+                                    'On the Way' => 'primary',
+                                    'Delivered' => 'success',
+                                    default => 'secondary',
+                                };
+                            @endphp
+                            <span class="badge bg-{{ $badgeColor }} px-3 py-2">{{ $order->status }}</span>
+                        </td>
 
-
-                @foreach($orders as $order)
-                    @foreach($order->items as $item)
-                        <tr>
-                            <td>{{ $order->created_at->format('Y-m-d H:i') }}</td>
-                            <td>
-                                @if($item->product->thumbnail)
-                                    <img src="{{ asset('storage/' . $item->product->thumbnail) }}" width="50" height="50" class="rounded shadow-sm" loading="lazy">
-                                @endif
-                            </td>
-                            <td>{{ $item->product->name }}</td>
-                            <td>{{ $item->quantity }}</td>
-                            <td>₱{{ number_format($item->price, 2) }}</td>
-                            <td>₱{{ number_format($item->price * $item->quantity, 2) }}</td>
-                            <td>₱{{ number_format($item->cashback * $item->quantity, 2) }}</td>
-                            <td>{{ $order->payment_method }}</td>
-                           <td>
-    @php
-        $badgeColor = match($order->status) {
-            'Pending' => 'warning',
-            'Processing' => 'info',
-            'On the Way' => 'primary',
-            'Delivered' => 'success',
-            default => 'secondary',
-        };
-    @endphp
-    <span class="badge bg-{{ $badgeColor }}">{{ $order->status }}</span>
-</td>
-
-<td>
-                                @if($order->reference_image)
-                                    <a href="{{ asset('storage/' . $order->reference_image) }}" target="_blank">
-                                        <img src="{{ asset('storage/' . $order->reference_image) }}" width="40" height="40" class="rounded shadow-sm" loading="lazy">
-                                    </a>
-                                @endif
-                            </td>
-                            <td>{{ $order->gcash_note ?? $order->note }}</td>
-                        </tr>
-                    @endforeach
+                        <td>
+                            @if($order->reference_image)
+                                <a href="{{ asset('storage/' . $order->reference_image) }}" target="_blank">
+                                    <img src="{{ asset('storage/' . $order->reference_image) }}" 
+                                         class="rounded border shadow-sm" 
+                                         style="width: 40px; height: 40px; object-fit: cover;" 
+                                         loading="lazy">
+                                </a>
+                            @endif
+                        </td>
+                        
+                        <td class="text-muted small">{{ $order->gcash_note ?? $order->note }}</td>
+                    </tr>
                 @endforeach
-            </tbody>
-        </table>
-    </div>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* Optional extra polish */
+    #ordersTable td, 
+    #ordersTable th {
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+    #ordersTable tbody tr:hover {
+        background-color: #f8f9fa;
+        transition: background-color 0.2s ease-in-out;
+    }
+</style>
 
     {{-- Mobile View --}}
     <div class="d-md-none">

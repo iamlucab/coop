@@ -21,11 +21,6 @@ class WalletController extends Controller
     public function index()
     {
         $member = Auth::user()->member;
-        
-        if (!$member) {
-            return redirect()->back()->withErrors(['member' => 'Member profile not found for this user.']);
-        }
-        
         $wallet = $member->wallet;
 
         if (!$wallet) {
@@ -81,8 +76,7 @@ class WalletController extends Controller
                 'required',
                 'exists:members,mobile_number',
                 function ($attribute, $value, $fail) {
-                    $member = Auth::user()->member;
-                    if ($member && $value === $member->mobile_number) {
+                    if ($value === Auth::user()->member->mobile_number) {
                         $fail('You cannot send to your own account.');
                     }
                 },
@@ -91,11 +85,6 @@ class WalletController extends Controller
         ]);
 
         $sender = Auth::user()->member;
-        
-        if (!$sender) {
-            return back()->withErrors(['member' => 'Member profile not found.'])->withInput(['_modal' => 'send']);
-        }
-        
         $recipient = Member::where('mobile_number', $request->mobile_number)->firstOrFail();
 
         $amount = $request->amount;
@@ -165,14 +154,8 @@ class WalletController extends Controller
 
         $proofPath = $this->handleProofUpload($request);
 
-        $member = Auth::user()->member;
-        
-        if (!$member) {
-            return back()->with('error', 'Member profile not found.');
-        }
-        
         $cashIn = CashInRequest::create([
-            'member_id' => $member->id,
+            'member_id' => Auth::user()->member->id,
             'amount' => $request->amount,
             'note' => $request->note,
             'description' => $request->description,
@@ -182,19 +165,19 @@ class WalletController extends Controller
         ]);
 
         if ($cashIn) {
-            Log::info('✅ Cash in saved!', ['id' => $cashIn->id, 'member_id' => $member->id, 'amount' => $request->amount]);
+            Log::info('✅ Cash in saved!', ['id' => $cashIn->id, 'member_id' => Auth::user()->member->id, 'amount' => $request->amount]);
             
             // Debug logging for success message
             \Log::info('Cash in successful, setting success message', [
                 'cash_in_id' => $cashIn->id,
-                'member_id' => $member->id,
+                'member_id' => Auth::user()->member->id,
                 'amount' => $request->amount
             ]);
             
             return redirect()->route('member.dashboard')->with('success', 'Cash in request submitted successfully! Please wait for admin approval.');
         }
 
-        Log::error('Cash in request failed to save', ['member_id' => $member->id, 'amount' => $request->amount]);
+        Log::error('Cash in request failed to save', ['member_id' => Auth::user()->member->id, 'amount' => $request->amount]);
         return back()->with('error', 'Failed to submit cash in request. Please try again.');
     }
 
@@ -254,11 +237,6 @@ class WalletController extends Controller
         ]);
 
         $member = auth()->user()->member;
-        
-        if (!$member) {
-            return back()->with('error', 'Member profile not found.');
-        }
-        
         $cashbackWallet = $member->cashbackWallet;
         $mainWallet = $member->wallet;
 
@@ -324,10 +302,6 @@ class WalletController extends Controller
         $recipient = $recipientWallet->member;
         $sender = Auth::user()->member;
 
-        if (!$sender) {
-            return redirect()->route('member.dashboard')->with('error', 'Member profile not found.');
-        }
-
         // Prevent self-payment
         if ($sender->id === $recipient->id) {
             return redirect()->route('member.dashboard')->with('error', 'You cannot send money to yourself.');
@@ -357,11 +331,6 @@ class WalletController extends Controller
         }
 
         $sender = Auth::user()->member;
-        
-        if (!$sender) {
-            return back()->withErrors(['error' => 'Member profile not found.']);
-        }
-        
         $recipient = $recipientWallet->member;
         $amount = $request->amount;
         $senderWallet = $sender->wallet;

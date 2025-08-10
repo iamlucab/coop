@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Join E-Bili Online</title>
+    <title>Join Amigos '98 Comunity Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{-- PWA & Icons --}}
@@ -23,7 +23,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: #fff;
+            background: #eff8ff;
             color: #212529;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
@@ -183,10 +183,10 @@
         </button>
     </div>
 
-    <img src="{{ asset('images/ebili-logo.png') }}" class="img-fluid mb-4" style="max-width: 100px; display: block; margin: auto;" alt="Logo">
-    <h1><strong>E-BILI ONLINE</strong></h1>
+    <img src="{{ asset('images/ebili-logo.png') }}" class="img-fluid mb-4" style="max-width: 150px; display: block; margin: auto;" alt="Logo">
+    <h4><strong><center>Amigos '98 Community </strong></h4></center>
     <hr>
-    <h3 class="mb-4">Join and be a Member</h3>
+    <h5 class="mb-4">Join and be a Member</h5>
 
     <form action="{{ route('guest.register.store') }}" method="POST" enctype="multipart/form-data">
         @csrf

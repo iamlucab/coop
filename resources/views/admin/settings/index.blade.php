@@ -2,8 +2,8 @@
 @section('title', 'Site Settings')
 
 @section('content')
-<div class="container-fluid">
-    <h3 class="mb-4">🛠️ Site Settings</h3>
+<div class="container-fluid"><br>
+    <h5 class="mb-4">🛠️ Site Settings</h5>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

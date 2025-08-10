@@ -15,9 +15,9 @@
 <div class="text-center mb-4 fade-in">
     {{-- QR Code Container for Member Transfer --}}
     <div class="qr-container mx-auto mb-3" style="position: relative; max-width: 300px;">
-        <div class="qr-code-wrapper" style="background: rgb(249, 247, 247); padding: 15px; border-radius: 20px; box-shadow: 0 8px 25px rgba(111, 66, 193, 0.3); display: inline-block; width: 100%;">
+        <div class="qr-code-wrapper" style="background: rgb(249, 247, 247); padding: 15px; border-radius: 20px; box-shadow: 0 8px 25px rgba(167, 173, 174, 0.3); display: inline-block; width: 100%;">
             {{-- QR Code Display Area --}}
-            <div id="qrCodeDisplay" style="width: 150px; height: 150px; border-radius: 15px; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 3px solid #6f42c1; margin: 0 auto;">
+            <div id="qrCodeDisplay" style="width: 150px; height: 150px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 3px solid #212022; margin: 0 auto;">
                 <div class="text-center">
                     <i class="bi bi-qr-code fa-3x text-primary mb-2"></i>
                     <div class="small text-muted" style="font-size: 0.75rem;">Generating QR...</div>
@@ -26,7 +26,7 @@
             
             {{-- Member Info Display --}}
             <div class="member-info mt-2 text-center">
-                <div class="fw-bold" style="color: var(--primary-purple); font-size: 0.85rem;">{{ auth()->user()->name }}</div>
+                <div class="fw-bold" style="color: var(--primary-black); font-size: 0.85rem;">{{ auth()->user()->name }}</div>
                 <div class="text-muted" style="font-size: 0.75rem;">{{ auth()->user()->mobile_number }}</div>
             </div>
             
@@ -188,14 +188,14 @@
                     bottom: 80px;
                     right: 15px;
                     z-index: 999;
-                    background: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%);
+                    background: linear-gradient(135deg, #2957d8 0%, #0e269e 100%);
                     border-radius: 50%;
                     width: 45px;
                     height: 45px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.4);
+                    box-shadow: 0 4px 10px rgba(251, 252, 255, 0.4);
                     cursor: pointer;
                     transition: all 0.3s ease;
                     animation: fadeInUp 0.5s ease;
@@ -203,7 +203,7 @@
         
                 .back-to-top:hover {
                     transform: scale(1.1) translateY(-2px);
-                    box-shadow: 0 6px 20px rgba(111, 66, 193, 0.6);
+                    box-shadow: 0 6px 20px rgba(28, 80, 211, 0.6);
                 }
         
                 .back-to-top i {
@@ -382,13 +382,13 @@
     {{-- Cashback Wallet --}}
     <div class="col-6">
     <a href="{{ route('wallet.history', ['type' => 'cashback']) }}" class="text-decoration-none" style="text-decoration: none;">
-            <div class="cashback-card p-2 p-sm-3 text-center h-100" style="color: rgb(103, 103, 103) !important; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <small class="text-uppercase d-block" style="font-size: 0.6rem; opacity: 0.9; color: rgba(116, 116, 116, 0.9) !important;">Cashback Wallet</small>
+            <div class="cashback-card p-2 p-sm-3 text-center h-100" style="color: rgb(255, 255, 255) !important; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <small class="text-uppercase d-block" style="font-size: 0.6rem; opacity: 0.9; color: rgba(255, 255, 255, 0.9) !important;">Cashback Wallet</small>
                 @php
                     $cashback = auth()->user()->member->cashbackWallet;
                 @endphp
-                <h5 class="fw-bold mt-1 mb-1" style="color: rgb(104, 104, 104) !important; font-size: 1rem;">₱{{ number_format($cashback?->balance ?? 0, 2) }}</h5>
-                <div class="mt-1 small" style="color: rgba(71, 71, 71, 0.8) !important; font-size: 0.65rem;"><i class="bi bi-clock-history me-1"></i> View Cashback</div>
+                <h5 class="fw-bold mt-1 mb-1" style="color: rgb(255, 255, 255) !important; font-size: 1rem;">₱{{ number_format($cashback?->balance ?? 0, 2) }}</h5>
+                <div class="mt-1 small" style="color: rgba(255, 255, 255, 0.8) !important; font-size: 0.65rem;"><i class="bi bi-clock-history me-1"></i> View Cashback</div>
             </div>
         </a>
     </div>

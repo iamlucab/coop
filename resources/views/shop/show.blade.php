@@ -4,7 +4,7 @@
 @push('css')
 <style>
     .gallery-thumb.active {
-        border: 2px solid #198754;
+        border: 2px solid #2d5cda;
     }
 </style>
 @endpush
@@ -164,6 +164,8 @@
     </div>
 </div>
 @endsection
+
+@include('partials.mobile-footer')
 
 @section('js')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

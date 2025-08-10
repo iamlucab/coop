@@ -18,12 +18,12 @@
             @endif
 
             <div class="p-3">
-                <h6 class="fw-bold mb-2 text-truncate" title="{{ $product->name }}">{{ $product->name }}</h6>
+                <a href="{{ route('shop.show', $product) }}"> <h6 class="fw-bold mb-2 text-truncate" title="{{ $product->name }}">{{ $product->name }}</h6>
 
                 <p class="text-muted small mb-2 text-truncate" title="{{ $product->description }}">
                     {{ Str::limit($product->description, 50) }}
                 </p>
-
+</a>
                 <div class="mt-auto">
                     {{-- Price Display with Discount --}}
                     @if($product->hasDiscount())
