@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/ebili-theme.css') }}">
 
 {{-- Mobile Footer Navigation --}}
-<div id="mobileFooter" class="mobile-footer d-flex justify-content-around align-items-center py-2">
+<div id="mobile-footer" class="mobile-footer d-flex justify-content-around align-items-center py-2">
     {{-- Home --}}
     <a href="{{ route('member.dashboard') }}"
        class="mobile-footer-item text-decoration-none d-flex flex-column align-items-center justify-content-center {{ request()->routeIs('member.dashboard') ? 'active' : '' }}">

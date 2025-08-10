@@ -29,12 +29,11 @@
         {{-- Reserved Membership Codes Card --}}
         <div class="col-12 col-md-4">
             <div class="card h-100 shadow-sm">
-                <div class="card-header bg-info text-white py-2 px-3">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-upc-scan me-2"></i>
-                        <h6 class="card-title mb-0 fs-6"> Reserved Codes</h6>
-                    </div>
-                </div>
+   <div class="card-header bg-info text-white py-2 px-3">
+  <div class="d-flex align-items-center text-white">
+    <i class="bi bi-upc-scan me-2"></i> <h6 class="card-title mb-0 fs-6" style="color: white !important;">&nbsp; Reserved Codes</h6>
+  </div>
+</div>
                 <div class="card-body p-3">
                     @if(isset($reservedCodes) && $reservedCodes->count() > 0)
                     <div class="text-center mb-2">
@@ -60,9 +59,8 @@
         <div class="col-12 col-md-4">
             <div class="card h-100 shadow-sm">
                 <div class="card-header bg-primary text-white py-2 px-3">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-file-earmark-text me-2"></i>
-                        <h6 class="card-title mb-0 fs-6"> Code Requests</h6>
+                    <div class="d-flex align-items-center text-white">
+                        <i class="bi bi-file-earmark-text me-2"></i> <h6 class="card-title  mb-0 fs-6"  style="color: white !important;">&nbsp;Code Requests</h6>
                     </div>
                 </div>
                 <div class="card-body p-3">
@@ -100,7 +98,7 @@
                 <div class="card-header bg-success text-white py-2 px-3">
                     <div class="d-flex align-items-center">
                         <i class="bi bi-person-plus me-2"></i>
-                        <h6 class="card-title mb-0 fs-6"> Register Members</h6>
+                        <h6 class="card-title mb-0 fs-6" style="color: white !important;" >&nbsp; Register Members</h6>
                     </div>
                 </div>
                 <div class="card-body p-3 text-center">
@@ -122,8 +120,8 @@
         <div class="col-12 col-lg-8">
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white">
-                    <h6 class="card-title mb-0">
-                        <i class="bi bi-code"></i> Request Membership Codes
+                    <h6 class="card-title mb-0" style="color: white !important;">
+                        <i class="bi bi-code" ></i> Request Membership Codes
                     </h6>
                 </div>
                 <div class="card-body">
@@ -135,7 +133,7 @@
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="quantity" class="font-weight-bold">
-                                        <i class="bi bi-hash"></i> Number of Codes
+                                        <i class="bi bi-hash"></i> Quantity
                                     </label>
                                     <input type="number" name="quantity" id="quantity" 
                                            class="form-control form-control-lg" 
@@ -217,8 +215,7 @@
                         <!-- Wallet Payment Warning -->
                         <div id="wallet_warning" class="alert alert-warning d-none">
                             <i class="bi bi-exclamation-triangle"></i>
-                            <strong>Insufficient Funds!</strong> Your wallet balance is insufficient for this transaction.
-                            Please choose another payment method or add funds to your wallet.
+                            <strong>Insufficient Funds!</strong> Please choose another payment method or add funds to your wallet.
                         </div>
                         
                         <!-- Wallet Payment Success -->
@@ -230,8 +227,8 @@
                         <!-- GCash Payment Details -->
                         <div id="gcash_details" class="d-none">
                             <div class="card border-primary shadow-sm mb-3">
-                                <div class="card-header bg-primary text-white">
-                                    <h6 class="mb-0">
+                                <div class="card-header bg-primary text-white ">
+                                    <h6 class="mb-0" style="color: white !important;">
                                         <i class="bi bi-phone"></i> GCash Payment Details
                                     </h6>
                                 </div>
@@ -243,7 +240,7 @@
                                     
                                     <div class="row">
                                         <div class="col-12 col-md-6">
-                                            <strong>GCash Account:</strong> LU*** CAB*
+                                            <strong>GCash Account:</strong><br>LU*** CAB*
                                         </div>
                                         <div class="col-12 col-md-6 text-md-right">
                                             <a href="{{ asset('images/gcashQR.jpeg') }}" download="GCash-QR-Code.jpeg" 
@@ -266,7 +263,7 @@
                         <div id="bank_details" class="d-none">
                             <div class="card border-primary shadow-sm mb-3">
                                 <div class="card-header bg-primary text-white">
-                                    <h6 class="mb-0">
+                                    <h6 class="mb-0" style="color: white !important;">
                                         <i class="bi bi-bank"></i> Bank Transfer Details
                                     </h6>
                                 </div>
@@ -309,16 +306,16 @@
                             <textarea name="note" id="note" class="form-control" rows="3" 
                                       placeholder="Any additional notes...">{{ old('note') }}</textarea>
                         </div>
-                        
+                        <br>
                         <!-- Submit Buttons -->
                         <div class="row">
                             <div class="col-12 col-md-6 mb-2">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                    <i class="bi bi-send"></i> Submit Request
+                                <button type="submit" class="btn btn-primary btn-sm btn-block">
+                                    <i class="bi bi-send"></i> Submit 
                                 </button>
                             </div>
                             <div class="col-12 col-md-6 mb-2">
-                                <a href="{{ route('member.dashboard') }}" class="btn btn-secondary btn-lg btn-block">
+                                <a href="{{ route('member.dashboard') }}" class="btn btn-warning text-white btn-sm btn-block">
                                     <i class="bi bi-arrow-left"></i> Cancel
                                 </a>
                             </div>
@@ -335,8 +332,8 @@
     <div class="col-12">
         <div class="card shadow-sm">
             <div class="card-header bg-info text-white">
-                <h6 class="card-title mb-0">
-                    <i class="bi bi-upc-scan me-2"></i>  Reserved Membership Codes
+                <h6 class="card-title mb-0" style="color:  white !important;">
+                    <i class="bi bi-upc-scan me-2"></i>&nbsp;  Reserved Membership Codes
                 </h6>
             </div>
             <div class="card-body">
@@ -393,8 +390,8 @@
     <div class="col-12">
         <div class="card shadow-sm">
             <div class="card-header bg-primary text-white">
-                <h6 class="card-title mb-0 text-white">
-                    <i class="bi bi-upc-scan me-2"></i> Membership Code Requests
+                <h6 class="card-title mb-0" style="color:  white !important;">
+                    <i class="bi bi-upc-scan me-2"></i>&nbsp;Membership Code Requests
                 </h6>
             </div>
             <div class="card-body">
@@ -406,7 +403,7 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
-                                        <h6 class="card-title mb-1">Request #{{ $request->id }}</h6>
+                                        <h6 class="card-title mb-1">Request # &nbsp; {{ $request->id }}</h6>
                                         <small class="text-muted">{{ $request->created_at->format('M d, Y H:i') }}</small>
                                     </div>
                                     <div>
@@ -458,7 +455,7 @@
                 @if($membershipCodeRequests->where('status', 'approved')->count() > 0 && (!isset($reservedCodes) || $reservedCodes->count() == 0))
                 <div class="mt-3 alert alert-info mb-0">
                     <i class="bi bi-info-circle me-2"></i>
-                    Your membership code request has been approved. Your codes are being prepared and will appear here shortly. If you don't see them within a few minutes, please refresh the page or contact support.
+                    Your membership code request has been approved. Your codes are being prepared and will appear here shortly.
                 </div>
                 @endif
                 @else
@@ -484,12 +481,12 @@
     <div class="col-12">
         <div class="card shadow-sm">
             <div class="card-header bg-success text-white">
-                <h6 class="card-title mb-0 text-white">
+                <h6 class="card-title mb-0" style="color: white !important;">
                     <i class="bi bi-person-plus me-2"></i> Register New Members
                 </h6>
             </div>
             <div class="card-body">
-                <p class="mb-3">
+                <p class="small text-muted">
                     Use your reserved membership codes to register new members in your network.
                     This helps expand your referral network and earn more bonuses.
                 </p>
@@ -539,6 +536,7 @@
 </div>
 
 @stop
+<br>
 @include('partials.mobile-footer')
 
 

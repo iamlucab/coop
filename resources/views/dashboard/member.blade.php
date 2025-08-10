@@ -17,7 +17,7 @@
     <div class="qr-container mx-auto mb-3" style="position: relative; max-width: 300px;">
         <div class="qr-code-wrapper" style="background: rgb(249, 247, 247); padding: 15px; border-radius: 20px; box-shadow: 0 8px 25px rgba(167, 173, 174, 0.3); display: inline-block; width: 100%;">
             {{-- QR Code Display Area --}}
-            <div id="qrCodeDisplay" style="width: 150px; height: 150px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 3px solid #212022; margin: 0 auto;">
+            <div id="qrCodeDisplay" style="width: 142.5px; height: 142.5px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 3px solid #212022; margin: 0 auto;">
                 <div class="text-center">
                     <i class="bi bi-qr-code fa-3x text-primary mb-2"></i>
                     <div class="small text-muted" style="font-size: 0.75rem;">Generating QR...</div>
@@ -348,7 +348,7 @@
 <div class="container-fluid px-2 px-sm-3">
 
 {{-- Success/Error Messages - HTML Approach (Removed to prevent duplicate messages) --}}
-{{-- @if(session('success'))
+@if(session('success'))
     <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
         <i class="bi bi-check-circle me-2"></i>
         <strong>Success!</strong> {{ session('success') }}
@@ -362,7 +362,9 @@
         <strong>Error!</strong> {{ session('error') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-@endif --}}
+@endif
+
+
 
 {{-- ✅ Wallet and Cashback Balances in a Row --}}
 <div class="row mb-4 g-2">
@@ -1299,7 +1301,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to create fallback display
     function createFallbackDisplay() {
         qrDisplay.innerHTML = `
-            <div class="text-center" style="background: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%); width: 180px; height: 180px; border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+            <div class="text-center" style="background: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%); width: 171px; height: 171px; border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
                 <div style="font-size: 28px; font-weight: bold; margin-bottom: 8px;">{{ strtoupper(substr(auth()->user()->name, 0, 2)) }}</div>
                 <div style="font-size: 12px; opacity: 0.8;">{{ auth()->user()->mobile_number }}</div>
                 <div style="font-size: 10px; opacity: 0.6; margin-top: 8px;">Scan to Pay</div>
@@ -1349,8 +1351,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Style the canvas to fit the design
-        canvas.style.width = '180px';
-        canvas.style.height = '180px';
+        canvas.style.width = '171px';  // 5% smaller than 180px
+        canvas.style.height = '171px';  // 5% smaller than 180px
         canvas.style.borderRadius = '15px';
         
         qrDisplay.innerHTML = '';
@@ -1369,7 +1371,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Use QR Server API as fallback
             const qrImg = document.createElement('img');
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(qrData)}`;
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=171x171&data=${encodeURIComponent(qrData)}`;  // 5% smaller than 180x180
             qrImg.style.width = '150px';
             qrImg.style.height = '150px';
             qrImg.style.borderRadius = '15px';
@@ -1469,7 +1471,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentQRCanvas) {
                 console.log('Using canvas QR code');
                 try {
-                    downloadCtx.drawImage(currentQRCanvas, 100, 160, 200, 200);
+                    downloadCtx.drawImage(currentQRCanvas, 100, 160, 190, 190);  // 5% smaller than 200px
                     console.log('Canvas QR drawn successfully');
                     finishDownloadImage();
                 } catch (error) {
@@ -1507,7 +1509,7 @@ document.addEventListener('DOMContentLoaded', function() {
             function generateFallbackQR() {
                 // Draw fallback QR placeholder
                 downloadCtx.fillStyle = '#6f42c1';
-                downloadCtx.fillRect(100, 160, 200, 200);
+                downloadCtx.fillRect(100, 160, 190, 190);  // 5% smaller than 200px
                 downloadCtx.fillStyle = '#ffffff';
                 downloadCtx.font = 'bold 32px Arial, sans-serif';
                 downloadCtx.textAlign = 'center';

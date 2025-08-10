@@ -3,15 +3,15 @@
 @section('title', 'My Tickets - Help Desk')
 
 @section('content_header')
-    <h3 class="fw-bold mb-0"><i class="bi bi-life-preserver me-2"></i> Help Desk</h3>
+    <h5 class="fw-bold mb-0"><i class="bi bi-life-preserver me-2"></i> Help Desk</h5>
 @stop
 
 @section('content')
 
     {{-- Submit Ticket Form --}}
     <div class="card mb-4 shadow-sm">
-        <div class="card-header bg-primary text-white">
-            <strong class="text-white"><i class="bi bi-plus-circle me-1"></i> Submit a New Ticket</strong>
+        <div class="card-header text-white">
+            <strong class="text-white"><i class="bi bi-plus-circle me-1"></i>&nbsp; Submit a New Ticket</strong><p class= "txt-white small" style="color: #fff !important" >If you have any concern, and inquiries just send us here your message</p>
         </div>
         <div class="card-body">
             <form action="{{ route('member.tickets.store') }}" method="POST">

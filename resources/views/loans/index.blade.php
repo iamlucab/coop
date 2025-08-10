@@ -3,14 +3,14 @@
 @section('title', 'Loan History')
 
 @section('content_header')
-    <h1>Loan History</h1>
+    <h5>Loan History</h5>
 @endsection
 
 @section('content')
     <div class="card d-none d-md-block">
         <div class="card-body table-responsive">
             <table id="loanHistoryTable" class="table table-bordered table-striped table-sm">
-                <thead>
+                <thead class="thead-light">
                     <tr>
                         <th>#</th>
                         <th>Amount</th>
