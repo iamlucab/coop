@@ -14,7 +14,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set deployment version file
-        # Extract the tag name (strip refs/tags/) and save it to DEPLOY_VERSION.txt
         run: echo "${GITHUB_REF#refs/tags/}" > DEPLOY_VERSION.txt
 
       - name: Deploy via FTP
@@ -24,7 +23,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /public_html/coop
+          server-dir: /public_html/coop/
           exclude: |
             node_modules
             resources
@@ -43,4 +42,4 @@ jobs:
             .fleet
             .idea
             .vscode
-          git-ftp-args: --insecure
+          security: insecure
