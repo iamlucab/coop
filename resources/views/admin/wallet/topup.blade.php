@@ -45,7 +45,7 @@
             @if(isset($member) && $member)
             <div class="card shadow-sm rounded-3 mb-4">
                 <div class="card-header bg-primary text-white">
-                    <strong>Top-up / Refund for {{ $member->full_name }}</strong>
+                    <strong class="text-white" >Top-up / Refund for {{ $member->full_name }}</strong>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.wallet.topup.store') }}" onsubmit="return confirm('Confirm this wallet transaction?');">
