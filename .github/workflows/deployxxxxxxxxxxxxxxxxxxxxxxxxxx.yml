@@ -1,0 +1,30 @@
+# name: 🚀 Deploy to GoDaddy via FTP
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   ftp-deploy:
+#     name: 📦 Upload via FTP
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: 📥 Checkout code
+#         uses: actions/checkout@v3
+
+#       - name: 📤 FTP Deploy
+#         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+#         with:
+#           server: ${{ secrets.FTP_HOST }}
+#           username: ${{ secrets.FTP_USERNAME }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           port: ${{ secrets.FTP_PORT }}
+#           server-dir: /
+#           protocol: ftp
+#           exclude: |
+#             **/.git*
+#             **/.github*
+#             README.md
+#             LICENSE
