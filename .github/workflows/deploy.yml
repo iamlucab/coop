@@ -1,0 +1,42 @@
+name: Deploy to GoDaddy via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /public_html/coop
+          exclude: |
+            node_modules
+            resources
+            tests
+            .git
+            .github
+            .env
+            package.json
+            package-lock.json
+            deploy.php
+            public/build
+            public/hot
+            public/storage
+            storage/*.key
+            vendor
+            .fleet
+            .idea
+            .vscode
+          git-ftp-args: --insecure
