@@ -51,7 +51,7 @@
         
         <div class="dropdown-divider"></div>
         <a href="{{ route('admin.notifications.index') }}" class="dropdown-item dropdown-footer">
-            <i class="fas fa-bell mr-2"></i> View All Notifications
+            <i class="fas fa-bell mr-2"></i> View All 
         </a>
     </div>
 </li>
