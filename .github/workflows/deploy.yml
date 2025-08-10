@@ -1,3 +1,6 @@
+# this must be the first line of the file
+# This file is part of the Coop Management System project.
+
 name: Deploy to GoDaddy (branch + tag)
 
 on:
@@ -28,6 +31,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
           local-dir: ./
           server-dir: /public_html/coop/
           exclude: |
