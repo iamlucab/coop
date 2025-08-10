@@ -1,9 +1,11 @@
-name: Deploy to GoDaddy via FTP (tag-based)
+name: Deploy to GoDaddy (branch + tag)
 
 on:
   push:
+    branches:
+      - main
     tags:
-      - 'v*.*.*'  # Trigger only on version tags like v1.0.0
+      - 'v*.*.*'
 
 jobs:
   ftp-deploy:
@@ -14,7 +16,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set deployment version file
-        run: echo "${GITHUB_REF#refs/tags/}" > DEPLOY_VERSION.txt
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            echo "${GITHUB_REF#refs/tags/}" > DEPLOY_VERSION.txt
+          else
+            echo "${GITHUB_REF#refs/heads/}-$(git rev-parse --short HEAD)" > DEPLOY_VERSION.txt
+          fi
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
