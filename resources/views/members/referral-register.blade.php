@@ -304,14 +304,14 @@
             <a href="{{ route('login') }}" class="text-decoration-none"><small>Already have an account? Login</a></small>  
 
         <div class="card-disclaimer mt-4">
-            Thank you for your interest in E-Bili Online.<br>
+            Thank you for your interest in Amigos '98 Online.<br>
             All data is strictly used for community-building and app participation.<br>
             <strong>By registering through this referral link, you and your sponsor will receive bonuses!</strong>
         </div>
     </div>
 
     <footer>
-        &copy; {{ date('Y') }} E-Bili Online - Shop to Save, Share to Earn!
+        &copy; {{ date('Y') }} Dito sa Amigos '98 Online - Buy to Save, Share to Earn!
     </footer>
 
     <!-- Mobile Footer -->
@@ -394,40 +394,6 @@
         });
     </script>
 
-    {{-- install prompt  --}}
-    <script>
-        let deferredPrompt;
-        const installBtn = document.createElement('button');
-        installBtn.id = "installAppBtn";
-        installBtn.className = "btn btn-warning w-100 mb-3";
-        installBtn.innerHTML = '<i class="bi bi-download"></i> Install E-Bili App';
-        installBtn.style.display = 'none';
-
-        // Append the install button inside the container (top of form)
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.container');
-            container.insertBefore(installBtn, container.firstChild);
-        });
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            installBtn.style.display = 'block';
-
-            installBtn.addEventListener('click', async () => {
-                installBtn.style.display = 'none';
-                deferredPrompt.prompt();
-                const result = await deferredPrompt.userChoice;
-                console.log('[PWA] Install result:', result.outcome);
-                deferredPrompt = null;
-            });
-        });
-
-        window.addEventListener('appinstalled', () => {
-            console.log('[PWA] App was installed');
-            installBtn.remove();
-        });
-    </script>
 
     {{-- site manifest --}}
     <script>
@@ -439,6 +405,9 @@
             });
         }
     </script>
-
+    
+    {{-- PWA Install Button --}}
+    @include('partials.pwa-install-button')
+    
     </body>
     </html>

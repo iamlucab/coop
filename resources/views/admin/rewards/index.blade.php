@@ -3,7 +3,7 @@
 @section('title', 'Reward Programs')
 
 @section('content_header')
-    <h1>Reward Programs</h1>
+    <h4>Reward Programs</h4>
 @stop
 
 @section('content')

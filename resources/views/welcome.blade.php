@@ -368,17 +368,6 @@ body {
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh;">
 
-<div id="installToast" class="toast align-items-center text-bg-dark border-0 position-fixed bottom-0 start-50 translate-middle-x mb-3 shadow" role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 9999; display: none;">
-  <div class="d-flex">
-    <div class="toast-body">
-        <hr>
-      Join and be one of our Amigos 98 Community friends!
-    </div>
-    <button type="button" class="btn btn-sm btn-primary me-2 my-auto" id="installBtn">Install App</button>
-    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close" onclick="hideInstallToast()"></button>
-  </div>
-</div>
-
 <div id="installSuccessToast" class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3 shadow" role="alert" aria-live="assertive" aria-atomic="true" style="z-index: 9999;">
   <div class="d-flex">
     <div class="toast-body">
@@ -691,10 +680,6 @@ body {
   </div>
 </div>
 
-<button id="fixedInstallBtn" class="btn btn-success shadow position-fixed px-4 py-2"
-    style="bottom: 100px; right: 16px; z-index: 9999; display: none;">
-    <i class="bi bi-download me-1"></i> Install App
-</button>
 
 {{-- Membership Required Modal --}}
 <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
@@ -885,50 +870,9 @@ document.querySelectorAll('#programTabs .nav-link').forEach(function(tab) {
 });
 </script>
 
-<script>
-let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-
-    const installBtn = document.getElementById('fixedInstallBtn');
-    installBtn.style.display = 'block';
-
-    installBtn.addEventListener('click', async () => {
-        if (!deferredPrompt) return;
-
-        deferredPrompt.prompt();
-
-        const choiceResult = await deferredPrompt.userChoice;
-
-        if (choiceResult.outcome === 'accepted') {
-            console.log('✅ Installed');
-            localStorage.setItem('Amigos 98 CommunityAppInstalled', 'yes');
-
-            // Show success toast if available
-            const toastEl = document.getElementById('installSuccessToast');
-            if (toastEl) {
-                const toast = new bootstrap.Toast(toastEl);
-                toast.show();
-            }
-        } else {
-            console.log('❌ Dismissed');
-            localStorage.setItem('Amigos 98 CommunityAppInstalled', 'dismissed');
-        }
-
-        deferredPrompt = null;
-        installBtn.style.display = 'none';
-    });
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-    const flag = localStorage.getItem('Amigos 98 CommunityAppInstalled');
-    if (flag === 'yes' || flag === 'dismissed') {
-        document.getElementById('fixedInstallBtn').style.display = 'none';
-    }
-});
-</script>
+{{-- PWA Install Button --}}
+@include('partials.pwa-install-button')
 
 </body>
 </html>

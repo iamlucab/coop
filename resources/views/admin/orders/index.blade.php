@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="card rounded-3 shadow-sm">
         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Order Reports</h5>
+            <h5 class="mb-0" style=color:white !impotant ">Order Reports</h5>
         </div>
 
         <div class="card-body">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="text-right mt-2">
                     <button type="submit" class="btn btn-sm btn-success"><i class="bi bi-funnel"></i> Filter</button>
-                    <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-warning">Reset</a>
+                    <a href="{{ route('admin.orders.index') }}" class="btn btn-sm btn-warning text-dark ">Reset</a>
                 </div>
             </form>
 

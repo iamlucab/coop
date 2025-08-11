@@ -3,7 +3,7 @@
 @section('title', 'Create Referral Configuration')
 
 @section('content_header')
-    <h1>Create Referral Configuration</h1>
+    <h5>Create Referral Configuration</h5>
 @stop
 
 @section('content')

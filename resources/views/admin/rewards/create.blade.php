@@ -3,7 +3,7 @@
 @section('title', 'Create Reward Program')
 
 @section('content_header')
-    <h3>Create New Reward Program</h3>
+    <h5>Create New Reward Program</h5>
 @stop
 
 @section('content')
@@ -40,7 +40,7 @@
         </div>
 
         <button type="submit" class="btn btn-success">Create Program</button>
-        <a href="{{ route('admin.rewards.index') }}" class="btn btn-secondary">Back</a>
+        <a href="{{ route('admin.rewards.index') }}" class="btn btn-secondary" style="color:white !important ">Back</a>
     </form>
 @stop
 

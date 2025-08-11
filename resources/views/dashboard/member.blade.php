@@ -486,7 +486,7 @@
     <a href="{{ route('member.membership-code-request.create') }}" class="text-decoration-none text-dark" style="flex: 0 0 30%; max-width: 30%;">
         <div class="card shadow-sm p-2 p-sm-3">
              <i class="bi bi-upc-scan fa-lg text-info mb-1"></i>
-            <div class="small" style="font-size: 0.75rem;">Request Codes</div>
+            <div class="small" style="font-size: 0.75rem;">Codes</div>
         </div>
     </a>
 

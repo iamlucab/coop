@@ -3,7 +3,7 @@
 @section('title', 'Product Categories')
 
 @section('content_header')
-    <h1 class="mb-3">🗂️ Product Categories</h1>
+    <h4 class="mb-3">🗂️ Product Categories</h4>
 @endsection
 
 @section('content')

@@ -51,7 +51,7 @@ use App\Http\Controllers\Admin\AdminWalletController;
                 $featuredProducts = collect();
             }
             return view('welcome', compact('featuredProducts'));
-        });
+        })->name('welcome');
 
              // ✅ Authentication Routes
         Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -502,7 +502,7 @@ Route::get('/offline', function () {
 
 // ✅ Fallback Route
 Route::fallback(function () {
-    return redirect()->route('home')->with('error', 'Page not found.');
+    return redirect()->route('welcome')->with('error', 'Page not found.');
 });
 
 

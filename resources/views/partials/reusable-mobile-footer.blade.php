@@ -104,15 +104,16 @@
 <style>
     /* Mobile Footer Base Styling */
     .reusable-mobile-footer {
-        background: var(--primary-green) !important;
+        background: #17a2b8 !important; /* bg-info color */
         border-radius: 20px 20px 0 0 !important;
         box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1) !important;
-        border-top: 2px solid rgba(0, 128, 0, 0.1);
+        border-top: 2px solid rgba(23, 162, 184, 0.1);
+        color: white !important;
     }
 
     /* Mobile Footer Items */
     .reusable-mobile-footer .mobile-footer-item {
-        color: var(--dark-text) !important;
+        color: white !important;
         transition: all 0.3s ease !important;
         font-family: 'Poppins', sans-serif !important;
         padding: 12px 4px !important;
@@ -133,7 +134,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: var(--primary-green);
+        background: #17a2b8; /* bg-info color */
         opacity: 0;
         transition: opacity 0.3s ease;
         border-radius: 12px;
@@ -187,9 +188,9 @@
         transform: translateX(-50%);
         width: 30px;
         height: 3px;
-        background: var(--primary-green);
+        background: #17a2b8; /* bg-info color */
         border-radius: 0 0 3px 3px;
-        box-shadow: 0 2px 8px rgba(0, 128, 0, 0.5);
+        box-shadow: 0 2px 8px rgba(23, 162, 184, 0.5);
     }
 
     /* Body padding for fixed footer - Improved spacing */
@@ -272,10 +273,10 @@
 
     @keyframes pulseActive {
         0%, 100% {
-            box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.4);
+            box-shadow: 0 0 0 0 rgba(23, 162, 184, 0.4);
         }
         50% {
-            box-shadow: 0 0 0 8px rgba(0, 128, 0, 0);
+            box-shadow: 0 0 0 8px rgba(23, 162, 184, 0);
         }
     }
 </style>
