@@ -495,6 +495,11 @@ Route::post('/join/{sponsor_id}', [GuestRegistrationController::class, 'storeWit
 Route::get('/welcome.php', [GuestRegistrationController::class, 'welcome'])->name('welcome.register');
 Route::post('/welcome.php', [GuestRegistrationController::class, 'store'])->name('welcome.register.store');
 
+// ✅ Offline Page Route
+Route::get('/offline', function () {
+    return view('offline');
+})->name('offline');
+
 // ✅ Fallback Route
 Route::fallback(function () {
     return redirect()->route('home')->with('error', 'Page not found.');
