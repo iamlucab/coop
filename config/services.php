@@ -89,4 +89,19 @@ return [
         'server_key' => env('FCM_SERVER_KEY'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | AliExpress OAuth Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Configuration for AliExpress OAuth integration
+    |
+    */
+
+    
+        'aliexpress' => [
+            'client_id' => env('ALIEXPRESS_CLIENT_ID'),
+            'client_secret' => env('ALIEXPRESS_CLIENT_SECRET'),
+            'redirect' => env('ALIEXPRESS_REDIRECT_URL', env('APP_URL') . '/aliexpress/callback'),
+        ],
 ];

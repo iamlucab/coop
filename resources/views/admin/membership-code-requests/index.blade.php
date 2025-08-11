@@ -22,7 +22,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h6 class="card-title text-white">Pending Requests</h6>
+            <h6 class="card-title" style="color:white !important ">Pending Requests</h6>
         </div>
         <div class="card-body">
             @if($requests->count() > 0)

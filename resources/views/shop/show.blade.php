@@ -32,7 +32,7 @@
                     <div class="col-md-6">
                         <div class="card-body">
                             <h4 class="fw-bold mb-2">{{ $product->name }}</h4>
-                            <p class="text-muted">{{ $product->description }}</p>
+                            <p class="text-muted">{!! nl2br(e($product->description)) !!}</p>
 
                             <div class="mb-3">
                                 {{-- Price Display with Discount --}}

@@ -3,7 +3,7 @@
 @section('title', 'Product Details - Staff')
 
 @section('content_header')
-    <h1>Product Details</h1>
+    <h6>Product Details</h6>
     <p class="text-muted">View product information</p>
 @stop
 
@@ -82,7 +82,7 @@
                                 </tr>
                                 <tr>
                                     <th>Description:</th>
-                                    <td>{{ $product->description ?: 'No description' }}</td>
+                                    <td>{!! nl2br(e($product->description)) ?: '<span class="text-muted">No description</span>' !!}</td>
                                 </tr>
                                 <tr>
                                     <th>Category:</th>

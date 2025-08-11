@@ -62,6 +62,10 @@ use App\Http\Controllers\Admin\AdminWalletController;
         Route::get('/auth/{provider}', [\App\Http\Controllers\Auth\SocialLoginController::class, 'redirectToProvider'])->name('social.redirect');
         Route::get('/auth/{provider}/callback', [\App\Http\Controllers\Auth\SocialLoginController::class, 'handleProviderCallback'])->name('social.callback');
 
+        // ✅ AliExpress OAuth Routes
+        Route::get('/aliexpress/auth', [\App\Http\Controllers\Auth\AliexpressAuthController::class, 'redirectToProvider'])->name('aliexpress.redirect');
+        Route::get('/aliexpress/callback', [\App\Http\Controllers\Auth\AliexpressAuthController::class, 'handleProviderCallback'])->name('aliexpress.callback');
+
         // ✅ OTP Login Routes
         Route::post('/auth/otp/send', [\App\Http\Controllers\Auth\OtpLoginController::class, 'sendOtp'])->name('otp.send');
         Route::post('/auth/otp/verify', [\App\Http\Controllers\Auth\OtpLoginController::class, 'verifyOtp'])->name('otp.verify');
@@ -93,10 +97,8 @@ Route::patch('/shop/cart/{id}/update', [ShopController::class, 'updateQuantity']
     Route::delete('/shop/cart/{id}', [ShopController::class, 'remove'])->name('shop.cart.remove');
 
     // Checkout
-Route::get('/shop/checkout', [ShopController::class, 'checkoutPage'])->name('shop.checkout.page');
-Route::post('/shop/checkout', [ShopController::class, 'checkout'])->name('shop.checkout');
-   
-Route::get('/shop/checkout', [ShopController::class, 'checkoutPage'])->name('shop.checkout.page');
+    Route::get('/shop/checkout', [ShopController::class, 'checkoutPage'])->name('shop.checkout.page');
+    Route::post('/shop/checkout', [ShopController::class, 'checkout'])->name('shop.checkout');
 
 
 });
@@ -533,12 +535,11 @@ Route::middleware(['auth', 'can:member-only'])->group(function () {
     // Shop browsing (MemberProductController)
     Route::get('/shop', [MemberProductController::class, 'index'])->name('shop.index');
     Route::get('/shop/{product}', [MemberProductController::class, 'show'])->name('shop.show');
-
+    
     // Cart & Order (ShopController)
     Route::post('/shop/order/{product}', [ShopController::class, 'order'])->name('shop.order');
     Route::get('/shop/cart', [ShopController::class, 'cart'])->name('shop.cart');
     Route::delete('/shop/cart/{id}', [ShopController::class, 'remove'])->name('shop.cart.remove');
-    Route::post('/shop/checkout', [ShopController::class, 'checkout'])->name('shop.checkout');
 });
 
 // 🏷️ Promo Code Validation (AJAX)
@@ -588,15 +589,12 @@ Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->name('admin.')->
     // 🧾 Order Report & Detail
     Route::get('orders/report', [OrderReportController::class, 'index'])->name('orders.index');
     Route::get('orders/{order}', [OrderReportController::class, 'show'])->name('orders.show');
-
+    
     // 📄 Invoice
     Route::get('orders/invoice/{order}', [OrderReportController::class, 'invoice'])->name('orders.invoice');
-
     
-  Route::get('/orders', [OrderReportController::class, 'index'])->name('orders.index');
     Route::post('/orders/{id}/update-status', [OrderReportController::class, 'updateStatus'])->name('orders.updateStatus');
     Route::post('/order-items/{id}/update-status', [OrderReportController::class, 'updateItemStatus'])->name('orders.updateItemStatus');
-
 });
 
 

@@ -21,6 +21,7 @@
                         <div class="form-floating mb-3">
                             <textarea name="description" id="description" class="form-control rounded-3" style="height: 100px" placeholder="Description">{{ old('description') }}</textarea>
                             <label for="description">Description</label>
+                            <div class="form-text">Use line breaks to separate paragraphs. Formatting will be preserved when displaying.</div>
                         </div>
 
                         <div class="row">

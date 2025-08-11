@@ -1,4 +1,4 @@
-{{-- Reusable Mobile Footer Component --}}
+    {{-- Reusable Mobile Footer Component --}}
 @props(['activeRoute' => null])
 
 {{-- Mobile Footer Navigation --}}

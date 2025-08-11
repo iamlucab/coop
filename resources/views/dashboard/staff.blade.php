@@ -1,7 +1,7 @@
 @extends('layouts.adminlte-base')
 @section('title', 'Staff Dashboard')
 
-{{-- E-Bili Theme Styling --}}
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/ebili-theme.css') }}">
@@ -14,7 +14,7 @@
     </div>
     
     <h2 class="fw-bold mb-2" style="color: var(--primary-purple);">Staff Dashboard</h2>
-    <p class="slogan mb-0" style="font-size: 0.9rem;">Support Your E-Bili Community</p>
+    <p class="slogan mb-0" style="font-size: 0.9rem;">Support Your Amigos '98 Online</p>
 </div>
 @stop
 
@@ -22,7 +22,7 @@
 <div class="container-fluid">
     {{-- ✅ Summary Cards --}}
     <div class="row mb-4">
-        <div class="col-md-4 mb-3">
+        <div class="col-md-3 mb-3">
             <div class="card fade-in">
                 <div class="card-body text-center">
                     <div class="d-flex align-items-center justify-content-center mb-3">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-3 mb-3">
             <div class="card fade-in">
                 <div class="card-body text-center">
                     <div class="d-flex align-items-center justify-content-center mb-3">
@@ -54,7 +54,23 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-3 mb-3">
+            <div class="card fade-in">
+                <div class="card-body text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                             style="width: 60px; height: 60px; background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%);">
+                            <i class="bi bi-x-circle fa-2x text-white"></i>
+                        </div>
+                        <div class="text-start">
+                            <h3 class="fw-bold mb-0" style="color: var(--primary-purple);">{{ $myProductsCount - $activeProductsCount }}</h3>
+                            <p class="text-muted mb-0">In-Active Products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
             <div class="card fade-in">
                 <div class="card-body text-center">
                     <div class="d-flex align-items-center justify-content-center mb-3">
@@ -143,74 +159,14 @@
 
     {{-- ✅ Staff Action Icons --}}
     <div class="mb-4">
-        <h4 class="section-title text-center">Staff Tools (other features to activate soon!)</h4>
+        <h4 class="section-title text-center">Product Management</h4>
         <div class="row text-center">
-            <div class="col-6 col-md-4 mb-4">
-                <a href="{{ url('/admin/members') }}" class="text-decoration-none">
-                    <div class="card fade-in p-4 h-100">
-                        <i class="bi bi-people fa-3x mb-3" style="color: var(--primary-purple);"></i>
-                        <div class="fw-bold" style="color: var(--primary-purple);">Members</div>
-                        <small class="text-muted">View member accounts</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-6 col-md-4 mb-4">
-                <a href="{{ url('/admin/cashin-approvals') }}" class="text-decoration-none">
-                    <div class="card fade-in p-4 h-100">
-                        <i class="bi bi-wallet2 fa-3x mb-3" style="color: #28a745;"></i>
-                        <div class="fw-bold" style="color: var(--primary-purple);">Cash In</div>
-                        <small class="text-muted">Process requests</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-6 col-md-4 mb-4">
-                <a href="{{ url('/admin/tickets') }}" class="text-decoration-none">
-                    <div class="card fade-in p-4 h-100">
-                        <i class="bi bi-ticket fa-3x mb-3" style="color: #ffc107;"></i>
-                        <div class="fw-bold" style="color: var(--primary-purple);">Support</div>
-                        <small class="text-muted">Handle tickets</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-6 col-md-4 mb-4">
-                <a href="{{ url('/genealogy') }}" class="text-decoration-none">
-                    <div class="card fade-in p-4 h-100">
-                        <i class="bi bi-diagram-3 fa-3x mb-3" style="color: #17a2b8;"></i>
-                        <div class="fw-bold" style="color: var(--primary-purple);">Network</div>
-                        <small class="text-muted">View genealogy</small>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-6 col-md-4 mb-4">
-                <a href="{{ route('referral.report') }}" class="text-decoration-none">
-                    <div class="card fade-in p-4 h-100">
-                        <i class="bi bi-graph-up fa-3x mb-3" style="color: var(--secondary-purple);"></i>
-                        <div class="fw-bold" style="color: var(--primary-purple);">Reports</div>
-                        <small class="text-muted">View analytics</small>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-6 col-md-4 mb-4">
+            <div class="col-12 col-md-12 mb-4">
                 <a href="{{ route('staff.products.index') }}" class="text-decoration-none">
                     <div class="card fade-in p-4 h-100">
                         <i class="bi bi-box-seam fa-3x mb-3" style="color: #e83e8c;"></i>
                         <div class="fw-bold" style="color: var(--primary-purple);">My Products</div>
-                        <small class="text-muted">Manage products</small>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-6 col-md-4 mb-4">
-                <a href="{{ route('wallet.index') }}" class="text-decoration-none">
-                    <div class="card fade-in p-4 h-100">
-                        <i class="bi bi-wallet2 fa-3x mb-3" style="color: var(--dark-purple);"></i>
-                        <div class="fw-bold" style="color: var(--primary-purple);">Wallets</div>
-                        <small class="text-muted">Monitor wallets</small>
+                        <small class="text-muted">Manage your products</small>
                     </div>
                 </a>
             </div>

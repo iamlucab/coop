@@ -21,7 +21,8 @@
 
                         <div class="mb-3">
                             <label class="form-label">Description</label>
-                            <textarea name="description" rows="3" class="form-control rounded-3">{{ old('description', $product->description) }}</textarea>
+                            <textarea name="description" rows="4" class="form-control rounded-3" placeholder="Enter product description with paragraph formatting...">{{ old('description', $product->description) }}</textarea>
+                            <div class="form-text">Use line breaks to separate paragraphs. Formatting will be preserved when displaying.</div>
                         </div>
 
                         <div class="row">
@@ -351,6 +352,36 @@ $(function() {
     
     // Update on change of relevant fields
     $('input[name="price"], #discount_value, #discount_type').on('change input', updatePricePreview);
+    
+    // Gallery preview functionality for new uploads
+    $('input[name="gallery[]"]').on('change', function(e) {
+        const files = e.target.files;
+        
+        if (files.length > 0) {
+            // Create a container for new previews if it doesn't exist
+            let newPreviewContainer = $('#new-gallery-preview');
+            if (newPreviewContainer.length === 0) {
+                newPreviewContainer = $('<div id="new-gallery-preview" class="mt-2 d-flex flex-wrap gap-2"></div>');
+                $(this).parent().append(newPreviewContainer);
+            } else {
+                newPreviewContainer.empty();
+            }
+            
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        newPreviewContainer.append(
+                            `<img src="${e.target.result}" class="img-thumbnail" style="height: 80px;">`
+                        );
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+            newPreviewContainer.show();
+        }
+    });
 });
 </script>
 @endsection

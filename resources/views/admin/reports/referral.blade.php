@@ -3,7 +3,7 @@
 @section('title', 'Referral Bonus Report')
 
 @section('content_header')
-    <h1>Referral Bonus Report</h1>
+    <h5>Referral Bonus Report</h5>
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-3 align-self-end">
                 <button type="submit" class="btn btn-primary">Filter</button>
-                <a href="{{ route('referral.report') }}" class="btn btn-secondary">Reset</a>
+                <a href="{{ route('referral.report') }}" class="btn btn-secondary text-white"> Reset</a>
             </div>
         </form>
     </div>

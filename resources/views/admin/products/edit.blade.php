@@ -21,7 +21,8 @@
 
                         <div class="mb-3">
                             <label class="form-label">Description</label>
-                            <textarea name="description" rows="3" class="form-control rounded-3">{{ old('description', $product->description) }}</textarea>
+                            <textarea name="description" rows="4" class="form-control rounded-3" placeholder="Enter product description with paragraph formatting...">{{ old('description', $product->description) }}</textarea>
+                            <div class="form-text">Use line breaks to separate paragraphs. Formatting will be preserved when displaying.</div>
                         </div>
 
                         <div class="row">

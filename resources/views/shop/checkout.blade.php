@@ -13,7 +13,7 @@
 </style>
 
 @section('content')
-<div class="container-fluid px-2">
+<div class="container-fluid px-2"><br>
     <h5 class="mb-3"><i class="bi bi-receipt me-1"></i> Order Summary</h5>
 
     {{-- Order Summary Card --}}

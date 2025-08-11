@@ -254,9 +254,8 @@ class ShopController extends Controller
 
         $order = Order::create([
             'member_id'         => $member->id,
-            'total'             => $total,
-            'subtotal'          => $subtotal,
-            'cashback'          => $totalCashback,
+            'total_amount'      => $subtotal, // Use subtotal which includes shipping and promo discounts
+            'total_cashback'    => $totalCashback,
             'payment_method'    => $request->payment_method,
             'reference_image'   => $filename,
             'delivery_type'     => $request->delivery_type,
@@ -264,7 +263,6 @@ class ShopController extends Controller
             'contact_number'    => $request->contact_number,
             'status'            => 'Pending',
             'cashback_given'    => false,
-            'total_amount'      => 0,
             'promo_code'        => $request->promo_code,
             'promo_discount'    => $promoDiscount,
         ]);
@@ -276,6 +274,7 @@ class ShopController extends Controller
                 'price'      => $item['price'],
                 'quantity'   => $item['quantity'],
                 'cashback'   => $item['cashback'] ?? 0,
+                'cashback_amount' => ($item['cashback'] ?? 0) * $item['quantity'],
                 'status'     => 'Pending',
             ]);
 

@@ -13,7 +13,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Products I Created</h3>
+                    <h3 class="card-title" style="color:white !important">Products I Created</h3>
                     <div class="card-tools">
                         <a href="{{ route('staff.products.create') }}" class="btn btn-primary btn-sm">
                             <i class="bi bi-plus"></i> Add New Product
@@ -25,6 +25,13 @@
                         <div class="alert alert-success alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
                             {{ session('success') }}
+                        </div>
+                    @endif
+                    
+                    @if(session('error'))
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            {{ session('error') }}
                         </div>
                     @endif
 
@@ -107,16 +114,6 @@
                                                                 class="btn btn-{{ $product->active ? 'secondary' : 'success' }} btn-sm"
                                                                 title="{{ $product->active ? 'Deactivate' : 'Activate' }}">
                                                             <i class="bi bi-{{ $product->active ? 'pause' : 'play' }}"></i>
-                                                        </button>
-                                                    </form>
-                                                    <form action="{{ route('staff.products.destroy', $product) }}"
-                                                          method="POST"
-                                                          style="display: inline;"
-                                                          onsubmit="return confirm('Are you sure you want to delete this product?')">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete">
-                                                            <i class="bi bi-trash"></i>
                                                         </button>
                                                     </form>
                                                 </div>
