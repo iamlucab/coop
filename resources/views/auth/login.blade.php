@@ -317,7 +317,7 @@
     <div class="login-card">
         <div class="login-logo">
             <img src="{{ asset('logo.png') }}" alt="Logo">
-            <h5 class="mt-2 fw-bold">Amigos '98 </h5>
+            <h5 class="mt-2 fw-bold">Amigos '98 Community </h5>
         </div>
 
        {{-- ✅ Mobile & PWA-Friendly Alerts --}}
