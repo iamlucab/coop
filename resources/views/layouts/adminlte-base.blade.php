@@ -23,7 +23,7 @@
                 @php
                     // Calculate total notifications
                     $membershipRequestsCount = \App\Models\MembershipCodeRequest::where('status', 'pending')->count();
-                    $cashinRequestsCount = \App\Models\CashinRequest::where('status', 'pending')->count();
+                    $cashinRequestsCount = \App\Models\CashInRequest::where('status', 'pending')->count();
                     $loanRequestsCount = \App\Models\Loan::where('status', 'pending')->count();
                     $productOrdersCount = \App\Models\Order::where('status', 'pending')->count();
                     $helpdeskMessagesCount = \App\Models\Ticket::where('status', 'open')->count();

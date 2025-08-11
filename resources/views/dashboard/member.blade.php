@@ -1442,7 +1442,7 @@ document.addEventListener('DOMContentLoaded', function() {
             downloadCtx.fillStyle = '#4a1570';
             downloadCtx.font = 'bold 24px Poppins, Arial, sans-serif';
             downloadCtx.textAlign = 'center';
-            downloadCtx.fillText('E-Bili Payment QR', 200, 50);
+            downloadCtx.fillText('Amigos \'98 Online Payment QR', 200, 50);
             
             // Draw member name
             downloadCtx.font = 'bold 18px Poppins, Arial, sans-serif';
@@ -1532,7 +1532,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Draw footer
                     downloadCtx.font = 'bold 12px Poppins, Arial, sans-serif';
                     downloadCtx.fillStyle = '#4a1570';
-                    downloadCtx.fillText('Amigo tayo!  - Buy to Save, Share to Earn', 200, 450);
+                    downloadCtx.fillText('Amigos \'98 Online - Buy to Save, Share to Earn', 200, 450);
                     
                     // Add timestamp
                     downloadCtx.font = '10px Arial, sans-serif';
