@@ -51,7 +51,7 @@
     <p class="slogan mb-0" style="font-size: 0.9rem;">{{ strtoupper(auth()->user()->mobile_number) }}</p> --}}
 
     @if(isset($latestWin) && $latestWin && $latestWin->program && $latestWin->status === 'unclaimed')
-    <div class="alert alert-success alert-dismissible fade show slide-up mt-3" role="alert">
+    <div class="alert alert-success alertz-dismissible fade show slide-up mt-3" role="alert">
         🎉 <strong>Congratulations!</strong> You won in the
         <strong>{{ $latestWin->program->title }}</strong> reward program!
         <br>
@@ -1440,9 +1440,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Draw E-Bili logo/title
             downloadCtx.fillStyle = '#4a1570';
-            downloadCtx.font = 'bold 24px Poppins, Arial, sans-serif';
+            downloadCtx.font = 'bold 20px Poppins, Arial, sans-serif';
             downloadCtx.textAlign = 'center';
-            downloadCtx.fillText('Amigos \'98 Online Payment QR', 200, 50);
+            downloadCtx.fillText('Amigos \'98 ', 200, 50);
             
             // Draw member name
             downloadCtx.font = 'bold 18px Poppins, Arial, sans-serif';
@@ -1458,7 +1458,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Draw wallet ID
             downloadCtx.font = '14px Poppins, Arial, sans-serif';
             downloadCtx.fillStyle = '#6c757d';
-            downloadCtx.fillText("Wallet ID: {{ $wallet->wallet_id }}", 200, 125);
+            downloadCtx.fillText("{{ $wallet->wallet_id }}", 200, 125);
             @endif
             
             // Create QR code area background
@@ -1527,7 +1527,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     downloadCtx.fillStyle = '#495057';
                     downloadCtx.textAlign = 'center';
                     downloadCtx.fillText('Scan this QR code to send money', 200, 400);
-                    downloadCtx.fillText('to this E-Bili account', 200, 420);
+                    downloadCtx.fillText('to this Amigos \'98 account', 200, 420);
                     
                     // Draw footer
                     downloadCtx.font = 'bold 12px Poppins, Arial, sans-serif';

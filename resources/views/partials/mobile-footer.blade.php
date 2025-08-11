@@ -1,4 +1,4 @@
-{{-- E-Bili Theme Styling --}}
+{{--  Theme Styling --}}
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/ebili-theme.css') }}">
 
@@ -8,35 +8,35 @@
     <a href="{{ route('member.dashboard') }}"
        class="mobile-footer-item text-decoration-none d-flex flex-column align-items-center justify-content-center {{ request()->routeIs('member.dashboard') ? 'active' : '' }}">
         <i class="bi bi-house fa-lg mb-1"></i>
-         <span class="small fw-bold text-white">Home</span>
+         <span class="small fw-bold text-dark">Home</span>
     </a>
 
     {{-- Shop --}}
     <a href="{{ route('shop.index') }}"
        class="mobile-footer-item text-decoration-none d-flex flex-column align-items-center justify-content-center {{ request()->routeIs('shop.*') ? 'active' : '' }}">
         <i class="bi bi-bag fa-lg mb-1"></i>
-          <span class="small fw-bold text-white">Shop</span>
+          <span class="small fw-bold text-dark">Shop</span>
     </a>
 
     {{-- Wallet --}}
     <a href="{{ route('wallet.history', ['type' => 'main']) }}"
        class="mobile-footer-item text-decoration-none d-flex flex-column align-items-center justify-content-center {{ request()->routeIs('wallet.*') ? 'active' : '' }}">
         <i class="bi bi-wallet2 fa-lg mb-1"></i>
-         <span class="small fw-bold text-white">Wallet</span>
+         <span class="small fw-bold text-dark">Wallet</span>
     </a>
 
     {{-- Network --}}
     <a href="{{ route('genealogy.index') }}"
        class="mobile-footer-item text-decoration-none d-flex flex-column align-items-center justify-content-center {{ request()->routeIs('genealogy.*') ? 'active' : '' }}">
         <i class="bi bi-diagram-3 fa-lg mb-1"></i>
-         <span class="small fw-bold text-white">Network</span>
+         <span class="small fw-bold text-dark">Network</span>
     </a>
 
     {{-- Profile --}}
     <a href="{{ route('profile.edit') }}"
        class="mobile-footer-item text-decoration-none d-flex flex-column align-items-center justify-content-center {{ request()->routeIs('profile.*') ? 'active' : '' }}">
         <i class="bi bi-person fa-lg mb-1"></i>
-         <span class="small fw-bold text-white">Profile</span>
+         <span class="small fw-bold text-dark">Profile</span>
     </a>
 </div>
 
@@ -56,6 +56,13 @@
     z-index: 1050;
     transition: transform 0.3s ease-in-out;
     animation: slideUpFooter 0.5s ease-out;
+    /* Add touch-action to prevent scrolling interference */
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @keyframes slideUpFooter {
@@ -90,6 +97,9 @@
         overflow: hidden !important;
         flex: 1;
         text-align: center;
+        /* Add pointer events to ensure proper touch handling */
+        pointer-events: auto;
+        touch-action: manipulation;
     }
 
     .mobile-footer-item::before {
@@ -217,7 +227,7 @@
 {{-- Scroll-based show/hide script --}}
 <script>
     let lastScrollTop = 0;
-    const mobileFooter = document.getElementById('mobileFooter');
+    const mobileFooter = document.getElementById('mobile-footer');
 
     window.addEventListener('scroll', function () {
         const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
