@@ -398,31 +398,33 @@
 
 {{-- ✅ Referral Network Card --}}
 <div class="row mb-4">
-    <div class="col-12">
-        <div class="card shadow-sm" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); border: none;">
-            <div class="card-body text-white p-3">
-                <div class="row align-items-center">
-                    <div class="col-8">
-                        <h6 class="card-title mb-1" style="color: white !important; font-size: 0.9rem;">
-                            <i class="bi bi-people-fill me-1"></i>My Referral Network
-                        </h6>
-                        <p class="mb-0 small" style="color: rgba(255,255,255,0.9); font-size: 0.75rem;">
-                            Direct Referrals: <strong>{{ auth()->user()->member->getDirectReferrals()->count() }}</strong>
-                        </p>
-                        <p class="mb-0 small" style="color: rgba(255,255,255,0.9); font-size: 0.75rem;">
-                            Total Network: <strong>{{ auth()->user()->member->getTotalReferralCount() }}</strong>
-                        </p>
-                    </div>
-                    <div class="col-4 text-end">
-                        <a href="{{ route('member.referral.summary') }}" class="btn btn-light btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">
-                            <i class="bi bi-eye me-1"></i> View
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <div class="col-12">
+    <div class="card shadow-sm" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); border: none;">
+      <div class="card-body text-white p-3">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h6 class="card-title mb-1" style="color: white !important; font-size: 0.9rem;">
+              <i class="bi bi-people-fill me-1"></i>My Referral Network
+            </h6>
+            <p class="mb-0 small" style="color: rgba(255,255,255,0.9); font-size: 0.75rem;">
+              <span style="white-space: nowrap;">Direct Referrals:</span>
+              <strong>{{ auth()->user()->member->getDirectReferrals()->count() }}</strong>
+            </p>
+            <p class="mb-0 small" style="color: rgba(255,255,255,0.9); font-size: 0.75rem;">
+              Total Network: <strong>{{ auth()->user()->member->getTotalReferralCount() }}</strong>
+            </p>
+          </div>
+          <div class="col-4 text-end">
+            <a href="{{ route('member.referral.summary') }}" class="btn btn-light btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">
+              <i class="bi bi-eye me-1"></i> View
+            </a>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 
 
 

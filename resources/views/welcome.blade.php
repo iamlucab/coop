@@ -399,7 +399,7 @@ body {
         <img src="{{ asset('storage/icons/ebili-logo.png') }}" alt="eBILI Logo" style="width: 100px; height: 100px; object-fit: contain;">
     </div>
     
-    <h2 class="mb-2 fw-bold" style="color: var(--primary-blue);">Amigos 98 Community Online</h2>
+    <h2 class="mb-2 fw-bold" style="color: var(--primary-blue);">Amigos '98 Community Online</h2>
     <p class="slogan text-success">Buy to Save, Share to Earn</p>
 
     {{-- Get Started Button --}}
