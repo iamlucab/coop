@@ -83,9 +83,16 @@
 
                             {{-- Gallery --}}
                             @php
+                                // Ensure gallery is properly handled
                                 $gallery = $product->gallery ?? [];
-                                $gallery = is_array($gallery) ? $gallery : [];
-                                array_unshift($gallery, $product->thumbnail);
+                                // Make sure it's an array
+                                if (!is_array($gallery)) {
+                                    $gallery = [];
+                                }
+                                // Add thumbnail to the beginning of gallery if it exists
+                                if ($product->thumbnail) {
+                                    array_unshift($gallery, $product->thumbnail);
+                                }
                             @endphp
 
                             @if(count($gallery) > 1)
@@ -93,10 +100,13 @@
                                     <label class="fw-bold">Product gallery</label>
                                     <div class="d-flex flex-wrap gap-2">
                                         @foreach ($gallery as $image)
-                                            <img src="{{ asset('storage/' . $image) }}"
-                                                 data-full="{{ asset('storage/' . $image) }}"
-                                                 class="img-thumbnail gallery-thumb"
-                                                 style="height: 70px; width: 70px; object-fit: cover; cursor: pointer; border-radius: 50%; box-shadow: 0 0 5px rgba(0,0,0,0.15);">
+                                            @if($image)
+                                                <img src="{{ asset('storage/' . $image) }}"
+                                                     data-full="{{ asset('storage/' . $image) }}"
+                                                     class="img-thumbnail gallery-thumb"
+                                                     style="height: 70px; width: 70px; object-fit: cover; cursor: pointer; border-radius: 50%; box-shadow: 0 0 5px rgba(0,0,0,0.15);"
+                                                     alt="Product gallery image">
+                                            @endif
                                         @endforeach
                                     </div>
                                 </div>

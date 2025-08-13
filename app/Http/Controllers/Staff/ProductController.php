@@ -76,17 +76,27 @@ class ProductController extends Controller
                 // Reorder based on gallery_order if provided
                 if ($request->filled('gallery_order')) {
                     $order = json_decode($request->gallery_order, true);
-                    $galleryPaths = collect($order)->map(fn($i) => $galleryPaths[$i] ?? null)->filter()->values()->all();
+                    if (is_array($order)) {
+                        $galleryPaths = collect($order)->map(fn($i) => $galleryPaths[$i] ?? null)->filter()->values()->all();
+                    }
                 }
                 
                 $validated['gallery'] = json_encode($galleryPaths);
             }
 
             // Set the creator of the product
-            $validated['created_by'] = auth()->id();
+            $validated['created_by'] = auth()->user()->id; // Use numeric ID instead of mobile number
             $validated['active'] = $request->has('active') ? 1 : 0;
 
-            Product::create($validated);
+            $product = Product::create($validated);
+            
+            // Log the created product for debugging
+            \Log::info('Product created by staff', [
+                'product_id' => $product->id,
+                'created_by' => $product->created_by,
+                'auth_user_id' => auth()->user()->id,
+                'auth_user_mobile' => auth()->id() // This is the mobile number
+            ]);
 
             return redirect()->route('staff.products.index')
                 ->with('success', 'Product created successfully.');
@@ -102,8 +112,21 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         // Ensure staff can only view their own products
-        if ($product->created_by != auth()->id()) {
-            abort(403, 'Unauthorized access to product.');
+        // Get the authenticated user's numeric ID
+        $authUser = auth()->user();
+        $authUserId = $authUser->id; // This will be the numeric ID
+        
+        // Compare with the product creator's ID
+        if ($product->created_by != $authUserId) {
+            // Debug information for troubleshooting
+            \Log::info('Product authorization check failed', [
+                'product_id' => $product->id,
+                'product_created_by' => $product->created_by,
+                'auth_user_id' => $authUserId,
+                'auth_user_mobile' => auth()->id(), // This is the mobile number
+                'auth_user' => $authUser
+            ]);
+            abort(403, 'Unauthorized access to product. Product created by: ' . $product->created_by . ', Current user ID: ' . $authUserId);
         }
         
         return view('staff.products.show', compact('product'));
@@ -115,8 +138,21 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         // Ensure staff can only edit their own products
-        if ($product->created_by != auth()->id()) {
-            abort(403, 'Unauthorized access to product.');
+        // Get the authenticated user's numeric ID
+        $authUser = auth()->user();
+        $authUserId = $authUser->id; // This will be the numeric ID
+        
+        // Compare with the product creator's ID
+        if ($product->created_by != $authUserId) {
+            // Debug information for troubleshooting
+            \Log::info('Product authorization check failed', [
+                'product_id' => $product->id,
+                'product_created_by' => $product->created_by,
+                'auth_user_id' => $authUserId,
+                'auth_user_mobile' => auth()->id(), // This is the mobile number
+                'auth_user' => $authUser
+            ]);
+            abort(403, 'Unauthorized access to product. Product created by: ' . $product->created_by . ', Current user ID: ' . $authUserId);
         }
         
         $categories = Category::all();
@@ -130,8 +166,21 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         // Ensure staff can only update their own products
-        if ($product->created_by != auth()->id()) {
-            abort(403, 'Unauthorized access to product.');
+        // Get the authenticated user's numeric ID
+        $authUser = auth()->user();
+        $authUserId = $authUser->id; // This will be the numeric ID
+        
+        // Compare with the product creator's ID
+        if ($product->created_by != $authUserId) {
+            // Debug information for troubleshooting
+            \Log::info('Product authorization check failed', [
+                'product_id' => $product->id,
+                'product_created_by' => $product->created_by,
+                'auth_user_id' => $authUserId,
+                'auth_user_mobile' => auth()->id(), // This is the mobile number
+                'auth_user' => $authUser
+            ]);
+            abort(403, 'Unauthorized access to product. Product created by: ' . $product->created_by . ', Current user ID: ' . $authUserId);
         }
         
         $validated = $request->validate([
@@ -166,24 +215,30 @@ class ProductController extends Controller
                 $validated['thumbnail'] = $thumbnailPath;
             }
             
-            // Handle gallery uploads
-            if ($request->hasFile('gallery')) {
-                // Delete old gallery images if they exist
-                if ($product->gallery) {
-                    foreach (json_decode($product->gallery, true) as $oldImage) {
-                        Storage::disk('public')->delete($oldImage);
+            // Handle gallery upload and removal
+            $galleryPaths = [];
+            
+            // Get existing gallery paths if they exist
+            $existingGallery = $product->gallery ?? [];
+            if (!is_array($existingGallery)) {
+                $existingGallery = [];
+            }
+            
+            // If we're updating with new files or existing gallery data
+            if ($request->hasFile('gallery') || $request->has('existing_gallery')) {
+                // Add existing gallery images that weren't removed
+                if ($request->has('existing_gallery')) {
+                    $galleryPaths = $request->existing_gallery;
+                } else {
+                    // If no existing_gallery data, preserve all existing images
+                    $galleryPaths = $existingGallery;
+                }
+                
+                // Add new gallery images if any were uploaded
+                if ($request->hasFile('gallery')) {
+                    foreach ($request->file('gallery') as $image) {
+                        $galleryPaths[] = $image->store('products/gallery', 'public');
                     }
-                }
-                
-                $galleryPaths = [];
-                foreach ($request->file('gallery') as $image) {
-                    $galleryPaths[] = $image->store('products/gallery', 'public');
-                }
-                
-                // Reorder based on gallery_order if provided
-                if ($request->filled('gallery_order')) {
-                    $order = json_decode($request->gallery_order, true);
-                    $galleryPaths = collect($order)->map(fn($i) => $galleryPaths[$i] ?? null)->filter()->values()->all();
                 }
                 
                 $validated['gallery'] = json_encode($galleryPaths);
@@ -208,8 +263,21 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         // Ensure staff can only delete their own products
-        if ($product->created_by != auth()->id()) {
-            abort(403, 'Unauthorized access to product.');
+        // Get the authenticated user's numeric ID
+        $authUser = auth()->user();
+        $authUserId = $authUser->id; // This will be the numeric ID
+        
+        // Compare with the product creator's ID
+        if ($product->created_by != $authUserId) {
+            // Debug information for troubleshooting
+            \Log::info('Product authorization check failed', [
+                'product_id' => $product->id,
+                'product_created_by' => $product->created_by,
+                'auth_user_id' => $authUserId,
+                'auth_user_mobile' => auth()->id(), // This is the mobile number
+                'auth_user' => $authUser
+            ]);
+            abort(403, 'Unauthorized access to product. Product created by: ' . $product->created_by . ', Current user ID: ' . $authUserId);
         }
         
         try {
@@ -235,8 +303,21 @@ class ProductController extends Controller
     public function toggleStatus(Product $product)
     {
         // Ensure staff can only toggle status of their own products
-        if ($product->created_by != auth()->id()) {
-            abort(403, 'Unauthorized access to product.');
+        // Get the authenticated user's numeric ID
+        $authUser = auth()->user();
+        $authUserId = $authUser->id; // This will be the numeric ID
+        
+        // Compare with the product creator's ID
+        if ($product->created_by != $authUserId) {
+            // Debug information for troubleshooting
+            \Log::info('Product authorization check failed', [
+                'product_id' => $product->id,
+                'product_created_by' => $product->created_by,
+                'auth_user_id' => $authUserId,
+                'auth_user_mobile' => auth()->id(), // This is the mobile number
+                'auth_user' => $authUser
+            ]);
+            abort(403, 'Unauthorized access to product. Product created by: ' . $product->created_by . ', Current user ID: ' . $authUserId);
         }
         
         try {

@@ -123,11 +123,30 @@
                         <div class="mb-3">
                             <label class="form-label">Gallery Images</label>
                             <input type="file" name="gallery[]" multiple class="form-control rounded-3">
-                            @if ($product->gallery && is_array($product->gallery))
-                                <div class="mt-2 d-flex flex-wrap gap-2">
-                                    @foreach ($product->gallery as $image)
-                                        <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="img-thumbnail" style="height: 80px;">
-                                    @endforeach
+                            @php
+                                // Ensure gallery is properly handled
+                                $gallery = $product->gallery ?? [];
+                                // Make sure it's an array
+                                if (!is_array($gallery)) {
+                                    $gallery = [];
+                                }
+                            @endphp
+                            @if (count($gallery) > 0)
+                                <div class="mt-2">
+                                    <label class="form-label">Current Gallery Images:</label>
+                                    <div class="d-flex flex-wrap gap-2" id="gallery-container">
+                                        @foreach ($gallery as $index => $image)
+                                            @if($image)
+                                                <div class="position-relative" id="gallery-item-{{ $index }}">
+                                                    <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="img-thumbnail" style="height: 80px;">
+                                                    <button type="button" class="btn btn-danger btn-sm position-absolute top-0 end-0" onclick="removeGalleryImage({{ $index }})">
+                                                        <i class="bi bi-x"></i>
+                                                    </button>
+                                                    <input type="hidden" name="existing_gallery[]" value="{{ $image }}" id="existing_gallery_{{ $index }}">
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    </div>
                                 </div>
                             @endif
                         </div>
@@ -383,5 +402,14 @@ $(function() {
         }
     });
 });
+
+// Function to remove gallery image
+function removeGalleryImage(index) {
+    // Hide the image container
+    $('#gallery-item-' + index).hide();
+    
+    // Remove the hidden input field
+    $('#existing_gallery_' + index).remove();
+}
 </script>
 @endsection

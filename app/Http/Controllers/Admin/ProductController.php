@@ -106,7 +106,9 @@ class ProductController extends Controller
             // Reorder based on gallery_order
             if ($request->filled('gallery_order')) {
                 $order = json_decode($request->gallery_order, true);
-                $galleryPaths = collect($order)->map(fn($i) => $galleryPaths[$i] ?? null)->filter()->values()->all();
+                if (is_array($order)) {
+                    $galleryPaths = collect($order)->map(fn($i) => $galleryPaths[$i] ?? null)->filter()->values()->all();
+                }
             }
 
             $product->gallery = json_encode($galleryPaths);
@@ -162,13 +164,32 @@ public function update(Request $request, Product $product)
         $product->thumbnail = $request->file('thumbnail')->store('products/thumbnails', 'public');
     }
 
-    // Handle gallery upload
-    if ($request->hasFile('gallery')) {
-        $galleryPaths = [];
-        foreach ($request->file('gallery') as $image) {
-            $galleryPaths[] = $image->store('products/gallery', 'public');
+    // Handle gallery upload and removal
+    $galleryPaths = [];
+    
+    // Get existing gallery paths if they exist
+    $existingGallery = $product->gallery ?? [];
+    if (!is_array($existingGallery)) {
+        $existingGallery = [];
+    }
+    
+    // If we're updating with new files or existing gallery data
+    if ($request->hasFile('gallery') || $request->has('existing_gallery')) {
+        // Add existing gallery images that weren't removed
+        if ($request->has('existing_gallery')) {
+            $galleryPaths = $request->existing_gallery;
+        } else {
+            // If no existing_gallery data, preserve all existing images
+            $galleryPaths = $existingGallery;
         }
-
+        
+        // Add new gallery images if any were uploaded
+        if ($request->hasFile('gallery')) {
+            foreach ($request->file('gallery') as $image) {
+                $galleryPaths[] = $image->store('products/gallery', 'public');
+            }
+        }
+        
         $product->gallery = json_encode($galleryPaths);
     }
 
@@ -181,6 +202,14 @@ public function update(Request $request, Product $product)
     {
         $product->delete();
         return redirect()->route('admin.products.index')->with('success', 'Product deleted.');
+    }
+    
+    /**
+     * Display the specified product.
+     */
+    public function show(Product $product)
+    {
+        return view('admin.products.show', compact('product'));
     }
     
     /**

@@ -85,6 +85,10 @@
 
                         {{-- Actions --}}
                         <div class="d-flex gap-1 mt-2">
+                            <a href="{{ route('admin.products.show', $product) }}"
+                               class="btn btn-sm btn-outline-info rounded-pill flex-fill" title="View">
+                                <i class="bi bi-eye"></i> View
+                            </a>
                             <a href="{{ route('admin.products.edit', $product) }}"
                                class="btn btn-sm btn-outline-warning rounded-pill flex-fill" title="Edit">
                                 <i class="bi bi-pencil"></i> Edit

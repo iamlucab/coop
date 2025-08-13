@@ -27,7 +27,6 @@ class Product extends Model
 
     protected $casts = [
         'cashback_level_bonuses' => 'array',
-        'gallery' => 'array',
         'attributes' => 'array',
     ];
 
@@ -47,6 +46,14 @@ class Product extends Model
         
         // Otherwise, use the value as-is
         $this->attributes['created_by'] = $value;
+    }
+    
+    /**
+     * Accessor for created_by field to ensure it returns the correct value
+     */
+    public function getCreatedByAttribute($value)
+    {
+        return $value;
     }
 
     public function category()
@@ -190,5 +197,47 @@ class Product extends Model
             // Calculate percentage for fixed amount
             return round(($this->getDiscountAmount() / $this->price) * 100);
         }
+    }
+    
+    /**
+     * Ensure gallery is always returned as an array
+     */
+    public function getGalleryAttribute($value)
+    {
+        // If gallery is already an array, return it as is
+        if (is_array($value)) {
+            return $value;
+        }
+        
+        // If gallery is null, return empty array
+        if (is_null($value)) {
+            return [];
+        }
+        
+        // If gallery is a string, try to decode it as JSON
+        if (is_string($value)) {
+            // Handle case where value might be double-encoded
+            if (substr($value, 0, 1) === '"' && substr($value, -1) === '"') {
+                // Remove outer quotes and decode again
+                $value = json_decode($value, true);
+                if (is_array($value)) {
+                    return $value;
+                }
+            }
+            
+            // Try to decode as JSON
+            $decoded = json_decode($value, true);
+            // If decoding was successful and result is an array, return it
+            if (is_array($decoded)) {
+                return $decoded;
+            }
+            // If it's a single image path, return it as an array
+            if (!empty($value)) {
+                return [$value];
+            }
+        }
+        
+        // Default to empty array
+        return [];
     }
 }

@@ -523,60 +523,59 @@
     <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2 g-sm-3 mb-4">
         @foreach($products as $product)
             <div class="col">
-                <div class="product-card fade-in swipeable-product h-100"
-                     data-category-id="{{ $product->category_id }}"
-                     data-product-id="{{ $product->id }}"
-                     data-product-name="{{ $product->name }}">
-                    {{-- Thumbnail --}}
-                    @if($product->thumbnail)
-                        <a data-fancybox="thumb-{{ $product->id }}" href="{{ asset('storage/' . $product->thumbnail) }}">
-                                                    <img src="{{ asset('storage/' . $product->thumbnail) }}"
-                                                         class="product-image"
-                                                         alt="{{ $product->name }}"
-                                                         style="height: 120px;">
-                                                </a>
-                    @else
-                        <div class="product-placeholder">
-                                                    <div>
-                                                        <i class="bi bi-box-seam fs-3 mb-1"></i>
-                                                        <a href="{{ route('shop.show', $product) }}" class="text-decoration-none text-dark">
-                                                            <div style="font-size: 0.8rem;">{{ $product->name }}</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                    @endif
+                <a href="{{ route('shop.show', $product) }}" class="text-decoration-none">
+                    <div class="product-card fade-in swipeable-product h-100"
+                         data-category-id="{{ $product->category_id }}"
+                         data-product-id="{{ $product->id }}"
+                         data-product-name="{{ $product->name }}"
+                         style="cursor: pointer;">
+                        {{-- Thumbnail --}}
+                        @if($product->thumbnail)
+                            <div data-fancybox="thumb-{{ $product->id }}" href="{{ asset('storage/' . $product->thumbnail) }}">
+                                <img src="{{ asset('storage/' . $product->thumbnail) }}"
+                                     class="product-image"
+                                     alt="{{ $product->name }}"
+                                     style="height: 120px;">
+                            </div>
+                        @else
+                            <div class="product-placeholder">
+                                <div>
+                                    <i class="bi bi-box-seam fs-3 mb-1"></i>
+                                    <div class="text-dark" style="font-size: 0.8rem;">{{ $product->name }}</div>
+                                </div>
+                            </div>
+                        @endif
 
-                    {{-- Details --}}
-                                        <div class="p-2 p-sm-3">
-                                            <h6 class="fw-bold mb-1 text-truncate" title="{{ $product->name }}" style="font-size: 0.9rem;">
-                                                <a href="{{ route('shop.show', $product) }}" class="text-decoration-none text-dark">
-                                                    {{ $product->name }}
-                                                </a>
-                                            </h6>
+                        {{-- Details --}}
+                        <div class="p-2 p-sm-3">
+                            <h6 class="fw-bold mb-1 text-truncate text-dark" title="{{ $product->name }}" style="font-size: 0.9rem;">
+                                {{ $product->name }}
+                            </h6>
                     
-                                            <p class="text-muted small mb-1 text-truncate" title="{{ $product->description }}" style="font-size: 0.75rem;">
-                                                {{ Str::limit($product->description, 30) }}
-                                            </p>
+                            <p class="text-muted small mb-1 text-truncate" title="{{ $product->description }}" style="font-size: 0.75rem;">
+                                {{ Str::limit($product->description, 30) }}
+                            </p>
                     
-                                            <div class="mt-auto">
-                                                {{-- Price Display with Discount --}}
-                                                @if($product->hasDiscount())
-                                                    <div class="d-flex align-items-center gap-1 mb-1">
-                                                        <span class="price-tag" style="font-size: 0.9rem;">₱{{ number_format($product->getDiscountedPrice(), 2) }}</span>
-                                                        <small class="text-muted text-decoration-line-through" style="font-size: 0.7rem;">₱{{ number_format($product->price, 2) }}</small>
-                                                        <span class="badge bg-danger" style="font-size: 0.6rem;">-{{ $product->getDiscountPercentage() }}%</span>
-                                                    </div>
-                                                @else
-                                                    <div class="price-tag mb-1" style="font-size: 0.9rem;">₱{{ number_format($product->price, 2) }}</div>
-                                                @endif
-                                                
-                                                <span class="badge bg-info text-dark rounded-pill" style="font-size: 0.6rem;">
-                                                    Cashback: ₱{{ number_format($product->cashback_amount, 2) }}
-                                                </span>
-                                                <small class="text-muted d-block mt-1" style="font-size: 0.65rem;">Level 1 to Level {{ $product->cashback_max_level }}</small>
-                                            </div>
-                                        </div>
-                </div>
+                            <div class="mt-auto">
+                                {{-- Price Display with Discount --}}
+                                @if($product->hasDiscount())
+                                    <div class="d-flex align-items-center gap-1 mb-1">
+                                        <span class="price-tag" style="font-size: 0.9rem;">₱{{ number_format($product->getDiscountedPrice(), 2) }}</span>
+                                        <small class="text-muted text-decoration-line-through" style="font-size: 0.7rem;">₱{{ number_format($product->price, 2) }}</small>
+                                        <span class="badge bg-danger" style="font-size: 0.6rem;">-{{ $product->getDiscountPercentage() }}%</span>
+                                    </div>
+                                @else
+                                    <div class="price-tag mb-1" style="font-size: 0.9rem;">₱{{ number_format($product->price, 2) }}</div>
+                                @endif
+                                
+                                <span class="badge bg-info text-dark rounded-pill" style="font-size: 0.6rem;">
+                                    Cashback: ₱{{ number_format($product->cashback_amount, 2) }}
+                                </span>
+                                <small class="text-muted d-block mt-1" style="font-size: 0.65rem;">Level 1 to Level {{ $product->cashback_max_level }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         @endforeach
     </div>
@@ -1944,7 +1943,7 @@ function updateSidebarCartBadge(count = null) {
     }
 }
 
-// Back to Top functionality
+// Back to Top functionality with mobile fixes
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('backToTop');
     let isVisible = false;
@@ -1968,24 +1967,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Smooth scroll to top
-    function scrollToTop() {
-        const scrollDuration = 500;
-        const scrollStep = -window.scrollY / (scrollDuration / 15);
+    // Smooth scroll to top with mobile compatibility
+    function scrollToTop(e) {
+        e.preventDefault();
+        e.stopPropagation();
         
-        function scrollAnimation() {
-            if (window.scrollY !== 0) {
-                window.scrollBy(0, scrollStep);
-                setTimeout(scrollAnimation, 15);
+        // Use modern smooth scrolling if supported
+        if ('scrollBehavior' in document.documentElement.style) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            // Fallback for older browsers
+            const scrollDuration = 500;
+            const scrollStep = -window.scrollY / (scrollDuration / 15);
+            
+            function scrollAnimation() {
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                    requestAnimationFrame(scrollAnimation);
+                }
             }
+            
+            scrollAnimation();
         }
-        
-        scrollAnimation();
     }
     
-    // Event listeners
-    window.addEventListener('scroll', toggleBackToTop);
+    // Event listeners with passive option for better mobile performance
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
     backToTopButton.addEventListener('click', scrollToTop);
+    backToTopButton.addEventListener('touchstart', scrollToTop, { passive: false });
     
     // Initial check
     toggleBackToTop();
