@@ -44,7 +44,7 @@ use App\Http\Controllers\Admin\AdminWalletController;
                 $featuredProducts = \App\Models\Product::where('active', 1)
                     ->with('category')
                     ->inRandomOrder()
-                    ->take(8)
+                    ->take(15)
                     ->get();
             } catch (\Exception $e) {
                 // Fallback if products table doesn't exist or has issues
@@ -57,6 +57,7 @@ use App\Http\Controllers\Admin\AdminWalletController;
         Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
         Route::post('/login', [LoginController::class, 'login']);
         Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+        Route::get('/logout', [LoginController::class, 'logout'])->name('logout.get');
 
         // ✅ Social Login Routes
         Route::get('/auth/{provider}', [\App\Http\Controllers\Auth\SocialLoginController::class, 'redirectToProvider'])->name('social.redirect');
@@ -504,7 +505,7 @@ Route::get('/offline', function () {
 
 // ✅ Fallback Route
 Route::fallback(function () {
-    return redirect()->route('welcome')->with('success', 'Loading....');
+    return redirect()->route('welcome')->with('error', 'Page not found.');
 });
 
 

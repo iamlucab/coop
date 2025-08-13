@@ -424,9 +424,9 @@
             <a href="{{ route('password.request') }}" class="alt-login-btn">
                 <i class="fas fa-key"></i> Forgot Password
             </a>
-            <a href="#" class="alt-login-btn" onclick="showOtpModal()">
+            {{-- <a href="#" class="alt-login-btn" onclick="showOtpModal()">
                 <i class="fas fa-sms"></i> Login with OTP
-            </a>
+            </a> --}}
             
                <a href="{{ route('guest.register') }}" class="alt-login-btn">
                 <i class="fas fa-user"></i> Create Account
