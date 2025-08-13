@@ -240,7 +240,7 @@ return [
                     'text' => 'Logout',
                     'url' => '#',
                     'icon' => 'bi bi-box-arrow-right',
-                    'onclick' => 'event.preventDefault(); performLogout();'
+                    'onclick' => 'event.preventDefault(); document.getElementById(\'logout-form\').submit();'
                 ],
             ],
         ],
