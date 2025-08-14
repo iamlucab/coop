@@ -505,7 +505,7 @@ Route::get('/offline', function () {
 
 // ✅ Fallback Route
 Route::fallback(function () {
-    return redirect()->route('welcome')->with('error', 'Page not found.');
+    return redirect()->route('welcome')->with('success', 'Loading....');
 });
 
 
