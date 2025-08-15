@@ -502,10 +502,6 @@ Route::get('/offline', function () {
     return view('offline');
 })->name('offline');
 
-// ✅ Fallback Route
-Route::fallback(function () {
-    return redirect()->route('welcome')->with('success', 'Loading....');
-});
 
 
 // Referral Bonuses Management
