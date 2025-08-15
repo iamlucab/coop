@@ -11,6 +11,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <title>{{ config('app.name', 'Amigos 98 Community Online') }}</title>
 
+    {{-- CSRF Token --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     {{-- PWA & Icons --}}
     <link rel="icon" type="image/png" href="{{ asset('storage/icons/favicon-96x96.png') }}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{ asset('storage/icons/favicon.svg') }}" />
@@ -33,6 +36,10 @@
 </head>
 
 <body class="d-flex flex-column" style="min-height: 100vh;">
+{{-- Hidden logout form for all pages --}}
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+    </form>
 
     {{-- Dark Mode Toggle --}}
         <button class="btn btn-sm btn-toggle position-fixed" onclick="toggleTheme()" style="top: 1rem; right: 1rem; z-index: 1060; min-height: 44px; padding: 10px 15px;">

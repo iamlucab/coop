@@ -191,7 +191,6 @@ Route::get('/check-mobile', [MemberRegistrationController::class, 'checkMobile']
 
 
             // ✅ Role Dashboards
-            Route::view('/admin/dashboard', 'dashboard.admin')->name('admin.dashboard');
             Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 
 
