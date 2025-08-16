@@ -14,21 +14,21 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">{{ $product->name }}</h3>
-                    <div class="card-tools">
-                        <a href="{{ route('staff.products.index') }}" class="btn btn-secondary btn-sm">
-                            <i class="bi bi-arrow-left"></i> Back to Products
+                    <div class="card-tools d-flex flex-wrap gap-2">
+                        <a href="{{ route('staff.products.index') }}" class="btn btn-secondary btn-sm rounded-pill">
+                            <i class="bi bi-arrow-left"></i> <span class="d-none d-md-inline">Back</span>
                         </a>
-                        <a href="{{ route('staff.products.edit', $product) }}" class="btn btn-primary btn-sm">
-                            <i class="bi bi-pencil"></i> Edit Product
+                        <a href="{{ route('staff.products.edit', $product) }}" class="btn btn-primary btn-sm rounded-pill">
+                            <i class="bi bi-pencil"></i> <span class="d-none d-md-inline">Edit</span>
                         </a>
                         <form action="{{ route('staff.products.toggle-status', $product) }}"
                               method="POST"
                               style="display: inline;">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-{{ $product->active ? 'warning' : 'success' }} btn-sm">
+                            <button type="submit" class="btn btn-{{ $product->active ? 'warning' : 'success' }} btn-sm rounded-pill">
                                 <i class="bi bi-{{ $product->active ? 'pause' : 'play' }}"></i>
-                                {{ $product->active ? 'Deactivate' : 'Activate' }}
+                                <span class="d-none d-md-inline">{{ $product->active ? 'Deactivate' : 'Activate' }}</span>
                             </button>
                         </form>
                         <form action="{{ route('staff.products.destroy', $product) }}"
@@ -37,8 +37,8 @@
                               onsubmit="return confirm('Are you sure you want to delete this product? This action cannot be undone.')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash"></i> Delete Product
+                            <button type="submit" class="btn btn-danger btn-sm rounded-pill">
+                                <i class="bi bi-trash"></i> <span class="d-none d-md-inline">Delete</span>
                             </button>
                         </form>
                     </div>

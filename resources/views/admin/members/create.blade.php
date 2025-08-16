@@ -76,7 +76,7 @@
         </div>
 <input type="hidden" name="role" value="member">
 
-        <button type="submit" class="btn btn-primary btn-block mt-2">Register</button>
+        <button type="submit" class="btn btn-primary w-100 rounded-pill mt-2">Register</button>
     </form>
 </div>
 

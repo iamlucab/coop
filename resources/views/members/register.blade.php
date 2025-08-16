@@ -129,7 +129,7 @@
 
             {{-- Submit --}}
             <div class="col-md-12 mt-3">
-                <button class="btn btn-primary" id="submitBtn">Register</button>
+                <button class="btn btn-primary w-100 rounded-pill" id="submitBtn">Register</button>
             </div>
         </div>
     </form>

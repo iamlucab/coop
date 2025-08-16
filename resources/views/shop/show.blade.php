@@ -6,6 +6,47 @@
     .gallery-thumb.active {
         border: 2px solid #2d5cda;
     }
+    
+    /* Uniform button sizing for mobile */
+    @media (max-width: 767px) {
+        .product-action-btn {
+            padding: 12px 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .product-action-btn .btn-text {
+            display: block;
+            font-size: 0.75rem;
+        }
+        
+        .product-action-btn .btn-icon {
+            font-size: 1rem;
+        }
+    }
+    
+    /* Ensure buttons have uniform height */
+    .btn-uniform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        padding: 5px;
+    }
+    
+    .btn-uniform .btn-icon {
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+    
+    .btn-uniform .btn-text {
+        font-size: 0.7rem;
+        line-height: 1.2;
+        margin-top: 2px;
+    }
 </style>
 @endpush
 
@@ -136,18 +177,21 @@
                                 {{-- Button Row --}}
                                 <div class="row g-2 mt-4">
                                     <div class="col-4">
-                                        <button type="submit" class="btn btn-success w-100 rounded-pill">
-                                            <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                        <button type="submit" class="btn btn-success w-100 rounded-pill btn-uniform">
+                                            <i class="bi bi-cart-plus btn-icon"></i>
+                                            <span class="btn-text">Add to Cart</span>
                                         </button>
                                     </div>
                                     <div class="col-4">
-                                        <a href="{{ route('shop.cart') }}" class="btn btn-warning w-100 rounded-pill">
-                                            <i class="bi bi-cart me-1"></i> My Cart
+                                        <a href="{{ route('shop.cart') }}" class="btn btn-warning w-100 rounded-pill btn-uniform">
+                                            <i class="bi bi-cart btn-icon"></i>
+                                            <span class="btn-text">My Cart</span>
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="{{ route('shop.index') }}" class="btn btn-secondary w-100 rounded-pill">
-                                            <i class="bi bi-arrow-left me-1"></i> Back
+                                        <a href="{{ route('shop.index') }}" class="btn btn-secondary w-100 rounded-pill btn-uniform">
+                                            <i class="bi bi-arrow-left btn-icon"></i>
+                                            <span class="btn-text">Back</span>
                                         </a>
                                     </div>
                                 </div>

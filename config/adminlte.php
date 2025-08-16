@@ -236,6 +236,12 @@ return [
             'icon' => 'bi bi-person',
             'submenu' => [
                 ['text' => 'My Profile', 'url' => '/profile', 'icon' => 'bi bi-person-circle'],
+                [
+                    'text' => 'Logout',
+                    'url' => '#',
+                    'icon' => 'bi bi-box-arrow-right',
+                    'onclick' => 'event.preventDefault(); document.getElementById(\'logout-form\').submit();'
+                ],
             ],
         ],
     ],

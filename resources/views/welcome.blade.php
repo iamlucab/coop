@@ -32,22 +32,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-:root,
-[data-bs-theme="light"] {
-    --bs-body-bg: #f2f4f8;
-    --bs-body-color: #000000;
-
-    /* New blues */
-    --primary-blue: #0084fe;
-    --secondary-blue: #0b2f6c;
-    --accent-color: #0b2f6c;
-    --light-bg: #f2f4f8;
-    --dark-text: #000000;
-
-    /* Optionally tie into Bootstrap's primary */
-    --bs-primary: var(--primary-blue);
-    --bs-primary-hover: var(--secondary-blue);
-}
+    :root,
+    [data-bs-theme="light"] {
+        --bs-body-bg: #f2f4f8;
+        --bs-body-color: #000000;
+    
+        /* New blues */
+        --primary-blue: #0084fe;
+        --secondary-blue: #0b2f6c;
+        --accent-color: #0b2f6c;
+        --light-bg: #f2f4f8;
+        --dark-text: #000000;
+    
+        /* Optionally tie into Bootstrap's primary */
+        --bs-primary: var(--primary-blue);
+        --bs-primary-hover: var(--secondary-blue);
+    }
+    
+    /* Uniform button sizing for mobile */
+    @media (max-width: 767px) {
+        .product-action-btn {
+            padding: 12px 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .product-action-btn .btn-text {
+            display: block;
+            font-size: 0.75rem;
+        }
+        
+        .product-action-btn .btn-icon {
+            font-size: 1rem;
+        }
+    }
+    
+    /* Ensure buttons have uniform height */
+    .btn-uniform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        padding: 5px;
+    }
+    
+    .btn-uniform .btn-icon {
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+    
+    .btn-uniform .btn-text {
+        font-size: 0.7rem;
+        line-height: 1.2;
+        margin-top: 2px;
+    }
 
 [data-bs-theme="dark"] {
     --bs-body-bg: #1a0d2e;
@@ -473,8 +514,9 @@ body {
                             @else
                                 <div class="price-tag">₱{{ number_format($product->price, 2) }}</div>
                             @endif
-                            <button class="btn btn-primary btn-sm w-100 mt-2" onclick="event.stopPropagation(); showMembershipModal();">
-                                <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                            <button class="btn btn-primary btn-sm w-100 mt-2 btn-uniform" onclick="event.stopPropagation(); showMembershipModal();">
+                                <i class="bi bi-cart-plus btn-icon"></i>
+                                <span class="btn-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
@@ -494,8 +536,9 @@ body {
                             <h6 class="mb-2 fw-bold">Sample Product {{ $i }}</h6>
                             <p class="text-muted small mb-2">High quality product with amazing features</p>
                             <div class="price-tag">₱{{ number_format(rand(100, 999), 2) }}</div>
-                            <button class="btn btn-primary btn-sm w-100 mt-2" onclick="event.stopPropagation(); showMembershipModal();">
-                                <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                            <button class="btn btn-primary btn-sm w-100 mt-2 btn-uniform" onclick="event.stopPropagation(); showMembershipModal();">
+                                <i class="bi bi-cart-plus btn-icon"></i>
+                                <span class="btn-text">Add to Cart</span>
                             </button>
                         </div>
                     </div>
