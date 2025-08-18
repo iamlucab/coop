@@ -9,7 +9,7 @@
             <i class="bi bi-person me-2"></i> Personal Information
         </h5>
     </div>
-    
+
     <div class="col-md-4">
         <label class="form-label">
             <i class="bi bi-person me-1"></i> First Name <span class="text-danger">*</span>
@@ -121,12 +121,12 @@
                 $unusedCodes = \App\Models\MembershipCode::where('used', false)->get();
                 $currentCode = isset($member) && $member->membershipCode ? $member->membershipCode : null;
             @endphp
-            
+
             {{-- Show current code first if editing --}}
             @if($currentCode)
                 <option value="{{ $currentCode->code }}" selected>{{ $currentCode->code }} (Current)</option>
             @endif
-            
+
             {{-- Show only unused codes --}}
             @foreach ($unusedCodes as $code)
                 @if(!$currentCode || $code->code !== $currentCode->code)
@@ -161,7 +161,7 @@
                 <input type="checkbox" name="loan_eligible" value="1" class="form-check-input" id="loanEligibleCheckbox"
                     {{ old('loan_eligible', $member->loan_eligible ?? false) ? 'checked' : '' }}>
                 <label class="form-check-label fw-bold" for="loanEligibleCheckbox">
-                    <i class="bi bi-cash-coin me-1" style="color: var(--primary-purple);"></i> 
+                    <i class="bi bi-cash-coin me-1" style="color: var(--primary-purple);"></i>
                     Eligible for Loan
                 </label>
                 <small class="text-muted d-block mt-1">
@@ -188,6 +188,55 @@
             <small class="text-muted d-block mt-1">
                 <i class="bi bi-info-circle me-1"></i> No photo uploaded
             </small>
+        @endif
+    </div>
+
+    {{-- Proof of Payment Section --}}
+    <div class="col-md-4">
+        <label class="form-label">
+            <i class="bi bi-receipt me-1"></i> Proof of Payment
+        </label>
+        @if (isset($member) && $member->proof_of_payment)
+            <div class="mt-2">
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#proofOfPaymentModal">
+                    <i class="bi bi-eye"></i> View Proof
+                </button>
+                <small class="text-muted d-block mt-1">
+                    Click to view uploaded proof of payment
+                </small>
+            </div>
+
+            <!-- Proof of Payment Modal -->
+            <div class="modal fade" id="proofOfPaymentModal" tabindex="-1" role="dialog" aria-labelledby="proofOfPaymentModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="proofOfPaymentModalLabel">Proof of Payment</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="{{ asset('storage/' . $member->proof_of_payment) }}"
+                                 class="img-fluid"
+                                 alt="Proof of Payment"
+                                 style="max-height: 80vh;">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="{{ asset('storage/' . $member->proof_of_payment) }}" target="_blank" class="btn btn-primary">
+                                <i class="bi bi-box-arrow-up-right"></i> Open in New Tab
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @else
+            <div class="mt-2">
+                <span class="text-muted">
+                    <i class="bi bi-x-circle me-1"></i> No proof of payment uploaded
+                </span>
+            </div>
         @endif
     </div>
 </div>

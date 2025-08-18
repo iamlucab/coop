@@ -31,6 +31,8 @@ class GuestRegistrationController extends Controller
             'occupation'    => 'nullable|string|max:191',
             'photo'         => 'nullable|image|max:2048',
             'password'      => 'required|string|min:6',
+            'payment_method' => 'required|string|in:GCash,Paymaya,Bank Transfer,Pay in Cash,Pay Later',
+            'proof_of_payment' => 'nullable|image|max:2048',
         ]);
 
         // ✅ Check if mobile is already registered
@@ -44,6 +46,10 @@ class GuestRegistrationController extends Controller
         $photoPath = $request->hasFile('photo')
             ? $request->file('photo')->store('photos', 'public')
             : null;
+            
+        $proofOfPaymentPath = $request->hasFile('proof_of_payment')
+            ? $request->file('proof_of_payment')->store('payment_proofs', 'public')
+            : null;
 
         $member = Member::create([
             'first_name'    => ucfirst(strtolower($request->first_name)),
@@ -53,6 +59,8 @@ class GuestRegistrationController extends Controller
             'mobile_number' => $request->mobile_number,
             'occupation'    => $request->occupation ? ucfirst(strtolower($request->occupation)) : null,
             'photo'         => $photoPath,
+            'payment_method' => $request->payment_method,
+            'proof_of_payment' => $proofOfPaymentPath,
             'role'          => 'Member',
             'status'        => 'Pending',
             'sponsor_id'    => null, // Will be assigned by admin during approval
@@ -105,6 +113,8 @@ class GuestRegistrationController extends Controller
             'photo'         => 'nullable|image|max:2048',
             'password'      => 'required|string|min:6|confirmed',
             'sponsor_id'    => 'required|exists:members,id',
+            'payment_method' => 'required|string|in:GCash,Paymaya,Bank Transfer,Pay in Cash,Pay Later',
+            'proof_of_payment' => 'nullable|image|max:2048',
         ]);
 
         // Validate sponsor exists and is approved
@@ -127,6 +137,10 @@ class GuestRegistrationController extends Controller
         $photoPath = $request->hasFile('photo')
             ? $request->file('photo')->store('photos', 'public')
             : null;
+            
+        $proofOfPaymentPath = $request->hasFile('proof_of_payment')
+            ? $request->file('proof_of_payment')->store('payment_proofs', 'public')
+            : null;
 
         $member = Member::create([
             'first_name'    => ucfirst(strtolower($request->first_name)),
@@ -136,6 +150,8 @@ class GuestRegistrationController extends Controller
             'mobile_number' => $request->mobile_number,
             'occupation'    => $request->occupation ? ucfirst(strtolower($request->occupation)) : null,
             'photo'         => $photoPath,
+            'payment_method' => $request->payment_method,
+            'proof_of_payment' => $proofOfPaymentPath,
             'role'          => 'Member',
             'status'        => 'Pending',
             'sponsor_id'    => $sponsor_id, // Automatically set the sponsor from referral link

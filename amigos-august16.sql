@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 15, 2025 at 08:47 PM
+-- Generation Time: Aug 17, 2025 at 04:31 AM
 -- Server version: 10.6.22-MariaDB-cll-lve
 -- PHP Version: 8.3.22
 
@@ -368,81 +368,84 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_100000_create_password_resets_table', 1),
 (2, '2019_08_19_000000_create_failed_jobs_table', 1),
 (3, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(4, '2025_06_18_000000_create_members_table', 1),
-(5, '2025_06_18_000001_create_users_table', 1),
-(6, '2025_06_18_110030_create_voters_table', 1),
-(7, '2025_06_18_110255_create_benefits_table', 1),
-(8, '2025_06_18_110337_create_benefit_member_table', 1),
-(9, '2025_06_18_110359_create_loans_table', 1),
-(10, '2025_06_18_115815_create_wallets_table', 1),
-(11, '2025_06_19_005439_add_wallet_id_to_wallets_table', 1),
-(12, '2025_06_19_020350_create_cash_in_requests_table', 1),
-(13, '2025_06_19_034014_alter_status_column_in_loans_table', 1),
-(14, '2025_06_19_035728_add_term_months_to_loans_table', 1),
-(15, '2025_06_19_040132_create_loan_payments_table', 1),
-(16, '2025_06_19_090214_add_purpose_to_loans_table', 1),
-(17, '2025_06_29_013134_add_user_id_to_wallets_table', 1),
-(18, '2025_06_29_013643_add_user_id_to_wallets_table', 1),
-(19, '2025_06_29_014103_make_member_id_nullable_on_wallets_table', 1),
-(20, '2025_06_29_115442_create_membership_codes_table', 1),
-(21, '2025_06_29_125724_add_address_to_members_table', 1),
-(22, '2025_06_30_150111_create_reward_programs_table', 1),
-(23, '2025_06_30_150225_create_reward_winners_table', 1),
-(24, '2025_06_30_151341_add_winner_id_to_reward_programs_table', 1),
-(25, '2025_06_30_154307_add_foreign_key_to_reward_winners_table', 1),
-(26, '2025_06_30_161911_add_seen_to_reward_winners_table', 1),
-(27, '2025_06_30_170336_add_status_to_reward_winners_table', 1),
-(28, '2025_06_30_172643_create_tickets_table', 1),
-(29, '2025_06_30_174814_create_ticket_replies_table', 1),
-(30, '2025_06_30_183242_add_member_id_to_ticket_replies_table', 1),
-(31, '2025_06_30_194012_add_user_id_to_ticket_replies_table', 1),
-(32, '2025_06_30_200510_add_wallet_id_to_wallets_table', 1),
-(33, '2025_07_01_013959_add_loan_eligible_to_members_table', 1),
-(34, '2025_07_01_034004_add_note_to_loan_payments_table', 1),
-(35, '2025_07_02_031340_add_status_to_members_and_users', 1),
-(36, '2025_07_02_064335_create_mobile_password_resets_table', 1),
-(37, '2025_07_05_003513_add_proof_path_to_cash_in_requests_table', 1),
-(38, '2025_07_05_102128_add_payment_method_to_cash_in_requests_table', 1),
-(39, '2025_07_10_170926_create_referral_bonus_logs_table', 1),
-(40, '2025_07_11_192351_create_products_table', 1),
-(41, '2025_07_11_192501_create_orders_table', 1),
-(42, '2025_07_11_192505_create_order_items_table', 1),
-(43, '2025_07_11_192507_create_cashback_logs_table', 1),
-(44, '2025_07_11_220911_create_categories_table', 1),
-(45, '2025_07_11_220916_create_units_table', 1),
-(46, '2025_07_11_220959_add_fields_to_products_table', 1),
-(47, '2025_07_11_222707_add_stock_quantity_to_products_table', 1),
-(48, '2025_07_12_105759_create_wallet_transactions_table', 1),
-(49, '2025_07_12_111511_add_wallet_id_to_wallet_transactions_table', 1),
-(50, '2025_07_13_061230_add_checkout_fields_to_orders_table', 1),
-(51, '2025_07_13_064546_alter_orders_add_default_to_total_cashback', 1),
-(52, '2025_07_13_115111_create_settings_table', 1),
-(53, '2025_07_13_150011_add_discounts_to_products_table', 1),
-(54, '2025_07_14_053443_add_type_to_wallets_table', 1),
-(55, '2025_07_14_092645_add_source_to_cashback_logs_table', 1),
-(56, '2025_07_14_093642_alter_wallet_transactions_add_cashback_type', 1),
-(57, '2025_07_14_093953_add_cashback_given_to_orders_table', 1),
-(58, '2025_07_15_180036_add_source_to_wallet_transactions_table', 1),
-(59, '2025_07_15_200002_add_member_id_to_wallet_transactions_table', 1),
-(60, '2025_07_17_232934_add_cashback_amount_to_order_items_table', 2),
-(69, '2024_01_29_add_created_by_to_products_table', 3),
-(70, '2025_07_30_180255_create_device_tokens_table', 4),
-(71, '2025_07_30_182526_create_sms_logs_table', 5),
-(72, '2023_07_26_000000_add_payment_fields_to_loan_payments_table', 1),
-(73, '2023_07_26_000000_add_payment_fields_to_loan_payments_table_fixed', 6),
-(74, '2023_07_26_000001_add_approval_fields_to_loans_table', 1),
-(75, '2025_07_25_123112_create_referral_configurations_table', 1),
-(76, '2025_07_25_134817_add_cashback_configuration_to_products_table', 1),
-(77, '2025_07_25_135543_add_level_and_product_id_to_cashback_logs_table', 1),
-(78, '2025_07_25_160111_add_status_to_order_items_table', 1),
-(79, '2025_07_25_162730_add_promo_fields_to_orders_table', 1),
-(80, '2025_07_27_091821_add_image_to_categories_table', 1),
-(81, '2025_07_31_000000_migrate_existing_members_assign_codes', 1),
-(82, '2025_08_06_141552_create_membership_code_requests_table', 7),
-(83, '2025_08_06_142342_add_reservation_fields_to_membership_codes_table', 8),
-(85, '2025_08_06_152422_create_notifications_table', 9),
-(86, '2025_08_06_160000_add_reserved_codes_count_to_membership_code_requests_table', 10),
-(87, '2025_08_06_161000_create_membership_code_request_items_table', 11);
+(88, '2025_06_18_000000_create_members_table', 1),
+(89, '2025_06_18_000001_create_users_table', 1),
+(90, '2025_06_18_110030_create_voters_table', 1),
+(91, '2025_06_18_110255_create_benefits_table', 1),
+(92, '2025_06_18_110337_create_benefit_member_table', 1),
+(93, '2025_06_18_110359_create_loans_table', 1),
+(94, '2025_06_18_115815_create_wallets_table', 1),
+(95, '2025_06_19_005439_add_wallet_id_to_wallets_table', 1),
+(96, '2025_06_19_020350_create_cash_in_requests_table', 1),
+(97, '2025_06_19_034014_alter_status_column_in_loans_table', 1),
+(98, '2025_06_19_035728_add_term_months_to_loans_table', 1),
+(99, '2025_06_19_040132_create_loan_payments_table', 1),
+(100, '2025_06_19_040133_add_payment_fields_to_loan_payments_table', 1),
+(101, '2025_06_19_040134_add_payment_fields_to_loan_payments_table_fixed', 1),
+(102, '2025_06_19_040135_add_approval_fields_to_loans_table', 1),
+(103, '2025_06_19_090214_add_purpose_to_loans_table', 1),
+(104, '2025_06_29_013134_add_user_id_to_wallets_table', 1),
+(105, '2025_06_29_013643_add_user_id_to_wallets_table', 1),
+(106, '2025_06_29_014103_make_member_id_nullable_on_wallets_table', 1),
+(107, '2025_06_29_115442_create_membership_codes_table', 1),
+(108, '2025_06_29_125724_add_address_to_members_table', 1),
+(109, '2025_06_30_150111_create_reward_programs_table', 1),
+(110, '2025_06_30_150225_create_reward_winners_table', 1),
+(111, '2025_06_30_151341_add_winner_id_to_reward_programs_table', 1),
+(112, '2025_06_30_154307_add_foreign_key_to_reward_winners_table', 1),
+(113, '2025_06_30_161911_add_seen_to_reward_winners_table', 1),
+(114, '2025_06_30_170336_add_status_to_reward_winners_table', 1),
+(115, '2025_06_30_172643_create_tickets_table', 1),
+(116, '2025_06_30_174814_create_ticket_replies_table', 1),
+(117, '2025_06_30_183242_add_member_id_to_ticket_replies_table', 1),
+(118, '2025_06_30_194012_add_user_id_to_ticket_replies_table', 1),
+(119, '2025_06_30_200510_add_wallet_id_to_wallets_table', 1),
+(120, '2025_07_01_013959_add_loan_eligible_to_members_table', 1),
+(121, '2025_07_01_034004_add_note_to_loan_payments_table', 1),
+(122, '2025_07_02_031340_add_status_to_members_and_users', 1),
+(123, '2025_07_02_064335_create_mobile_password_resets_table', 1),
+(124, '2025_07_05_003513_add_proof_path_to_cash_in_requests_table', 1),
+(125, '2025_07_05_102128_add_payment_method_to_cash_in_requests_table', 1),
+(126, '2025_07_10_170926_create_referral_bonus_logs_table', 1),
+(127, '2025_07_11_192351_create_products_table', 1),
+(128, '2025_07_11_192501_create_orders_table', 1),
+(129, '2025_07_11_192505_create_order_items_table', 1),
+(130, '2025_07_11_192507_create_cashback_logs_table', 1),
+(131, '2025_07_11_220911_create_categories_table', 1),
+(132, '2025_07_11_220916_create_units_table', 1),
+(133, '2025_07_11_220959_add_fields_to_products_table', 1),
+(134, '2025_07_11_220960_add_created_by_to_products_table', 1),
+(135, '2025_07_11_222707_add_stock_quantity_to_products_table', 1),
+(136, '2025_07_12_105759_create_wallet_transactions_table', 1),
+(137, '2025_07_12_111511_add_wallet_id_to_wallet_transactions_table', 1),
+(138, '2025_07_13_061230_add_checkout_fields_to_orders_table', 1),
+(139, '2025_07_13_064546_alter_orders_add_default_to_total_cashback', 1),
+(140, '2025_07_13_115111_create_settings_table', 1),
+(141, '2025_07_13_150011_add_discounts_to_products_table', 1),
+(142, '2025_07_14_053443_add_type_to_wallets_table', 1),
+(143, '2025_07_14_092645_add_source_to_cashback_logs_table', 1),
+(144, '2025_07_14_093642_alter_wallet_transactions_add_cashback_type', 1),
+(145, '2025_07_14_093953_add_cashback_given_to_orders_table', 1),
+(146, '2025_07_15_180036_add_source_to_wallet_transactions_table', 1),
+(147, '2025_07_15_200002_add_member_id_to_wallet_transactions_table', 1),
+(148, '2025_07_17_232934_add_cashback_amount_to_order_items_table', 1),
+(149, '2025_07_25_123112_create_referral_configurations_table', 1),
+(150, '2025_07_25_134817_add_cashback_configuration_to_products_table', 1),
+(151, '2025_07_25_135543_add_level_and_product_id_to_cashback_logs_table', 1),
+(152, '2025_07_25_160111_add_status_to_order_items_table', 1),
+(153, '2025_07_25_162730_add_promo_fields_to_orders_table', 1),
+(154, '2025_07_27_091821_add_image_to_categories_table', 1),
+(155, '2025_07_30_180255_create_device_tokens_table', 1),
+(156, '2025_07_30_182526_create_sms_logs_table', 1),
+(157, '2025_07_31_000000_migrate_existing_members_assign_codes', 1),
+(158, '2025_08_06_141552_create_membership_code_requests_table', 1),
+(159, '2025_08_06_142342_add_reservation_fields_to_membership_codes_table', 1),
+(160, '2025_08_06_152422_create_notifications_table', 1),
+(161, '2025_08_06_160000_add_reserved_codes_count_to_membership_code_requests_table', 1),
+(162, '2025_08_06_161000_create_membership_code_request_items_table', 1),
+(163, '2025_08_11_232849_create_aliexpress_tokens_table', 1),
+(164, '2025_08_12_010112_create_sessions_table', 1),
+(165, '2025_08_16_120608_create_sessions_table', 2);
 
 -- --------------------------------------------------------
 
@@ -606,9 +609,9 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `cashback_amount`,
 (11, 'NVISION 55\" 4K UHD SMART ANDROID LED TV', 'Model: S800-55S1D\r\nDisplay Size: 55” LED\r\nResolution: 3840 x 2160\r\nWall-mount: 400mm x 300mm\r\nTV System: PAL, NTSC, SECAM\r\nSound System: I, D/K, B/G, M\r\nMusic Support: mp3, wma, m4a, aac\r\nPicture Support: jpg, jpeg, bmp, png, txt\r\nVideo Support: avi, mp4, ts/trp, mkv, mov, mpg, dat, vob, rm/rmvb\r\nInput Source: (1)RJ45, (1)VGA, (3)HDMI, (2)USB, AV in, RF in, Coaxial, MINI AV, MINI (YPbPr), Earphone in\r\nSmart System: Android 11.0, 1.5G + 8G\r\nPower Input: 100-240V ~ 50/60Hz\r\nConsumption: 70W\r\nGross Weight: 14.3Kg\r\nBox Size:1350mm x 150mm x 815mm', 21000.00, 100.00, 3, NULL, NULL, NULL, NULL, 1, 10, NULL, 1, '2025-07-22 05:59:04', '2025-07-22 05:59:04', 'products/thumbnails/G8QCyUvf7vqiUzTMxpZRq9ha58Cp9GfLdF6nBeze.jpg', '[\"products\\/gallery\\/4f1ktsamuSONtWSGH4LM8RrYDXqqcXpMxh8NyIQL.webp\",\"products\\/gallery\\/bylekX38ttNYPFtYaKeCYopXWMBCTm7mMOHPZDhy.jpg\",\"products\\/gallery\\/run4D7hp0gZrxRnLPRGlKtU0Bkf6qKVmfAr4LcCQ.jpg\"]', 3, 1, NULL),
 (12, 'Pan/Tilt Home Security Wi-Fi Camera', 'High-Definition Video: The Tapo C200 features 1080p high-definition video, providing users with clear and detailed footage.\r\nPan and Tilt: The device offers 360° horizontal and 114° vertical range, enabling complete coverage of the area.\r\nNight Vision: With advanced night vision up to 30 feet, the Tapo C200 allows users to monitor their homes around the clock.\r\nMotion Detection and Alerts: The device uses smart motion detection technology to send instant notifications to your phone whenever movement is detected.\r\nTwo-Way Audio: The Tapo C200 comes equipped with a built-in microphone and speaker, allowing users to communicate with family, pets, or warn off intruders.\r\nLocal Storage: The device supports microSD cards up to 512GB for local storage, providing a secure and cost-effective way to store footage.\r\nPrivacy Mode: Users can enable Privacy Mode to stop recording and control when the camera is monitoring and when it\'s not.\r\nEasy Setup and Management: With the Tapo app, users can easily set up and manage their Tapo C200, and access live streaming and other controls.\r\nVoice Control: The Tapo C200 is compatible with Google Assistant and Amazon Alexa, offering hands-free control for users.\r\nSecure Encryption: The device uses advanced encryption and wireless protocols to ensure data privacy and secure communication between your phone and the device', 1450.00, 100.00, 3, NULL, NULL, NULL, NULL, 1, 10, NULL, 1, '2025-07-22 06:02:17', '2025-07-22 06:04:04', 'products/thumbnails/AKhZVCXR6JUS1QJ856ocud3JfYGIaS42x9Ny7IMX.jpg', '[\"products\\/gallery\\/fftkEyTaCcY3dXmKNGVEaegCPa4XPkZIvaSvgdtv.jpg\",\"products\\/gallery\\/fbbVr1byMQtgQy0844UJOVLtr25WO2zc7UCuFskD.jpg\",\"products\\/gallery\\/DiXquPu65SWNDbTF9kHX9Br1oWDNevGPE3MeLRJ5.jpg\",\"products\\/gallery\\/OdugxfRXRololc4Jc4aN1KPiqwhaz8MXp7kWEUgl.jpg\",\"products\\/gallery\\/LS1drhPmy0bCN4L7Iqkc97o4s7GrnAk3x9PQ3B7U.png\"]', 6, 1, NULL),
 (13, 'Pan/Tilt AI Home Security Wi-Fi Camera', 'Seamless Privacy Control - Use the button on the product shell or Tapo app to easily open or close the privacy shield, giving you complete control over your private moments.\r\n\r\n2K QHD - When it comes to home security, details matter. With 2K QHD resolution, the Tapo C225 transcends beyond traditional FullHD 1080p quality to display finer details and incredibly clear videos.\r\n\r\nApple Homekit Supported - Along with Amazon Alexa and Google Assistant compatibility,Tapo C225 can also fully integrate into your Apple Home ecosystem for convenient hands-free operation.\r\n\r\nSmart Motion Tracking - With pan/tilt functionality and smart motion tracking technology with up to 120°/s rotating speed, precisely track and follow subjects, continuously keeping them within the camera’s field of view.\r\n\r\nColor Night Vision - The highly sensitive starlight sensor captures higher-quality images even in low-light conditions up to 30 ft.\r\n\r\nInvisible Infrared Mode - If the red IR LEDs prove to be a distraction while monitoring at night, switch to invisible IR mode to continue monitoring in low-light conditions without the disrupting red light, making it ideal for sleeping children and pets.\r\n\r\nLocal and Cloud Storage - Save recorded videos on a microSD Card (up to 512 GB, purchased separately) or use Tapo Care cloud storage services (subscribe separately).\r\n\r\nSharing Capabilities - Seamlessly forward videos you want to share to your social platforms.', 2950.00, 100.00, 3, NULL, NULL, NULL, NULL, 1, 10, NULL, 1, '2025-07-22 06:06:41', '2025-07-22 06:06:41', 'products/thumbnails/mRukDqYmAXzQ128TXbMOqQzCyN9DChT88lWcCjyj.jpg', '[\"products\\/gallery\\/aEHmPknyZtsa6BNRG33qjbdGOXDZZKSG5RHERJe0.jpg\",\"products\\/gallery\\/2TmFHqwCSIFP0y0Vg98g77i21NUbrgNsxYEAtunS.jpg\",\"products\\/gallery\\/6MZw8DfNOoHEl0s7MT6zLWAfgZilELpYc2nOOijC.jpg\"]', 6, 1, NULL),
-(21, 'Women heart embroider wallet PU leather coin purse female short wallet for woman', 'BRAND NEW\r\n\r\nGood Quality\r\n\r\nDesigned for your convenience\r\n\r\nPlease allow 1-3cm differences in product measurement\r\n\r\nDue to different computer monitors/calibrations colors may vary slightly from the picture\r\n\r\n\r\nDELIVERY PERIOD: \r\n\r\n3-7 Days Manila area, 7-14 Days Provincial', 120.00, 20.00, 4, '[]', 20.00, 'flat', 'HELLO', 1, 10, NULL, 1, '2025-08-12 09:51:25', '2025-08-12 09:52:50', 'products/thumbnails/0L3gjyILUf9nYiVF2KYucEFfN9ZJcBL9BZIkyHgP.jpg', '\"[\\\"products\\\\\\/gallery\\\\\\/IUTNQoeoHfFaozguTn9qCQuUIm7sqytrIpKoKjxN.jpg\\\",\\\"products\\\\\\/gallery\\\\\\/MsNnVeoMn0y2dUZwo6q9wAln20zIWfS6KPNTbk1L.jpg\\\"]\"', 14, 1, '\"Red\"'),
-(22, 'Korean Wallet for SALE Women\'s Short Wallet Korean Fashion Multi-function Buckle Multi-card Purse Ladies Wallet', 'Korean Wallet for SALE Women\'s Short Wallet Korean Fashion Multi-function Buckle Multi-card Purse Ladies Wallet #C219-1\r\nMaterial: PU leather\r\nSize: 14cm * 10cm * 2.5cm\r\nColor: Green, Blue, Black, Beige, Pink, Brown\r\nInterior: Note Compartment*1,\r\nInterior: Card Holder*8,\r\nInterior: Photo holder*2,\r\nInterior: Slot Pocket*3,\r\nInterior: Coin Pocket*2\r\nWallet closure: Hasp and Zipper', 160.00, 10.00, 2, '{\"1\":2}', NULL, 'flat', NULL, 1, 10, NULL, 1, '2025-08-12 09:57:17', '2025-08-12 09:57:17', 'products/thumbnails/T0kgGF2hTIZtAPz6UZQTgtCUS6qOg3rAHKepsa58.jpg', '\"[\\\"products\\\\\\/gallery\\\\\\/DtXRot25Ty4WEPNJmkNTuUk8CfYyqQeW0z6CZwkp.jpg\\\",\\\"products\\\\\\/gallery\\\\\\/APweizWTbSlL1LSlUczF92kFlLcTRYJsGcvLe3lh.jpg\\\",\\\"products\\\\\\/gallery\\\\\\/b1vZMA7XY9XA6Ze3d8f7YRcrU68bx3HuCK1w7o0e.jpg\\\"]\"', 14, 1, NULL),
-(23, 'BAVIN PC516 2.4A Mini Wall Charger + 1m Cable Smart 5.0 Chip Universal USB Adapter for iPh Micro Type-C Phones & Tablet', 'BAVIN PC516 2.4A Mini Wall Charger + 1m Cable Smart 5.0 Chip Universal USB Adapter for iPh Micro Type-C Phones & Tablet\r\n\r\n100% Authentic · Change of Mind · 30 Days Free Return · 1 Year Local Supplier Warranty', 185.00, 5.00, 3, '{\"1\":null,\"2\":null,\"3\":null}', NULL, NULL, NULL, 2, 10, NULL, 1, '2025-08-15 21:36:56', '2025-08-15 21:36:56', 'products/thumbnails/o4lwGMxmY1VwF431W9xDXrcHo97Ez7ZufXzbkjim.jpg', '[\"products\\/gallery\\/GzHopYEf2MIQn9JJut1LySvwjXjb2iXtBWz8p0zN.jpg\",\"products\\/gallery\\/wgikR7eGKxfVjOqvaZ3bfUTLbYsqVco5JV6WRJMX.jpg\",\"products\\/gallery\\/vXxapxR8AjXqztM2OgqtsAalNQ51BY6zdPLBkmQM.jpg\",\"products\\/gallery\\/DpTDQStQtB64Nmdwk4cnUIZDf8OMjPX4HUjcDrOd.jpg\"]', 6, NULL, NULL);
+(21, 'Women heart embroider wallet PU leather coin purse female short wallet for woman', 'BRAND NEW\r\n\r\nGood Quality\r\n\r\nDesigned for your convenience\r\n\r\nPlease allow 1-3cm differences in product measurement\r\n\r\nDue to different computer monitors/calibrations colors may vary slightly from the picture\r\n\r\n\r\nDELIVERY PERIOD: \r\n\r\n3-7 Days Manila area, 7-14 Days Provincial', 120.00, 20.00, 4, '[]', 20.00, 'flat', 'HELLO', 1, 10, NULL, 1, '2025-08-12 09:51:25', '2025-08-18 02:22:29', 'products/thumbnails/hCbzfpXDXnbzMjsG3RokwHA7NjgRlR4ZTbFooHlw.jpg', '[\"products\\/gallery\\/IUTNQoeoHfFaozguTn9qCQuUIm7sqytrIpKoKjxN.jpg\",\"products\\/gallery\\/MsNnVeoMn0y2dUZwo6q9wAln20zIWfS6KPNTbk1L.jpg\"]', 14, 1, '\"Red\"'),
+(22, 'Korean Wallet for SALE Women\'s Short Wallet Korean Fashion Multi-function Buckle Multi-card Purse Ladies Wallet', 'Korean Wallet for SALE Women\'s Short Wallet Korean Fashion Multi-function Buckle Multi-card Purse Ladies Wallet #C219-1\r\nMaterial: PU leather\r\nSize: 14cm * 10cm * 2.5cm\r\nColor: Green, Blue, Black, Beige, Pink, Brown\r\nInterior: Note Compartment*1,\r\nInterior: Card Holder*8,\r\nInterior: Photo holder*2,\r\nInterior: Slot Pocket*3,\r\nInterior: Coin Pocket*2\r\nWallet closure: Hasp and Zipper', 160.00, 10.00, 2, '{\"1\":2}', NULL, 'flat', NULL, 1, 10, NULL, 1, '2025-08-12 09:57:17', '2025-08-18 02:23:47', 'products/thumbnails/UtdheBNkQtcMJ8pgsn1XXqQLPyZaxaLJo7nR0Cww.jpg', '[\"products\\/gallery\\/DtXRot25Ty4WEPNJmkNTuUk8CfYyqQeW0z6CZwkp.jpg\",\"products\\/gallery\\/APweizWTbSlL1LSlUczF92kFlLcTRYJsGcvLe3lh.jpg\",\"products\\/gallery\\/b1vZMA7XY9XA6Ze3d8f7YRcrU68bx3HuCK1w7o0e.jpg\",\"products\\/gallery\\/m4MnXtKoEGzmdoQNjlpKcEc0x7IIeqIZ1BADwItc.jpg\"]', 14, 1, NULL),
+(23, 'BAVIN PC516 2.4A Mini Wall Charger + 1m Cable Smart 5.0 Chip Universal USB Adapter for iPh Micro Type-C Phones & Tablet', 'BAVIN PC516 2.4A Mini Wall Charger + 1m Cable Smart 5.0 Chip Universal USB Adapter for iPh Micro Type-C Phones & Tablet\r\n\r\n100% Authentic · Change of Mind · 30 Days Free Return · 1 Year Local Supplier Warranty', 185.00, 5.00, 3, '[]', NULL, NULL, NULL, 2, 10, NULL, 1, '2025-08-15 21:36:56', '2025-08-18 02:25:42', 'products/thumbnails/qLbpKx5tVoGWyqsgMPw3mD1BKFscAhM8lvxFziyf.jpg', '[\"products\\/gallery\\/GzHopYEf2MIQn9JJut1LySvwjXjb2iXtBWz8p0zN.jpg\",\"products\\/gallery\\/wgikR7eGKxfVjOqvaZ3bfUTLbYsqVco5JV6WRJMX.jpg\",\"products\\/gallery\\/vXxapxR8AjXqztM2OgqtsAalNQ51BY6zdPLBkmQM.jpg\",\"products\\/gallery\\/DpTDQStQtB64Nmdwk4cnUIZDf8OMjPX4HUjcDrOd.jpg\"]', 6, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -719,6 +722,28 @@ CREATE TABLE `reward_winners` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `status` enum('unclaimed','redeemed','expired') NOT NULL DEFAULT 'unclaimed'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sessions`
+--
+
+CREATE TABLE `sessions` (
+  `id` varchar(255) NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `ip_address` varchar(45) DEFAULT NULL,
+  `user_agent` text DEFAULT NULL,
+  `payload` longtext NOT NULL,
+  `last_activity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sessions`
+--
+
+INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('7PbajZlAvrujJ1qhxCUCqZVGA7JMLW4AQfMwOEJE', 9171234567, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUEx4SkV1V1pHR0NzdFM4VDVtWk1nMjNDcEgyTXAzYkx4UjFFUUFGaiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7czoxMToiMDkxNzEyMzQ1NjciO30=', 1755318302);
 
 -- --------------------------------------------------------
 
@@ -1209,6 +1234,14 @@ ALTER TABLE `reward_winners`
   ADD KEY `fk_rwinners_program` (`reward_program_id`);
 
 --
+-- Indexes for table `sessions`
+--
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sessions_user_id_index` (`user_id`),
+  ADD KEY `sessions_last_activity_index` (`last_activity`);
+
+--
 -- Indexes for table `settings`
 --
 ALTER TABLE `settings`
@@ -1365,7 +1398,7 @@ ALTER TABLE `membership_code_request_items`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
 
 --
 -- AUTO_INCREMENT for table `notifications`

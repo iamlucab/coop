@@ -28,10 +28,23 @@ class MemberProductController extends Controller
         }
 
         $products = $query->latest()->paginate(12);
-        
+
+        // Handle AJAX request for loading more products
+        if ($request->ajax() || $request->input('ajax')) {
+            $html = view('shop.partials.product-grid', compact('products'))->render();
+
+            return response()->json([
+                'success' => true,
+                'html' => $html,
+                'hasMore' => $products->hasMorePages(),
+                'totalProducts' => Product::where('active', 1)->where('stock_quantity', '>', 0)->count(),
+                'productsCount' => $products->count()
+            ]);
+        }
+
         // Get all categories for filtering
         $categories = \App\Models\Category::orderBy('name')->get();
-        
+
         // Calculate additional variables needed by the view
         $totalProducts = Product::where('active', 1)->where('stock_quantity', '>', 0)->count();
         $hasMore = $products->hasMorePages();

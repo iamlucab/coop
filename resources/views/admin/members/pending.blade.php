@@ -27,6 +27,8 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Mobile</th>
+                                <th>Payment Method</th>
+                                <th>Proof of Payment</th>
                                 <th>Registered</th>
                                 <th>Actions</th>
                             </tr>
@@ -36,6 +38,16 @@
                                 <tr>
                                     <td>{{ $member->first_name }} {{ $member->last_name }}</td>
                                     <td>{{ $member->mobile_number }}</td>
+                                    <td>{{ $member->payment_method }}</td>
+                                    <td>
+                                        @if($member->proof_of_payment)
+                                            <a href="{{ asset('storage/' . $member->proof_of_payment) }}" target="_blank" class="btn btn-info btn-sm">
+                                                <i class="bi bi-eye"></i> View
+                                            </a>
+                                        @else
+                                            <span class="text-muted">No proof</span>
+                                        @endif
+                                    </td>
                                     <td>{{ $member->created_at->format('M d, Y') }}</td>
                                     <td>
                                         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#approveModal{{ $member->id }}">

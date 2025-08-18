@@ -45,13 +45,13 @@
 
         .btn-primary {
             border-radius: 12px;
-            background-color: #63189e !important;
-            border-color: #63189e !important;
+            background-color: #1429a2 !important;
+            border-color: #1e56cf !important;
         }
-        
+
         .btn-primary:hover {
-            background-color: #531185 !important;
-            border-color: #531185 !important;
+            background-color: #286ad4 !important;
+            border-color: #240eb4 !important;
         }
 
         .card-disclaimer {
@@ -110,7 +110,7 @@
         body.dark-mode footer {
             color: #aaa;
         }
-        
+
         /* Mobile Footer */
         .mobile-footer {
             position: fixed;
@@ -123,12 +123,12 @@
             z-index: 1000;
             transition: background-color 0.3s ease;
         }
-        
+
         body.dark-mode .mobile-footer {
             background-color: #1e1e1e;
             border-top: 1px solid #333;
         }
-        
+
         .mobile-footer .nav-link {
             display: flex;
             flex-direction: column;
@@ -137,24 +137,24 @@
             color: #666;
             transition: color 0.3s ease;
         }
-        
+
         body.dark-mode .mobile-footer .nav-link {
             color: #aaa;
         }
-        
+
         .mobile-footer .nav-link.active {
             color: #63189e;
         }
-        
+
         body.dark-mode .mobile-footer .nav-link.active {
             color: #a35edb;
         }
-        
+
         .mobile-footer .nav-link i {
             font-size: 1.2rem;
             margin-bottom: 2px;
         }
-        
+
         /* Add padding to bottom to account for fixed footer */
         body {
             padding-bottom: 60px;
@@ -242,8 +242,80 @@
             @error('password_confirmation') <small class="text-danger">{{ $message }}</small> @enderror
         </div>
 
+        {{-- Payment Method --}}
         <div class="mb-3">
-            <label for="photo">Upload Photo (optional)</label>
+            <label for="payment_method" class="form-label">Membership Payment Method</label>
+            <select name="payment_method" id="payment_method" class="form-control" required>
+                <option value="">Select Payment Method</option>
+                <option value="GCash">GCash</option>
+                <option value="Paymaya">Paymaya</option>
+                <option value="Gotyme">Gotyme</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Pay in Cash">Pay in Cash</option>
+                <option value="Pay Later">Pay Later</option>
+            </select>
+            @error('payment_method') <small class="text-danger">{{ $message }}</small> @enderror
+        </div>
+
+        {{-- GCash/Paymaya/Gotyme QR Code --}}
+        <div id="qr_code_section" class="mb-3 d-none">
+            <label class="form-label">QR Code for Payment</label>
+            <div class="text-center">
+                <div id="qr-code-container" class="border rounded p-3" style="max-width: 200px; margin: 0 auto;">
+                    <!-- QR codes will be dynamically inserted here -->
+                </div>
+                <br><br>
+                <button class="btn btn-sm btn-primary" id="download-qr-btn">
+                    <i class="bi bi-download"></i> Download QR Code
+                </button>
+            </div>
+            <small class="form-text text-muted">
+                Scan this QR code to make your payment. After payment, please upload the proof below.
+            </small>
+        </div>
+
+        {{-- Bank Transfer Details --}}
+        <div id="bank_transfer_section" class="mb-3 d-none">
+            <label class="form-label">Bank Transfer Details</label>
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="border rounded p-2 mr-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-bank text-muted" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <div><strong>Bank:</strong> BDO</div>
+                            <div><strong>Account Name:</strong> Amigos Online Community</div>
+                            <div><strong>Account No:</strong> 0071 5801 3083</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img src="images/BDOQR.jpg" alt="BDO QR Code" class="img-fluid mb-2" style="max-height: 200px;">
+                        <p class="small text-muted mt-2">Scan to pay via Bank Transfer</p>
+                        <br><br>
+                        <button class="btn btn-sm btn-primary" onclick="downloadBankQr()">
+                            <i class="bi bi-download"></i> Download QR Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <small class="form-text text-muted">
+                Please send the exact amount and upload the proof below.
+            </small>
+        </div>
+
+        {{-- Proof of Payment Upload --}}
+        <div class="mb-3">
+            <label for="proof_of_payment" class="form-label">Proof of Payment (Optional)</label>
+            <input type="file" name="proof_of_payment" id="proof_of_payment" class="form-control" accept="image/*">
+            <small class="form-text text-muted">
+                Upload proof of payment (JPEG, PNG, GIF - max 2MB)
+            </small>
+            @error('proof_of_payment') <small class="text-danger">{{ $message }}</small> @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="photo">Valid ID (optional)</label>
             <input type="file" name="photo" class="form-control" accept="image/*">
             @error('photo') <small class="text-danger">{{ $message }}</small> @enderror
         </div>
@@ -259,7 +331,7 @@
         <button type="submit" class="btn btn-primary w-100" id="submitBtn" disabled>Register</button>
     </form>
     <div class="text-center mt-3">
-        <a href="{{ route('login') }}" class="text-decoration-none"><small>Already have an account? Login</a></small>  
+        <a href="{{ route('login') }}" class="text-decoration-none"><small>Already have an account? Login</a></small>
 
     <div class="card-disclaimer mt-4">
         Thank you for your interest in Amigos '98 Online.<br>
@@ -348,6 +420,60 @@
             toast.show();
             setTimeout(() => window.location.href = "{{ url('/') }}", 4000);
         @endif
+
+        // Payment method selection handling
+        const paymentMethodSelect = document.getElementById('payment_method');
+        const qrCodeSection = document.getElementById('qr_code_section');
+        const bankTransferSection = document.getElementById('bank_transfer_section');
+        const qrCodeContainer = document.getElementById('qr-code-container');
+        const downloadQrBtn = document.getElementById('download-qr-btn');
+
+        // QR code image paths (these should match the actual filenames)
+        const qrCodes = {
+            'GCash': 'images/gcashQR.jpeg', // Note: Using existing file with .jpeg extension
+            'Paymaya': 'images/paymayaQR.jpg',
+            'Gotyme': 'images/GotymeQR.jpg'
+        };
+
+        paymentMethodSelect.addEventListener('change', function() {
+            // Hide all payment sections
+            qrCodeSection.classList.add('d-none');
+            bankTransferSection.classList.add('d-none');
+
+            // Show relevant section based on selection
+            if (this.value === 'GCash' || this.value === 'Paymaya' || this.value === 'Gotyme') {
+                // Update QR code display
+                const qrImage = document.createElement('img');
+                qrImage.src = qrCodes[this.value];
+                qrImage.alt = this.value + ' QR Code';
+                qrImage.className = 'img-fluid';
+                qrImage.style.maxHeight = '200px';
+
+                // Clear container and add new image
+                qrCodeContainer.innerHTML = '';
+                qrCodeContainer.appendChild(qrImage);
+
+                // Update download button
+                downloadQrBtn.onclick = function() {
+                    const link = document.createElement('a');
+                    link.href = qrImage.src;
+                    link.download = qrCodes[paymentMethodSelect.value];
+                    link.click();
+                };
+
+                qrCodeSection.classList.remove('d-none');
+            } else if (this.value === 'Bank Transfer') {
+                bankTransferSection.classList.remove('d-none');
+            }
+        });
+
+        // Function to download bank QR code
+        function downloadBankQr() {
+            const link = document.createElement('a');
+            link.href = 'images/BDOQR.jpg';
+            link.download = 'BDOQR.jpg';
+            link.click();
+        }
     });
 </script>
 

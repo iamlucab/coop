@@ -16,3 +16,12 @@
         <a href="{{ route('members.index') }}" class="btn btn-secondary mt-3">Back</a>
     </form>
 @stop
+
+@section('js')
+    <script>
+        $(function () {
+            // Initialize any tooltips if needed
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+@stop
