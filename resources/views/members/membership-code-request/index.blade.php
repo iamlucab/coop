@@ -31,7 +31,7 @@
                             <div class="card h-100 shadow-sm border-0">
                                 <div class="card-header bg-light">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h6 class="mb-0 text-muted">Request #{{ $request->id }}</h6>
+                                        <h6 class="mb-0 text-muted">Request # {{ $request->id }}</h6>
                                         <span class="badge badge-{{ $request->status === 'pending' ? 'warning' : ($request->status === 'approved' ? 'success' : ($request->status === 'rejected' ? 'danger' : 'secondary')) }}">
                                             {{ ucfirst($request->status) }}
                                         </span>
@@ -48,9 +48,9 @@
                                             <div class="font-weight-bold">{{ $request->reserved_codes_count ?? 0 }}</div>
                                         </div>
                                     </div>
-                                    
+
                                     <hr class="my-2">
-                                    
+
                                     <div class="row">
                                         <div class="col-6">
                                             <small class="text-muted">Amount per Code</small>
@@ -61,9 +61,9 @@
                                             <div class="font-weight-bold text-success">₱{{ number_format($request->total_amount, 2) }}</div>
                                         </div>
                                     </div>
-                                    
+
                                     <hr class="my-2">
-                                    
+
                                     <div class="row">
                                         <div class="col-6">
                                             <small class="text-muted">Payment Method</small>
@@ -89,7 +89,7 @@
                                             <i class="fas fa-file-image"></i> View Payment Proof
                                         </a>
                                     @endif
-                                    
+
                                     @if($request->status === 'approved' && $request->reserved_codes_count > 0)
                                         <div class="mt-2">
                                             <small class="text-success">
@@ -97,7 +97,7 @@
                                             </small>
                                         </div>
                                     @endif
-                                    
+
                                     @if($request->status === 'pending')
                                         <div class="mt-2">
                                             <small class="text-warning">
@@ -110,7 +110,7 @@
                         </div>
                     @endforeach
                 </div>
-                
+
                 <div class="d-flex justify-content-center mt-4">
                     {{ $requests->links() }}
                 </div>
@@ -136,40 +136,40 @@
     .card {
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
-    
+
     .card:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
     }
-    
+
     .badge {
         font-size: 0.75rem;
     }
-    
+
     .text-muted {
         font-size: 0.8rem;
     }
-    
+
     .font-weight-bold {
         font-size: 0.9rem;
     }
-    
+
     /* Mobile optimizations */
     @media (max-width: 768px) {
         .col-12.col-md-6.col-lg-4 {
             padding-left: 8px;
             padding-right: 8px;
         }
-        
+
         .card-body {
             padding: 1rem;
         }
-        
+
         .card-footer {
             padding: 0.75rem 1rem;
         }
     }
-    
+
     /* Card grid adjustments */
     @media (min-width: 768px) and (max-width: 991px) {
         .col-md-6 {
@@ -177,7 +177,7 @@
             max-width: 50%;
         }
     }
-    
+
     @media (min-width: 992px) {
         .col-lg-4 {
             flex: 0 0 33.333333%;

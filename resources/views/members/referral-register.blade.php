@@ -286,7 +286,7 @@
 
         {{-- Payment Method --}}
         <div class="mb-3">
-            <label for="payment_method" class="form-label">Membership Payment Method</label>
+            <label for="payment_method" class="form-label">Membership Payment P100</label>
             <select name="payment_method" id="payment_method" class="form-control" required>
                 <option value="">Select Payment Method</option>
                 <option value="GCash">GCash</option>
@@ -332,7 +332,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <img src="images/BDOQR.jpg" alt="BDO QR Code" class="img-fluid mb-2" style="max-height: 200px;">
+                        <img src="{{ asset('images/BDOQR.jpg') }}" alt="BDO QR Code" class="img-fluid mb-2" style="max-height: 200px;">
                         <p class="small text-muted mt-2">Scan to pay via Bank Transfer</p>
                         <br><br>
                         <button class="btn btn-sm btn-primary" onclick="downloadBankQr()">
@@ -473,9 +473,9 @@
 
             // QR code image paths (these should match the actual filenames)
             const qrCodes = {
-                'GCash': 'images/gcashQR.jpeg', // Note: Using existing file with .jpeg extension
-                'Paymaya': 'images/paymayaQR.jpg',
-                'Gotyme': 'images/GotymeQR.jpg'
+                'GCash': '{{ asset("images/gcashQR.jpeg") }}', // Note: Using existing file with .jpeg extension
+                'Paymaya': '{{ asset("images/paymayaQR.jpg") }}',
+                'Gotyme': '{{ asset("images/GotymeQR.jpg") }}'
             };
 
             paymentMethodSelect.addEventListener('change', function() {
@@ -513,7 +513,7 @@
             // Function to download bank QR code
             function downloadBankQr() {
                 const link = document.createElement('a');
-                link.href = 'images/BDOQR.jpg';
+                link.href = '{{ asset("images/BDOQR.jpg") }}';
                 link.download = 'BDOQR.jpg';
                 link.click();
             }

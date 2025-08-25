@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container-fluid">
-    @if(session('success'))
+    {{-- @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
@@ -22,7 +22,7 @@
                 @endforeach
             </ul>
         </div>
-    @endif
+    @endif --}}
 
     {{-- ✅ Membership Dashboard Cards - Mobile Optimized --}}
     <div class="row mb-4 g-3">
@@ -127,7 +127,7 @@
                 <div class="card-body">
                     <form action="{{ route('member.membership-code-request.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        
+
                         <!-- Quantity and Price Section -->
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
@@ -135,15 +135,15 @@
                                     <label for="quantity" class="font-weight-bold">
                                         <i class="bi bi-hash"></i> Quantity
                                     </label>
-                                    <input type="number" name="quantity" id="quantity" 
-                                           class="form-control form-control-lg" 
+                                    <input type="number" name="quantity" id="quantity"
+                                           class="form-control form-control-lg"
                                            min="1" max="100" value="{{ old('quantity', 1) }}" required>
                                     <small class="form-text text-muted">
                                         Enter the number of membership codes you want to request (1-100)
                                     </small>
                                 </div>
                             </div>
-                            
+
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="form-group">
                                     <label class="font-weight-bold">
@@ -158,7 +158,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Total Amount and Wallet Balance -->
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
@@ -170,12 +170,12 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-success text-white">₱</span>
                                         </div>
-                                        <input type="text" id="total_amount" class="form-control font-weight-bold text-success" 
+                                        <input type="text" id="total_amount" class="form-control font-weight-bold text-success"
                                                value="{{ number_format($amountPerCode, 2) }}" readonly>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             @isset($wallet)
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="form-group">
@@ -186,13 +186,13 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-info text-white">₱</span>
                                         </div>
-                                        <input type="text" id="wallet_balance" class="form-control" 
+                                        <input type="text" id="wallet_balance" class="form-control"
                                                value="{{ number_format($wallet->balance, 2) }}" readonly>
                                     </div>
                                 </div>
                             @endisset
                         </div>
-                        
+
                         <!-- Payment Method Selection -->
                         <div class="form-group mb-4">
                             <label for="payment_method" class="font-weight-bold">
@@ -211,19 +211,19 @@
                                 </option>
                             </select>
                         </div>
-                        
+
                         <!-- Wallet Payment Warning -->
                         <div id="wallet_warning" class="alert alert-warning d-none">
                             <i class="bi bi-exclamation-triangle"></i>
                             <strong>Insufficient Funds!</strong> Please choose another payment method or add funds to your wallet.
                         </div>
-                        
+
                         <!-- Wallet Payment Success -->
                         <div id="wallet_success" class="alert alert-info d-none">
                             <i class="bi bi-info-circle"></i>
                             <strong>Wallet Payment:</strong> If you proceed with wallet payment, the codes will be transferred to you immediately after payment.
                         </div>
-                        
+
                         <!-- GCash Payment Details -->
                         <div id="gcash_details" class="d-none">
                             <div class="card border-primary shadow-sm mb-3">
@@ -237,19 +237,19 @@
                                         <img src="{{ asset('images/gcashQR.jpeg') }}" alt="GCash QR Code"
                                             class="img-fluid rounded shadow-sm" style="max-width: 200px;">
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-12 col-md-6">
-                                            <strong>GCash Account:</strong><br>LU*** CAB*
+                                            <strong>GCash Account:</strong><br>LU*** C.
                                         </div>
                                         <div class="col-12 col-md-6 text-md-right">
-                                            <a href="{{ asset('images/gcashQR.jpeg') }}" download="GCash-QR-Code.jpeg" 
+                                            <a href="{{ asset('images/gcashQR.jpeg') }}" download="gcashQR.jpeg"
                                                class="btn btn-sm btn-primary">
                                                 <i class="bi bi-download"></i> Download QR Code
                                             </a>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="mt-2">
                                         <small class="text-muted">
                                             <i class="bi bi-info-circle"></i> After payment, please upload the proof below.
@@ -258,7 +258,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Bank Payment Details -->
                         <div id="bank_details" class="d-none">
                             <div class="card border-primary shadow-sm mb-3">
@@ -269,11 +269,11 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
-                                        <img src="{{ asset('images/bdo-logo.png') }}" alt="BDO Logo" 
+                                        <img src="{{ asset('images/bdo-logo.png') }}" alt="BDO Logo"
                                              class="mr-3" style="max-width: 60px;">
                                         <div>
                                             <div><strong>Bank:</strong> BDO</div>
-                                            <div><strong>Account Name:</strong> Amigos Online Community</div>
+                                            <div><strong>Account Name:</strong> Amigos 98 Online</div>
                                             <div><strong>Account No:</strong> 0071 5801 3083</div>
                                         </div>
                                     </div>
@@ -283,7 +283,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Proof Upload -->
                         <div class="form-group mb-3">
                             <label for="proof" class="font-weight-bold">
@@ -297,13 +297,13 @@
                                 Upload proof of payment (JPEG, PNG, GIF - max 2MB)
                             </small>
                         </div>
-                        
+
                         <!-- Note -->
                         <div class="form-group mb-4">
                             <label for="note" class="font-weight-bold">
                                 <i class="bi bi-sticky"></i> Note (Optional)
                             </label>
-                            <textarea name="note" id="note" class="form-control" rows="3" 
+                            <textarea name="note" id="note" class="form-control" rows="3"
                                       placeholder="Any additional notes...">{{ old('note') }}</textarea>
                         </div>
                         <br>
@@ -311,7 +311,7 @@
                         <div class="row">
                             <div class="col-12 col-md-6 mb-2">
                                 <button type="submit" class="btn btn-primary btn-sm btn-block">
-                                    <i class="bi bi-send"></i> Submit 
+                                    <i class="bi bi-send"></i> Submit
                                 </button>
                             </div>
                             <div class="col-12 col-md-6 mb-2">
@@ -418,7 +418,7 @@
                                         @endif
                                     </div>
                                 </div>
-                                
+
                                 <div class="row g-2">
                                     <div class="col-6">
                                         <small class="text-muted">Quantity</small>
@@ -442,7 +442,7 @@
                     </div>
                     @endforeach
                 </div>
-                
+
                 {{-- Fallback message for pending requests --}}
                 @if($membershipCodeRequests->where('status', 'pending')->count() > 0)
                 <div class="mt-3 alert alert-info mb-0">
@@ -450,7 +450,7 @@
                     Your membership code request is currently pending approval. Once approved, the codes will be displayed here.
                 </div>
                 @endif
-                
+
                 {{-- Message for approved requests without codes yet --}}
                 @if($membershipCodeRequests->where('status', 'approved')->count() > 0 && (!isset($reservedCodes) || $reservedCodes->count() == 0))
                 <div class="mt-3 alert alert-info mb-0">
@@ -490,29 +490,29 @@
                     Use your reserved membership codes to register new members in your network.
                     This helps expand your referral network and earn more bonuses.
                 </p>
-                
+
                 @if(isset($reservedCodes) && $reservedCodes->count() > 0)
                 <div class="alert alert-info mb-3">
                     <i class="bi bi-info-circle me-2"></i>
                     You have <strong>{{ $reservedCodes->count() }}</strong> reserved code(s) ready to use for registration.
                 </div>
                 @endif
-                
+
            <div class="d-flex flex-wrap gap-2">
     <!-- Register Member Icon Button -->
-    <a href="{{ route('member.register.form') }}" 
-       class="btn btn-sm btn-success text-white p-2" 
-       data-bs-toggle="tooltip" 
-       data-bs-placement="top" 
+    <a href="{{ route('member.register.form') }}"
+       class="btn btn-sm btn-success text-white p-2"
+       data-bs-toggle="tooltip"
+       data-bs-placement="top"
        title="Register Member">
         <i class="bi bi-person-plus"></i>
     </a>
  &nbsp;
     <!-- Request Codes Icon Button -->
-    <a href="{{ route('member.membership-code-request.create') }}" 
-       class="btn btn-sm btn-outline-primary p-2" 
-       data-bs-toggle="tooltip" 
-       data-bs-placement="top" 
+    <a href="{{ route('member.membership-code-request.create') }}"
+       class="btn btn-sm btn-outline-primary p-2"
+       data-bs-toggle="tooltip"
+       data-bs-placement="top"
        title="Request More Codes">
         <i class="bi bi-upc-scan"></i>
     </a>
@@ -546,59 +546,59 @@
         border-radius: 15px;
         border: none;
     }
-    
+
     .card-header {
         border-radius: 15px 15px 0 0 !important;
     }
-    
+
     .form-control-lg {
         border-radius: 10px;
     }
-    
+
     .input-group-text {
         border-radius: 10px 0 0 10px;
     }
-    
+
     .btn-lg {
         border-radius: 10px;
         padding: 12px 24px;
     }
-    
+
     .custom-file-label {
         border-radius: 10px;
     }
-    
+
     .alert {
         border-radius: 10px;
         border: none;
     }
-    
+
     /* Mobile optimizations */
     @media (max-width: 768px) {
         .container-fluid {
             padding: 10px;
         }
-        
+
         .card-body {
             padding: 1.5rem;
         }
-        
+
         .form-control-lg {
             font-size: 16px; /* Prevents zoom on iOS */
         }
-        
+
         .btn-lg {
             padding: 15px 20px;
             font-size: 16px;
         }
     }
-    
+
     /* Hover effects */
     .card:hover {
         transform: translateY(-2px);
         transition: transform 0.2s ease-in-out;
     }
-    
+
     .btn:hover {
         transform: translateY(-1px);
         transition: transform 0.2s ease-in-out;
@@ -619,23 +619,23 @@
         validateWalletPayment();
         showPaymentDetails();
     });
-    
+
     // Handle payment method change
     document.getElementById('payment_method').addEventListener('change', function() {
         validateWalletPayment();
         showPaymentDetails();
     });
-    
+
     // Validate wallet payment
     function validateWalletPayment() {
         const paymentMethod = document.getElementById('payment_method').value;
         const walletWarning = document.getElementById('wallet_warning');
         const walletSuccess = document.getElementById('wallet_success');
-        
+
         if (paymentMethod === 'Wallet') {
             const totalAmount = parseFloat(document.getElementById('total_amount').value.replace(/,/g, ''));
             const walletBalance = parseFloat(document.getElementById('wallet_balance').value.replace(/,/g, ''));
-            
+
             if (totalAmount > walletBalance) {
                 walletWarning.classList.remove('d-none');
                 walletSuccess.classList.add('d-none');
@@ -654,17 +654,17 @@
             document.querySelector('button[type="submit"]').disabled = false;
         }
     }
-    
+
     // Show payment details based on selected method
     function showPaymentDetails() {
         const paymentMethod = document.getElementById('payment_method').value;
         const gcashDetails = document.getElementById('gcash_details');
         const bankDetails = document.getElementById('bank_details');
-        
+
         // Hide all payment details
         gcashDetails.classList.add('d-none');
         bankDetails.classList.add('d-none');
-        
+
         // Show relevant details
         if (paymentMethod === 'GCash') {
             gcashDetails.classList.remove('d-none');
@@ -672,14 +672,14 @@
             bankDetails.classList.remove('d-none');
         }
     }
-    
+
     // Custom file input
     document.querySelector('.custom-file-input').addEventListener('change', function(e) {
         var fileName = e.target.files[0].name;
         var nextSibling = e.target.nextElementSibling;
         nextSibling.innerText = fileName;
     });
-    
+
     // Initial validation and setup
     document.addEventListener('DOMContentLoaded', function() {
         validateWalletPayment();

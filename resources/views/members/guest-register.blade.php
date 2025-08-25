@@ -290,7 +290,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <img src="images/BDOQR.jpg" alt="BDO QR Code" class="img-fluid mb-2" style="max-height: 200px;">
+                        <img src="{{ asset('images/BDOQR.jpg') }}" alt="BDO QR Code" class="img-fluid mb-2" style="max-height: 200px;">
                         <p class="small text-muted mt-2">Scan to pay via Bank Transfer</p>
                         <br><br>
                         <button class="btn btn-sm btn-primary" onclick="downloadBankQr()">
@@ -430,9 +430,9 @@
 
         // QR code image paths (these should match the actual filenames)
         const qrCodes = {
-            'GCash': 'images/gcashQR.jpeg', // Note: Using existing file with .jpeg extension
-            'Paymaya': 'images/paymayaQR.jpg',
-            'Gotyme': 'images/GotymeQR.jpg'
+            'GCash': '{{ asset("images/gcashQR.jpeg") }}', // Note: Using existing file with .jpeg extension
+            'Paymaya': '{{ asset("images/paymayaQR.jpg") }}',
+            'Gotyme': '{{ asset("images/GotymeQR.jpg") }}'
         };
 
         paymentMethodSelect.addEventListener('change', function() {
