@@ -11,7 +11,7 @@ use App\Models\Category;
 class MemberDashboardController extends Controller
 
 
-{  
+{
 
 
   public function index()
@@ -46,9 +46,9 @@ class MemberDashboardController extends Controller
         $latestWin->update(['seen' => true]);
     }
 
-    // 🛍️ Load 10 random featured products with thumbnails
-    $products = Product::whereNotNull('thumbnail')->inRandomOrder()->take(10)->get();
-    
+    // 🛍️ Load 20 random featured products with thumbnails
+    $products = Product::whereNotNull('thumbnail')->inRandomOrder()->take(20)->get();
+
     // Load categories with images for display
     $categories = Category::all();
 

@@ -1,0 +1,3591 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1756103710652,
+    "data": [
+        {
+            "type": "file",
+            "name": ".editorconfig",
+            "size": 258,
+            "hash": "d9a5756ca5adea55000be0ee4f5af68946e3554c986981b7f8e35e7acaad28fa"
+        },
+        {
+            "type": "file",
+            "name": ".env.example",
+            "size": 2419,
+            "hash": "0964055c62dedef2846cb0d7d68c8c964b362f06c23a10a082f3521e98dac44f"
+        },
+        {
+            "type": "file",
+            "name": ".ftpquota",
+            "size": 16,
+            "hash": "c73e6083f95e1ecb21f0b2f9ddf9eb58c55749c5c424d83d03fdb194fdfe26b4"
+        },
+        {
+            "type": "file",
+            "name": ".gitattributes",
+            "size": 179,
+            "hash": "6a22e0993b609a4c9a562884fe08bf3b9c8c1cf7642d221f01ccd46e98bb3dc7"
+        },
+        {
+            "type": "file",
+            "name": ".gitignore",
+            "size": 238,
+            "hash": "02667a43531aaf4f1e81720ee2f79d6a175248f585b433756387333c5928e705"
+        },
+        {
+            "type": "file",
+            "name": ".htaccess",
+            "size": 204,
+            "hash": "2235936070e292aed179f4e037a6f48520e506485d08be038950ce1d8031f2cf"
+        },
+        {
+            "type": "folder",
+            "name": ".well-known"
+        },
+        {
+            "type": "file",
+            "name": "DEPLOY_VERSION.txt",
+            "size": 13,
+            "hash": "ec4c5ee7fa68adfff9e05b005fdd5eeb5ddd0fabd5d0df0e51b19dcbed4e4a36"
+        },
+        {
+            "type": "file",
+            "name": "GoDaddyDeployer.php",
+            "size": 12640,
+            "hash": "dc619a868286ea26791a275c0e7b87b98792e8a24f52c52098e30daf06020bd6"
+        },
+        {
+            "type": "file",
+            "name": "amigos",
+            "size": 464,
+            "hash": "ea0177cceec70eb1bf6a7d61e90064f0817942063df00d7794b38912f4f3ca31"
+        },
+        {
+            "type": "file",
+            "name": "amigos-august16.sql",
+            "size": 86727,
+            "hash": "949377328fc093dd7e46eb99534f17daaa1244f84d8a90318356145ca3eebe52"
+        },
+        {
+            "type": "file",
+            "name": "amigos.pub",
+            "size": 102,
+            "hash": "46574f59cada91b5592a4f79995efdd0247408b4051468489dcd5f226b46e707"
+        },
+        {
+            "type": "folder",
+            "name": "android"
+        },
+        {
+            "type": "folder",
+            "name": "app"
+        },
+        {
+            "type": "file",
+            "name": "artisan",
+            "size": 1686,
+            "hash": "f5645be808d32398cd215ef933c793d806ae56796190579dde4ca8888c584c1b"
+        },
+        {
+            "type": "file",
+            "name": "backup_members.json",
+            "size": 4209,
+            "hash": "8d822e0a1a6d148c95ac7dc06f6709ce5de5419813730fa3005c13430c333623"
+        },
+        {
+            "type": "file",
+            "name": "backup_users.json",
+            "size": 2834,
+            "hash": "35f0be84a0d4f42a6969f6c72624b35827f48157fec945af09ebdfc8fd06dd62"
+        },
+        {
+            "type": "folder",
+            "name": "bootstrap"
+        },
+        {
+            "type": "file",
+            "name": "composer.lock",
+            "size": 404147,
+            "hash": "9e2264f821a973dc61751555f67fc94467603b8a5f68ac16b3ceae169931f545"
+        },
+        {
+            "type": "file",
+            "name": "composer.json",
+            "size": 2143,
+            "hash": "fdcf295594ae4cf929b487fc633aa1ea60de6d3ca588cfde42afe397e028c91e"
+        },
+        {
+            "type": "folder",
+            "name": "config"
+        },
+        {
+            "type": "folder",
+            "name": "database"
+        },
+        {
+            "type": "file",
+            "name": "deployer.phar",
+            "size": 1062898,
+            "hash": "25f639561cb7ebe5c2231b05cb10a0cf62f83469faf6b9248dfa6b7f94e3bd26"
+        },
+        {
+            "type": "folder",
+            "name": "docs"
+        },
+        {
+            "type": "file",
+            "name": "ebili_backup_$(date",
+            "size": 0,
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "type": "file",
+            "name": "httpd-vhosts.conf",
+            "size": 224,
+            "hash": "d3f2fbea07bdfa3d89cc7016d79557a00d3e9e8200a0747725f18ff0c4cb4b72"
+        },
+        {
+            "type": "file",
+            "name": "fix-route-params.sh",
+            "size": 705,
+            "hash": "fea4498ddddb17838c22c5fb7f7417ba6af75222a8f08a4ff2e15aec34730682"
+        },
+        {
+            "type": "folder",
+            "name": "lang"
+        },
+        {
+            "type": "file",
+            "name": "phpunit.xml",
+            "size": 1175,
+            "hash": "91a7a74c9f79390e156109fe9e3fe56214a5f0811719ff66522774a41d09ef1c"
+        },
+        {
+            "type": "folder",
+            "name": "public"
+        },
+        {
+            "type": "folder",
+            "name": "routes"
+        },
+        {
+            "type": "folder",
+            "name": "storage"
+        },
+        {
+            "type": "folder",
+            "name": "temp_pwa"
+        },
+        {
+            "type": "file",
+            "name": "vite.config.js",
+            "size": 263,
+            "hash": "b79dffc57362f908a5f6a451c4c4bc1543a7f43b596300691f754f5c8b320312"
+        },
+        {
+            "type": "file",
+            "name": "welcome.php",
+            "size": 14445,
+            "hash": "46ed398369b4ebde3ef46fa982ccf9d58f2c80f75aacf0a0f30e43293c4a9e5a"
+        },
+        {
+            "type": "file",
+            "name": ".git/FETCH_HEAD",
+            "size": 121,
+            "hash": "68efb1d143b28dc98eef21c58e3ed31af28b386a01565daec28fdfbf1def5287"
+        },
+        {
+            "type": "file",
+            "name": ".git/HEAD",
+            "size": 21,
+            "hash": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
+        },
+        {
+            "type": "file",
+            "name": ".git/config",
+            "size": 410,
+            "hash": "d34eb42babbccb7f05f01b3165df0a2517fb3ef6f57fc12a857cf04a5a14a93a"
+        },
+        {
+            "type": "folder",
+            "name": ".git/hooks"
+        },
+        {
+            "type": "file",
+            "name": ".git/description",
+            "size": 73,
+            "hash": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+        },
+        {
+            "type": "file",
+            "name": ".git/index",
+            "size": 56758,
+            "hash": "16bb855668c6f144577e54e34a22ce392c3ed1df6f3ea597a9af043c654a3721"
+        },
+        {
+            "type": "folder",
+            "name": ".git/info"
+        },
+        {
+            "type": "folder",
+            "name": ".git/objects"
+        },
+        {
+            "type": "folder",
+            "name": ".git/logs"
+        },
+        {
+            "type": "folder",
+            "name": ".git/refs"
+        },
+        {
+            "type": "file",
+            "name": ".git/shallow",
+            "size": 41,
+            "hash": "d382d92c78bfcb18eb29da678353ce51c7ef98b0bb20e8ee0c45b42658e030cd"
+        },
+        {
+            "type": "folder",
+            "name": ".github/workflows"
+        },
+        {
+            "type": "folder",
+            "name": ".well-known/acme-challenge"
+        },
+        {
+            "type": "folder",
+            "name": "android/mipmap-hdpi"
+        },
+        {
+            "type": "folder",
+            "name": "android/mipmap-mdpi"
+        },
+        {
+            "type": "folder",
+            "name": "android/mipmap-xxhdpi"
+        },
+        {
+            "type": "folder",
+            "name": "android/mipmap-xhdpi"
+        },
+        {
+            "type": "folder",
+            "name": "android/mipmap-xxxhdpi"
+        },
+        {
+            "type": "folder",
+            "name": "app/Console"
+        },
+        {
+            "type": "folder",
+            "name": "app/Events"
+        },
+        {
+            "type": "folder",
+            "name": "app/Exceptions"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http"
+        },
+        {
+            "type": "folder",
+            "name": "app/Models"
+        },
+        {
+            "type": "folder",
+            "name": "app/Notifications"
+        },
+        {
+            "type": "folder",
+            "name": "app/Providers"
+        },
+        {
+            "type": "folder",
+            "name": "app/Services"
+        },
+        {
+            "type": "file",
+            "name": "bootstrap/app.php",
+            "size": 1620,
+            "hash": "e346d041676171a900406bba87f0658b6d3aebef79bed7e7081213e7ac3c7951"
+        },
+        {
+            "type": "folder",
+            "name": "bootstrap/cache"
+        },
+        {
+            "type": "file",
+            "name": "config/adminlte.php",
+            "size": 12449,
+            "hash": "f1bcd18e44e466244abb9fe6d9166510612a7059c769cf991afa245e8dadfcd7"
+        },
+        {
+            "type": "file",
+            "name": "config/app.php",
+            "size": 8408,
+            "hash": "bdfaae38d28afd06aea736aae9dabc23d25c987bf266e8917d961a14bd223f1d"
+        },
+        {
+            "type": "file",
+            "name": "config/auth.php",
+            "size": 2618,
+            "hash": "209dada9449acc1fdc9faaccbc9a503a72787cd2907992d059bdb64a53af3f10"
+        },
+        {
+            "type": "file",
+            "name": "config/broadcasting.php",
+            "size": 2091,
+            "hash": "551cef9d06710cf34fd54da3dcdabaafbf4b764e9382229b8538231884835519"
+        },
+        {
+            "type": "file",
+            "name": "config/cache.php",
+            "size": 3272,
+            "hash": "e2d326fef30064523e76cb2b52dd3d0e277b9e91af869d18daa9a88a458c2bdf"
+        },
+        {
+            "type": "file",
+            "name": "config/cors.php",
+            "size": 846,
+            "hash": "7a1b9af42b73b20126219eca484ea7eb02c25a5d179eab1ac00251779d808c49"
+        },
+        {
+            "type": "file",
+            "name": "config/database.php",
+            "size": 5329,
+            "hash": "3134bd670c3d05727c1f8837f0eb599c23ad087ebc23e8f706bb967c3f558201"
+        },
+        {
+            "type": "file",
+            "name": "config/dompdf.php",
+            "size": 974,
+            "hash": "1912b461662f0c91125eec461a18d59bc0228f02de72395a8e0c5f573dabac40"
+        },
+        {
+            "type": "file",
+            "name": "config/filesystems.php",
+            "size": 2307,
+            "hash": "e2c354952c1661b045bf1085e0c53a8036ace54edc6de6260fc7db7e52b93801"
+        },
+        {
+            "type": "file",
+            "name": "config/hashing.php",
+            "size": 1572,
+            "hash": "6179fbf205a72d2db2f19b4787dc416811013cd05c82fb919b4d012832421ce8"
+        },
+        {
+            "type": "file",
+            "name": "config/logging.php",
+            "size": 3749,
+            "hash": "fe4edbb6f650a804262fabcb115747a3bca492c9c9a9a1bbcc3fd21ec1f4f839"
+        },
+        {
+            "type": "file",
+            "name": "config/mail.php",
+            "size": 3600,
+            "hash": "326f09e38a4b759b09459a01b5ad3451ce42ca64be7578eb7dbdf95741478808"
+        },
+        {
+            "type": "file",
+            "name": "config/queue.php",
+            "size": 2906,
+            "hash": "3def35ab94a40da164762d41ffe0beb1f34fee089a5292e4912cb9f74c2380a6"
+        },
+        {
+            "type": "file",
+            "name": "config/sanctum.php",
+            "size": 2294,
+            "hash": "2d0c59f68caad6a6a8e59a297bf3ef3b9fb51ad26080ba2763df815376eb3d6d"
+        },
+        {
+            "type": "file",
+            "name": "config/services.php",
+            "size": 3569,
+            "hash": "02d90060604131b15dcab006ce6fc92aae1a98546620a74878100dc62cf6026d"
+        },
+        {
+            "type": "file",
+            "name": "config/session.php",
+            "size": 7023,
+            "hash": "fbd81b73a8af2094f9731f83ce445a124d977d1cde0963529881fab6ae3ad7a2"
+        },
+        {
+            "type": "file",
+            "name": "config/view.php",
+            "size": 1053,
+            "hash": "31296429fea0b7bc8392bdf63c5a664524c84634cdcd8d54c51d73d762c4b2ef"
+        },
+        {
+            "type": "file",
+            "name": "database/.gitignore",
+            "size": 10,
+            "hash": "e758642d95e83e907e010b6e46b07b3f953c7cef11fe5ebefc2a77b9d7b4d5f7"
+        },
+        {
+            "type": "folder",
+            "name": "database/factories"
+        },
+        {
+            "type": "folder",
+            "name": "database/migrations"
+        },
+        {
+            "type": "folder",
+            "name": "database/seeders"
+        },
+        {
+            "type": "file",
+            "name": "docs/DATABASE-DEPLOYMENT-SOLUTION.md",
+            "size": 2669,
+            "hash": "95d3610519bba6c11b60281659c730076ada03309ad51dcfd3db3cf307a43d4f"
+        },
+        {
+            "type": "file",
+            "name": "docs/DEPLOYMENT-GUIDE.md",
+            "size": 6187,
+            "hash": "3241d1eb7b8da22a6f3af57bae5d390076a308c8bcf56c31dc22b5651a081345"
+        },
+        {
+            "type": "file",
+            "name": "docs/DEPLOYMENT-README.md",
+            "size": 4242,
+            "hash": "3e8a06fa5fa5a82761e009fc166989642cc155c43dfef3da465319d61be3a585"
+        },
+        {
+            "type": "file",
+            "name": "docs/INTEGRATION_README.md",
+            "size": 6094,
+            "hash": "0379c23f6b12a20357a9a97595016eb5940d48c469a10f3399089cbe4046cbcf"
+        },
+        {
+            "type": "file",
+            "name": "docs/README-DEPLOYMENT.md",
+            "size": 4023,
+            "hash": "a7c8b20b4cde262dfbac47e00c665c98a1dd0f44d14513b5853a622c2aed7a94"
+        },
+        {
+            "type": "file",
+            "name": "docs/README.md",
+            "size": 4158,
+            "hash": "8621e137966bdfc085ef8808b1c0777f92d77d3a2cbf14b9e5a4ba2dcb16a352"
+        },
+        {
+            "type": "file",
+            "name": "docs/admin-notification-management-guide.md",
+            "size": 13037,
+            "hash": "39d819b7edc9dd35db3f034abc1e2978eb44be3dbac78a8dd0fb57a4d4db50b0"
+        },
+        {
+            "type": "file",
+            "name": "docs/data-import-guide.md",
+            "size": 5118,
+            "hash": "0e08ab91423c2f70d36f739645e49325da87910ea11f77eaef9b1021824ba363"
+        },
+        {
+            "type": "file",
+            "name": "docs/data-migration-guide.md",
+            "size": 5757,
+            "hash": "e242979bfda16669f3ca8dca460339380fbc6c83b32dfad50134dacac95fc696"
+        },
+        {
+            "type": "file",
+            "name": "docs/enhanced-login-features.md",
+            "size": 9120,
+            "hash": "1c4853799d5860bb4f2f9ff09991d453dfa9bfb6c6907c5abc293370210df6ea"
+        },
+        {
+            "type": "file",
+            "name": "docs/firebase-setup-guide.md",
+            "size": 6057,
+            "hash": "ad07eff6fa5d44c7c232fc10b1d9ac21dd243c589474679f43e6b0ef3de2f22b"
+        },
+        {
+            "type": "file",
+            "name": "docs/integration-complete.md",
+            "size": 5196,
+            "hash": "b18b8ee0afc6281dbb2b2f73d7ca39bdda0dbe67019d79d9be36cadc810620c5"
+        },
+        {
+            "type": "file",
+            "name": "docs/mobile-app-guide.md",
+            "size": 12195,
+            "hash": "427fb4c5721e027787e517143c1cc19609496d2efeea3a23ede52a9ab42f9a23"
+        },
+        {
+            "type": "file",
+            "name": "docs/push-notifications-guide.md",
+            "size": 12945,
+            "hash": "578a803994517707d76b34a18db40c4217b94b970f60f90be0b86f1f5f6d60e7"
+        },
+        {
+            "type": "file",
+            "name": "docs/referral-configuration.md",
+            "size": 3422,
+            "hash": "b541d69fc31f8330a2d27febd584e4121ec47afbf0324598128bb4bea3d8aced"
+        },
+        {
+            "type": "folder",
+            "name": "lang/en"
+        },
+        {
+            "type": "file",
+            "name": "public/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "folder",
+            "name": "resources/css"
+        },
+        {
+            "type": "folder",
+            "name": "resources/js"
+        },
+        {
+            "type": "folder",
+            "name": "resources/tickets"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views"
+        },
+        {
+            "type": "file",
+            "name": "resources/views - Shortcut.lnk",
+            "size": 1188,
+            "hash": "943fb351c532b4e0789b98dbb82961248f9eda70bea874fc6d4d98f5f0e50d90"
+        },
+        {
+            "type": "file",
+            "name": "routes/api.php",
+            "size": 570,
+            "hash": "23fc37075690d4c6a4ae2bdac04c6b30271fb0fb3436785174c49aafa95a3718"
+        },
+        {
+            "type": "file",
+            "name": "routes/channels.php",
+            "size": 669,
+            "hash": "bec2c19b1ec439f577de0a82f3803976f72fc01f174e2f28bd82d335b66a12c8"
+        },
+        {
+            "type": "file",
+            "name": "routes/console.php",
+            "size": 592,
+            "hash": "69ec50e361f429e7ffaf95011f9e3cab75481ad753405755580e8e89b1518b20"
+        },
+        {
+            "type": "file",
+            "name": "routes/web.php",
+            "size": 34485,
+            "hash": "0b43f973b24fbe88e6407604d41b5282e56a819e28fb1f33f74384a0505caf40"
+        },
+        {
+            "type": "folder",
+            "name": "storage/app"
+        },
+        {
+            "type": "folder",
+            "name": "storage/framework"
+        },
+        {
+            "type": "folder",
+            "name": "storage/logs"
+        },
+        {
+            "type": "folder",
+            "name": "storage/photos"
+        },
+        {
+            "type": "file",
+            "name": "temp_pwa/manifest.json",
+            "size": 667,
+            "hash": "2ab2ce8794419da617e7bf5dfeaf9c7d1716ed1cab0d14ae3210c76b1f1415a5"
+        },
+        {
+            "type": "file",
+            "name": "tests/CreatesApplication.php",
+            "size": 380,
+            "hash": "63e92d10f62118215f6a4ee20036e86a26d6867175365429e65de33d0c60ba21"
+        },
+        {
+            "type": "folder",
+            "name": "tests/Feature"
+        },
+        {
+            "type": "file",
+            "name": "tests/TestCase.php",
+            "size": 163,
+            "hash": "fde47044bae82a492f646384cbc1e636b93c6bf0cea7047c3631e6a26736154d"
+        },
+        {
+            "type": "folder",
+            "name": "tests/Unit"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/applypatch-msg.sample",
+            "size": 478,
+            "hash": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/commit-msg.sample",
+            "size": 896,
+            "hash": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/fsmonitor-watchman.sample",
+            "size": 4726,
+            "hash": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/post-update.sample",
+            "size": 189,
+            "hash": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/pre-applypatch.sample",
+            "size": 424,
+            "hash": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/pre-commit.sample",
+            "size": 1649,
+            "hash": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/pre-merge-commit.sample",
+            "size": 416,
+            "hash": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/pre-push.sample",
+            "size": 1374,
+            "hash": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/pre-receive.sample",
+            "size": 544,
+            "hash": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/pre-rebase.sample",
+            "size": 4898,
+            "hash": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/prepare-commit-msg.sample",
+            "size": 1492,
+            "hash": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/push-to-checkout.sample",
+            "size": 2783,
+            "hash": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/sendemail-validate.sample",
+            "size": 2308,
+            "hash": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+        },
+        {
+            "type": "file",
+            "name": ".git/hooks/update.sample",
+            "size": 3650,
+            "hash": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+        },
+        {
+            "type": "file",
+            "name": ".git/info/exclude",
+            "size": 240,
+            "hash": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+        },
+        {
+            "type": "folder",
+            "name": ".git/objects/info"
+        },
+        {
+            "type": "folder",
+            "name": ".git/objects/pack"
+        },
+        {
+            "type": "file",
+            "name": ".git/logs/HEAD",
+            "size": 220,
+            "hash": "12eefac7113caf6017fc1b8615a8dde8224a57bd9e994a50f479a17d375dfdf4"
+        },
+        {
+            "type": "folder",
+            "name": ".git/logs/refs"
+        },
+        {
+            "type": "folder",
+            "name": ".git/refs/heads"
+        },
+        {
+            "type": "folder",
+            "name": ".git/refs/remotes"
+        },
+        {
+            "type": "folder",
+            "name": ".git/refs/tags"
+        },
+        {
+            "type": "file",
+            "name": ".github/workflows/deploy.yml",
+            "size": 1397,
+            "hash": "30b714d0724cabd8e8baeabc7ebd5d0762181c020311972a37db0b1a482960bc"
+        },
+        {
+            "type": "file",
+            "name": ".well-known/acme-challenge/MmppbDZmdDl0OW1kazlrYWhmNDdhb2RqY2Q",
+            "size": 79,
+            "hash": "509851337e04c399cec7f70f6265152551d6d8d4a7b83eccd5dfceba28e2d079"
+        },
+        {
+            "type": "file",
+            "name": ".well-known/acme-challenge/Ymg1ZWpybzh1ZHRzMjNxNWZ1MzU0ODJpOG4",
+            "size": 79,
+            "hash": "8832f10e7daed08048dff7a9a584eb27fce8688158bdc56525f177090ca83722"
+        },
+        {
+            "type": "file",
+            "name": "android/mipmap-hdpi/ic_launcher.png",
+            "size": 7140,
+            "hash": "e24e12f3aca404bd1d7d8bc76786000a1eedc6681cd8732af0ca31115e4d3270"
+        },
+        {
+            "type": "file",
+            "name": "android/mipmap-mdpi/ic_launcher.png",
+            "size": 4057,
+            "hash": "f6a74b19e6c217790748ee25d801317cb588dab0d9a0ddc1e86f57636f297246"
+        },
+        {
+            "type": "file",
+            "name": "android/mipmap-xxhdpi/ic_launcher.png",
+            "size": 18886,
+            "hash": "e21c568cc72ee63e7d46fbd567d237dc59bec11184150bc6481b259450d17ced"
+        },
+        {
+            "type": "file",
+            "name": "android/mipmap-xhdpi/ic_launcher.png",
+            "size": 10670,
+            "hash": "d7c06efd54a3c555b3e1823123504fe920d93d387478329308e04df63020edbd"
+        },
+        {
+            "type": "file",
+            "name": "android/mipmap-xxxhdpi/ic_launcher.png",
+            "size": 28344,
+            "hash": "9dbe24effd58fc25333df1e6e5e9c7c35a25bd76766930f53f0faeb8454f7768"
+        },
+        {
+            "type": "folder",
+            "name": "app/Console/Commands"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Kernel.php",
+            "size": 995,
+            "hash": "0a8414a2bcf34041afc3248836588143cd322da441d80d2494b83adc7255d589"
+        },
+        {
+            "type": "file",
+            "name": "app/Events/MemberApproved.php",
+            "size": 799,
+            "hash": "3725007f9cd7986ff308b380036b7c25bead20154ef6b8a232af8da048ed6777"
+        },
+        {
+            "type": "file",
+            "name": "app/Exceptions/Handler.php",
+            "size": 1050,
+            "hash": "e76e98ef586a6da9c58dbf8ff5635b45eb627f35e86cffa4ab4b54a89b62996f"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http/Controllers"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Kernel.php",
+            "size": 2751,
+            "hash": "e3e96cc0b3a6ed394ec394a95e7d6a47e85dfa476aa87f9f487e4035776fae7e"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http/Middleware"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http/ViewComposers"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/AliexpressToken.php",
+            "size": 1284,
+            "hash": "b28d8fc283cc851d7663d1fad7523067e1268b99655c2ee073b18406cf38394c"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/CashInRequest.php",
+            "size": 356,
+            "hash": "828e2b927752b12d4037fdebd698a0d87d22e483a6ae8bf00b0f0213b824aedc"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/CashbackLog.php",
+            "size": 797,
+            "hash": "2505962a4e32ddb662885f28e4780097a03054a7f319d1c156860b682cad74a3"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Category.php",
+            "size": 316,
+            "hash": "1aaddfc84ae85c45f5231187c77e70dcdb3ebd8f4f79b7d2ed72adf2a74d14c8"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/DeviceToken.php",
+            "size": 3700,
+            "hash": "d9a8d7a8459606285c71296586b866cde80286f0c6a478c1c6e312c841a1de9b"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Loan.php",
+            "size": 932,
+            "hash": "ca2fcc8102eb5c2a8168ac83864440cdd90ec20f962c446c5dece842ff8a0e6c"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/LoanPayment.php",
+            "size": 906,
+            "hash": "2001b243638b653eafcd3d86225a516ef14c18ad4b26704cd84d51625efcddb1"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Member.php",
+            "size": 6895,
+            "hash": "6757cc9e175a433c46f229ba9b19e404abedce67cfa81ef23383e85c79a4498a"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/MembershipCodeRequest.php",
+            "size": 1856,
+            "hash": "59e13cf756272e9e9d02020922a80dc8c670dba2d491f1870b75de6de8a18502"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/MembershipCode.php",
+            "size": 2441,
+            "hash": "5455614a4abb112508c6b8d6283481dfb13401c1ab28d8475d89613b72ba67ee"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/MembershipCodeRequestItem.php",
+            "size": 524,
+            "hash": "633133bc6e2cab23855a07055c95fb43116efd4ff72c1f3a20d1b873190a55f4"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Notification.php",
+            "size": 1476,
+            "hash": "059147a78fb5e179074291493424a3157518ef3c6d08f0d20dcbd3692af19bb0"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Order.php",
+            "size": 618,
+            "hash": "7fc7a4396211b12e176ec73d66cecd4877cfb6cd74dc1e560e9e02f21e447a2c"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/OrderItem.php",
+            "size": 968,
+            "hash": "edaa7417cd5047b0a3b8973e359274ef55a837fc0d308cf881730dbff5055076"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Product.php",
+            "size": 6627,
+            "hash": "c7c110f95916d12b01bce83ab01a9dc380abd1c28b82341ecefecb67f884b8a3"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/ReferralBonusLog.php",
+            "size": 527,
+            "hash": "4a2ffb86b061fb84042009eac379c704f06bf292fa8529549bb522f9e852c2f1"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/ReferralConfiguration.php",
+            "size": 2794,
+            "hash": "77196657a5d7a7211685ea3fbfbcd02f54cf097dc583138d3bb0101030472ce9"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/RewardProgram.php",
+            "size": 460,
+            "hash": "fae5803d780f05d7384d9e40c4c48a8452a2a1b582530e9a0f4f958b2952c898"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/RewardWinner.php",
+            "size": 454,
+            "hash": "9d7e8d174dad2f2b74ebfac4c70602999b4d72947267cddf14966b2da6d01f46"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Setting.php",
+            "size": 344,
+            "hash": "09c1c6d82c2bc6906afdf25c87f6d337313f0862a1d7d8700b61b51f26e4256c"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/SmsLog.php",
+            "size": 8412,
+            "hash": "e5a9f1a6a8ea1f634f76306e3622f25cb8177690150cff045357a9e2ff58a7b9"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Ticket.php",
+            "size": 709,
+            "hash": "c1dea034553e411b854e38262d2f59d14aafab27eeebabdd9e31e8e9dcdd7cf1"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/TicketReply.php",
+            "size": 937,
+            "hash": "3662c6e692976ecb171e25469cc267e590554327925aaf23481540b81a4cd815"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Unit.php",
+            "size": 303,
+            "hash": "80fde599e42395ebf9eb783156e8586fb5a6bcc5b18b2b5ccd4a96b5b1b1b332"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/User.php",
+            "size": 2451,
+            "hash": "aa3bba5d40277477648c3b91e95b3406e11d9f25199bceb106d766d8f647843e"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Voter.php",
+            "size": 506,
+            "hash": "442d92911455aafaf29f8b8a00d06d4cb57eecbf6e21fc37431e12743735dc0e"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/Wallet.php",
+            "size": 2399,
+            "hash": "840528aade9c546aff3f21641322e682a81e3aff2e2de78026711186a8bc5c05"
+        },
+        {
+            "type": "file",
+            "name": "app/Models/WalletTransaction.php",
+            "size": 2506,
+            "hash": "9a159db00622b6ca22d81d49e695a82b5949d8e6e9e2b34b7b70af38e785b7e8"
+        },
+        {
+            "type": "file",
+            "name": "app/Notifications/MemberApprovedNotification.php",
+            "size": 957,
+            "hash": "f9926b5fab36f3ffe4adc976907679a647aa39fa1845f520ee6ac60e89152bed"
+        },
+        {
+            "type": "file",
+            "name": "app/Notifications/RewardWon.php",
+            "size": 1303,
+            "hash": "0144186fbd6c6d5d7f80f9a8915419b3d5d023617ef0e4cf04fa3932070bf7bb"
+        },
+        {
+            "type": "file",
+            "name": "app/Providers/AliexpressServiceProvider.php",
+            "size": 533,
+            "hash": "c28c86a92986c7946904878b3774ec43a8392006d350bb833efe743e2f73cbe9"
+        },
+        {
+            "type": "file",
+            "name": "app/Providers/AppServiceProvider.php",
+            "size": 1008,
+            "hash": "901564a0c2c0ea9378c8b719c957e4be17e844cf12c810b347afddc067230f2b"
+        },
+        {
+            "type": "file",
+            "name": "app/Providers/AuthServiceProvider.php",
+            "size": 1105,
+            "hash": "136c2d3fadf2654ba247e39d899161af05a32b5f1c93fccaa47c907faf67cfa0"
+        },
+        {
+            "type": "file",
+            "name": "app/Providers/BroadcastServiceProvider.php",
+            "size": 380,
+            "hash": "6dade8c1ce5b4f91204e5c56f821f658f3e24d3d5bbae1a625c6914995ad81d2"
+        },
+        {
+            "type": "file",
+            "name": "app/Providers/EventServiceProvider.php",
+            "size": 926,
+            "hash": "ca762bf87e69ec98b7324942fb4062a245cecfe7d4d04c5cb91c1bcde4496be6"
+        },
+        {
+            "type": "file",
+            "name": "app/Providers/RouteServiceProvider.php",
+            "size": 1327,
+            "hash": "ac3feac96a4fef80c555d6e064ba2bde9471e121ad296ac8b8b71d9468ea52be"
+        },
+        {
+            "type": "file",
+            "name": "app/Services/AliexpressService.php",
+            "size": 3917,
+            "hash": "8d9f01925d508504c29109eaddccded85a93992f00a7980d0f980450fea74315"
+        },
+        {
+            "type": "file",
+            "name": "app/Services/FirebasePushNotificationService.php",
+            "size": 11152,
+            "hash": "08cc82f9bb064f7f12f80fe623a17f3a3e68b400c851664d3d44f0b8b6a08771"
+        },
+        {
+            "type": "file",
+            "name": "app/Services/ReferralBonusService.php",
+            "size": 4736,
+            "hash": "69aea7dcc2bf299513d04039b6e1b63dc5ebf8f0d5f1efe87777e08fcc09c592"
+        },
+        {
+            "type": "file",
+            "name": "app/Services/SemaphoreSmsService.php",
+            "size": 10901,
+            "hash": "0d62701a358b866702db7c850536d57400797af9236a174e6a20d5fc3f299a1f"
+        },
+        {
+            "type": "file",
+            "name": "bootstrap/cache/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "file",
+            "name": "database/factories/MemberFactory.php",
+            "size": 886,
+            "hash": "9f3f3f7d6b382a47dc3de97519612ae9e1fcd425970ce58584cb742f825be456"
+        },
+        {
+            "type": "file",
+            "name": "database/factories/UserFactory.php",
+            "size": 970,
+            "hash": "b5812aa56f4a766326e3d0638374059cbb2ed377dff247aaa59966e3ca57166d"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2014_10_12_100000_create_password_resets_table.php",
+            "size": 671,
+            "hash": "789aa6b04b29e8cf9ee88b151bb35ee8dd04ee0921d83002ec34a03177d17186"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2019_08_19_000000_create_failed_jobs_table.php",
+            "size": 810,
+            "hash": "69197c463f551c7e5d92247786502e4da0dbaa39d4a206604d39b20f54931d29"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php",
+            "size": 898,
+            "hash": "5ddab635a1ab9e278bb9c828e840b5e4c38e3321565d0c494e8acfc5b78502a9"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_18_000000_create_members_table.php",
+            "size": 1107,
+            "hash": "913b0d13c83aa6567b09de64691f1eef0024822cafc744e0acfa6072f325997d"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_18_000001_create_users_table.php",
+            "size": 973,
+            "hash": "35d84d04a36d24574bf6c405e63b48975752053f2e1750cd92cc0acfdac831c7"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_18_110030_create_voters_table.php",
+            "size": 912,
+            "hash": "317e38d652236f5d5ac0df87b9ca43b61213d74d3e20964f96cc5c41649d6cf7"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_18_110255_create_benefits_table.php",
+            "size": 657,
+            "hash": "f80bc405bd9d838155511279b0eec502c32b17b9b0f0b2b75b2873281f518cca"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_18_110337_create_benefit_member_table.php",
+            "size": 714,
+            "hash": "e5e5d0d01474ba2894f598fdfa23a824adbcfa3b0647e25e3ea61fd0390c5a80"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_18_110359_create_loans_table.php",
+            "size": 844,
+            "hash": "223e55ed0e7d2577e3c62040e09f61ba895c62fff8c40984c8451b62535b4799"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_18_115815_create_wallets_table.php",
+            "size": 745,
+            "hash": "ad7feccbfb5b4f76e1ce0ed37ffc91e0f44e1654197a87680114fc5f25eff499"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_005439_add_wallet_id_to_wallets_table.php",
+            "size": 704,
+            "hash": "86a83b2e535b54fea3e0b02247f33855b90069f36e4295162cfe950b21e707eb"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_020350_create_cash_in_requests_table.php",
+            "size": 776,
+            "hash": "61b028e45ecf319efecbeab8a4fd1778eedeb0d4955352e245daeeb30964c815"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_034014_alter_status_column_in_loans_table.php",
+            "size": 528,
+            "hash": "e3d7d71926ae2242d913d1c2a3fb25456d2610679fd5a1b7d8b72ca8f899af8e"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_035728_add_term_months_to_loans_table.php",
+            "size": 673,
+            "hash": "92e6ce8dad5b10d9245284af80789e66247738083c63593ed878d8f69c164ea8"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_040132_create_loan_payments_table.php",
+            "size": 792,
+            "hash": "0ecaa134fd32b1ee5a5b7737114f47a6e8b17f2cef3ccb5f67fb11d53b65c30a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_040133_add_payment_fields_to_loan_payments_table.php",
+            "size": 1672,
+            "hash": "789157363982a4e13258eb88f5d51e881b183dafe3aec8441a382892743018e6"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_040135_add_approval_fields_to_loans_table.php",
+            "size": 942,
+            "hash": "a4a10a2648c0e439c303680a2e314b0e7c2b98e56cf6ed738b1b9d4b7f4af5b9"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_040134_add_payment_fields_to_loan_payments_table_fixed.php",
+            "size": 3350,
+            "hash": "8743dd52137c9876521e6b696916a9abd04130d8aebec8596934faa82b761654"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_19_090214_add_purpose_to_loans_table.php",
+            "size": 671,
+            "hash": "b73a8787484b8364d6f5a1e0ccf41a5aa4c739ef9cf0bab4803cca99d40164ec"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_29_013134_add_user_id_to_wallets_table.php",
+            "size": 576,
+            "hash": "4adf51d26b567598ba2c64f9ea4d0b2d4ae7351f361488cc54925a81ea3438fb"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_29_013643_add_user_id_to_wallets_table.php",
+            "size": 1009,
+            "hash": "674f03f936d615bfb1d2b495cd730e4c783cb9e43a4198c6b408bb38df78e820"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_29_014103_make_member_id_nullable_on_wallets_table.php",
+            "size": 619,
+            "hash": "80b733b129a3484ebe620b4ec1e44892bfde63ebbbccac1d5e49893ced39ac9d"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_29_115442_create_membership_codes_table.php",
+            "size": 718,
+            "hash": "6c9799f40a7dc3cc394d9877f0fe608cb7c583341c1da4c5b13c1ca73849e722"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_29_125724_add_address_to_members_table.php",
+            "size": 543,
+            "hash": "e14fbd610d03e6e5c4a38b1bf1ced465239402879de9c29adfbf79152c135806"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_150111_create_reward_programs_table.php",
+            "size": 658,
+            "hash": "1d6840b6fd12cc505bc687c617bf4d4a31b1f8d183a8972a6c08edc4f516b6eb"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_150225_create_reward_winners_table.php",
+            "size": 783,
+            "hash": "d18ba64a6d6d85283d23fc3d2b12a390cedf9d4352a6e1bb61b5e6d7bfc69d9a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_151341_add_winner_id_to_reward_programs_table.php",
+            "size": 640,
+            "hash": "d9750270e3e84b7d05dff776e47f10625c0c38a7dd51a34a9105a78c56b40a7a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_154307_add_foreign_key_to_reward_winners_table.php",
+            "size": 889,
+            "hash": "cd84c557c0678578ff26ac6ad10d8753ad7c71ff7e35fb038dd2ee0a8b718546"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_161911_add_seen_to_reward_winners_table.php",
+            "size": 633,
+            "hash": "0c0e6f63908aa09ab4be1c1696c1ffe77ee50094c279546191a98e2f98e8df5a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_170336_add_status_to_reward_winners_table.php",
+            "size": 580,
+            "hash": "19820aa80f44357ebe27d08c1904835aea3da284142e4e7ef6a835f0691612bd"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_172643_create_tickets_table.php",
+            "size": 828,
+            "hash": "b7359cd55c8eabc3e83a5ab505608c04eb76cdfb0f2857a58cb88def32f8b6cf"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_174814_create_ticket_replies_table.php",
+            "size": 721,
+            "hash": "0589f3967da007568b66d0b99a27f868ec3f21b1969fe2f4a324b09ce111d3f4"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_183242_add_member_id_to_ticket_replies_table.php",
+            "size": 739,
+            "hash": "e3e2d65e3041991fe6caf33f118d18a0e484c66efb7921e535ea1b3b6be39314"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_194012_add_user_id_to_ticket_replies_table.php",
+            "size": 751,
+            "hash": "abb476f8b5ee2ec7739fe99490d9f1fda603284c18c39176f5c912280e8187f6"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_06_30_200510_add_wallet_id_to_wallets_table.php",
+            "size": 609,
+            "hash": "a825effdbb5c3e4a7418b4e5d99dcce61449336982767c5ee315093338acf7e7"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_01_013959_add_loan_eligible_to_members_table.php",
+            "size": 538,
+            "hash": "883e8a9e8a5fe606e214bed6aab43c129b4d0d47f4ee019e1b35c33c79760fb5"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_02_031340_add_status_to_members_and_users.php",
+            "size": 730,
+            "hash": "223c6601ee90aa1d31273f953212d7925a08ae0e03889593430056941788f615"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_01_034004_add_note_to_loan_payments_table.php",
+            "size": 547,
+            "hash": "795f14a41fa050ba836e4b09f75ffa8818e1edf08d683c1ede0c0f3046cebc25"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_02_064335_create_mobile_password_resets_table.php",
+            "size": 658,
+            "hash": "308bdf39e07eb9438a3f57188b911b4d0746943018a345a0bc5cae06d355b583"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_05_003513_add_proof_path_to_cash_in_requests_table.php",
+            "size": 632,
+            "hash": "4a826d43aca985e2aca0730d3b07ab514f9dc4ff184d2256ce55354bb7d98bed"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_05_102128_add_payment_method_to_cash_in_requests_table.php",
+            "size": 560,
+            "hash": "d8358d684fbb88bf838103fdeb61bd1256fb18342a7c239a46685015c42479d7"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_10_170926_create_referral_bonus_logs_table.php",
+            "size": 866,
+            "hash": "5de0ee52d38388e0a3d5f11dbf732504d58f7b8916b73044a4d5e9b6432b2ae3"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_192351_create_products_table.php",
+            "size": 808,
+            "hash": "b9681c5b94fcbddbc425a04ad72907a77c288917e5978670831b425ac17b0830"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_192501_create_orders_table.php",
+            "size": 795,
+            "hash": "d196987cd9a62c522f5a68ba44b6777ba6b6f5e90782f5d0d6df61da233b1121"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_192505_create_order_items_table.php",
+            "size": 810,
+            "hash": "8183e8804bb8077a8d507ad2c03be02271da39e0c1991b95232e5211a7b22f3a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_192507_create_cashback_logs_table.php",
+            "size": 789,
+            "hash": "380ab9be32bfeca01845768ff83d49072f5ca6c3a880d1f9fb9f29a6b2750f56"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_220911_create_categories_table.php",
+            "size": 592,
+            "hash": "03229cd30539f045f613dccc69889420e36ede70fac371800b98adafee1bb384"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_220916_create_units_table.php",
+            "size": 604,
+            "hash": "8ef1015b8bd55b692968502fb27c9deed81d2f38a8cb82f02e387c26dbf6ce33"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_220959_add_fields_to_products_table.php",
+            "size": 873,
+            "hash": "0338e8fb1214782455f6bee835e73dfe996ccbb527ba219d34fdc8fe3dfab62a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_220960_add_created_by_to_products_table.php",
+            "size": 783,
+            "hash": "f3167e1c073c62511b034970cf14e086b90e1712f3048810aa265da1ac8c3681"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_11_222707_add_stock_quantity_to_products_table.php",
+            "size": 565,
+            "hash": "43f2b8a04b6bb6b4dde5bb1730d39b882c7d06bbf4b637025d3b0d87816aa521"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_12_105759_create_wallet_transactions_table.php",
+            "size": 1377,
+            "hash": "d6da3c4bdce0b3d3ca0c105dc38f41982667cf2860d47bd6d69ce17724ee85a1"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_12_111511_add_wallet_id_to_wallet_transactions_table.php",
+            "size": 735,
+            "hash": "72c28ec755525d26f6010aa235a42d20c853dbeb887a4b0391592b989c886ec0"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_13_061230_add_checkout_fields_to_orders_table.php",
+            "size": 1130,
+            "hash": "55fa8d5b4e8b0ec29c2323787e6d24b9a5cf8fa75f74498913edba5a86d858e8"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_13_064546_alter_orders_add_default_to_total_cashback.php",
+            "size": 627,
+            "hash": "b5689de06eb75101a2edfce099d3ffc4874d35e9685895f2eff0bc0d7e4dcccb"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_13_115111_create_settings_table.php",
+            "size": 534,
+            "hash": "076d35e8c8736f2cebb8f76c7a1ae2e7a3dab19d6854bed6fb71f8bd44d3222b"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_13_150011_add_discounts_to_products_table.php",
+            "size": 853,
+            "hash": "43607a932e9c88fad8ace84f5e41961baef40229ea99f202eb11c9fe90ccfb02"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_14_053443_add_type_to_wallets_table.php",
+            "size": 551,
+            "hash": "855cc57df6630380aa3bc62f17b5261a1b45cd73a6d38ee977d84e82cef44b86"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_14_092645_add_source_to_cashback_logs_table.php",
+            "size": 615,
+            "hash": "04122ea9dade795369ab7cac54babb7670012a45148befdcc9fccbcdd331381f"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_14_093642_alter_wallet_transactions_add_cashback_type.php",
+            "size": 720,
+            "hash": "05355cf7ff2a99d7051cc074f5882950a3f8940d0012722db89c1d9402b0c3c9"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_14_093953_add_cashback_given_to_orders_table.php",
+            "size": 547,
+            "hash": "2b5b8c249b30077ed9e9407f4f18284d7a3c637c14ee699ce8ad371848e5b36e"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_15_180036_add_source_to_wallet_transactions_table.php",
+            "size": 707,
+            "hash": "cbaab1252bfca45a24f4e5cfeb949285fb375d5fa9b66a1cfc0dbe3bba9f6e78"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_15_200002_add_member_id_to_wallet_transactions_table.php",
+            "size": 857,
+            "hash": "498e34299720067178f184912c2713a618d9a680510daae11ceca61081ac7b02"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_17_232934_add_cashback_amount_to_order_items_table.php",
+            "size": 570,
+            "hash": "f34cd56e12ba40e699aaf02a6150e49e0f86cfa8bd2936c8a4aabe7d141473c0"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_25_123112_create_referral_configurations_table.php",
+            "size": 1182,
+            "hash": "7fa85f7178b48e92f0f239d7042b84a56b8ff99aaaab7f9e713e4bf4a714ccec"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_25_134817_add_cashback_configuration_to_products_table.php",
+            "size": 824,
+            "hash": "54be8494e53af37dd068705bff892932c14e94950465d0134dc5d2291d7837dc"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_25_135543_add_level_and_product_id_to_cashback_logs_table.php",
+            "size": 864,
+            "hash": "b52edecbbf0b28c114667469bcc22a5da0c3845f39433374443905688d109ab7"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_25_160111_add_status_to_order_items_table.php",
+            "size": 670,
+            "hash": "46728dcefac1d9d7a9a0672069e627e0abbd675333fd1f4aea7504707eda3d2d"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_25_162730_add_promo_fields_to_orders_table.php",
+            "size": 776,
+            "hash": "de8e18f22b8d85e73410f9b00d06501d37d04b2579b45d2ced9a695d3f97f319"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_27_091821_add_image_to_categories_table.php",
+            "size": 615,
+            "hash": "21b4c86d37dbd6527622116e3dd03fbb1851f526b2b850c907a418c2a4ddeb6a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_30_180255_create_device_tokens_table.php",
+            "size": 1304,
+            "hash": "791d2d37cf0761d35cce423246e5da9d2d4ddae4ea42ede8930d7b19271d63cc"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_30_182526_create_sms_logs_table.php",
+            "size": 1877,
+            "hash": "b7d096f54b2021bbd85c817646be76fec41beed7174f0785cf98d9ed816e82b2"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_07_31_000000_migrate_existing_members_assign_codes.php",
+            "size": 5175,
+            "hash": "ced19b873d118f9b6151193f119bfd12829f30a886a055ffbc730d0da9d46943"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_06_141552_create_membership_code_requests_table.php",
+            "size": 1113,
+            "hash": "bcc10c29e668aecc89573e53be006186a3a6dd2763d14c5fdf273ea04476976d"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_06_142342_add_reservation_fields_to_membership_codes_table.php",
+            "size": 916,
+            "hash": "6629745875f03a6181a038fb4f1537da64775270100fe35a79bc42b74bf9297a"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_06_152422_create_notifications_table.php",
+            "size": 1050,
+            "hash": "acf7d390867845b09c1507407938647a3d6d69bb339c126940daa0cca3934095"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_06_160000_add_reserved_codes_count_to_membership_code_requests_table.php",
+            "size": 719,
+            "hash": "5e55858d546b48719e0f61340c4608e0912a32844c4a4a7a832a6be0a0f8e1d4"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_06_161000_create_membership_code_request_items_table.php",
+            "size": 846,
+            "hash": "f44e839b3dbe2e4e339a2d70f5d93afeb299232da3e41900dbdb842cae04618d"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_11_232849_create_aliexpress_tokens_table.php",
+            "size": 1453,
+            "hash": "3cab3916cfe60fb34ea2236ca63981f1369e28e83f7eb6a4499248b4eea1dff2"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_12_010112_create_sessions_table.php",
+            "size": 829,
+            "hash": "a55b0cabcaea4d27358a1e43f2fe3fa5c756f444fdd573b92c5c68f8547cee70"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_16_120608_create_sessions_table.php",
+            "size": 829,
+            "hash": "a55b0cabcaea4d27358a1e43f2fe3fa5c756f444fdd573b92c5c68f8547cee70"
+        },
+        {
+            "type": "file",
+            "name": "database/migrations/2025_08_17_153358_add_payment_fields_to_members_table.php",
+            "size": 736,
+            "hash": "8b14d32095e08624b0ba341b3abe2089d64496d6c125f2f60992469781866718"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/AdminUserSeeder.php",
+            "size": 6332,
+            "hash": "fdff3de5a75362051b2db07f0e3b984777e2923b2ad78e8226850d00312bd194"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/AdminWithReferralSeeder.php",
+            "size": 2182,
+            "hash": "ba68be5f5fae1084c7360b9b240f1148efec33aa818c3fbd0cc6a57a3e94ccd1"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/BackfillWalletSeeder.php",
+            "size": 536,
+            "hash": "130885355c2c9287be53f4d23e5edf27d73f24813300f77610ef556b68ba145e"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/CategorySeeder.php",
+            "size": 836,
+            "hash": "da0bd0dabc902869f2f583d1cd6ca2f12eafea7055c6b6d2f2c72fb941b13aa1"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/ClearAndSeedRolesSeeder.php",
+            "size": 7825,
+            "hash": "5251763cf0edd5025fbeac0362fcf0bd9e09cbb46208ceb0a2f78d46772dfc3a"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/DatabaseSeeder.php",
+            "size": 899,
+            "hash": "2d7cc25679fa85f7f876c7b7ceb2c4fb8ad1292493ced0b115b71106b798ed8e"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/DeploymentSeeder.php",
+            "size": 9573,
+            "hash": "d0a54ca41d05787bcfe0fdd80e0b54ad932f7cd16edb07f5e99e14a4d2979913"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/MigrateExistingDataSeeder.php",
+            "size": 8328,
+            "hash": "c0f99250fe3846694b2774789e3543e8cf67c77689ad67765526f88224911dce"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/OrderTestSeeder.php",
+            "size": 1910,
+            "hash": "1b1d917259e755fbe89b50150c101eebda7408069651555952e5c99e561ededa"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/ReferralConfigurationSeeder.php",
+            "size": 1207,
+            "hash": "4f6e9b97ad9dab3eaecfb9b2d236dfa4ebf4733ffaf0c4858a2a8b94aa754365"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/SettingSeeder.php",
+            "size": 831,
+            "hash": "ad61cc2e92ecfc910e8f3895ae8612d1384457d48a8bda580d7d417f01fba11b"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/TestCashInSeeder.php",
+            "size": 1593,
+            "hash": "271c5bd22c3c76d2b4f84061c70f7a97bb218f43ab53179baf64579dd66f2057"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/TestUsersSeeder.php",
+            "size": 2279,
+            "hash": "1c20c2afcf453dc14e993792938b22b4b0adb94a8b78c31ea9dc7232bb412bb1"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/UnitSeeder.php",
+            "size": 706,
+            "hash": "1f7d8b085255944be098140b1e13419165927f01b5deaffa64aa67c220f1f250"
+        },
+        {
+            "type": "file",
+            "name": "database/seeders/WalletTransactionSeeder.php",
+            "size": 1217,
+            "hash": "fc0e4ddb985f566d256ab342bc73376f6d66d19a07cfc1bf7848be95bef8ccad"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/auth.php",
+            "size": 674,
+            "hash": "029823d4e0f2a8cce3b9ccb90e3eacdb4c9f28947ba59a5525bd39c14c869716"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/passwords.php",
+            "size": 744,
+            "hash": "1033d4d34a49e17610dee7a13e14d13525472a96396a96c07d3870f337e10498"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/pagination.php",
+            "size": 534,
+            "hash": "5c9bed6d2c965666d0c8b9f17f93f87cbfc7a240ead19b3b061764e8238e219f"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/validation.php",
+            "size": 10118,
+            "hash": "cebb5b4556cb1aaa39927977b89639ecc882b058ddb4b01304b66fbf3f5bd082"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte"
+        },
+        {
+            "type": "file",
+            "name": "resources/css/app.css",
+            "size": 0,
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "type": "file",
+            "name": "resources/js/app.js",
+            "size": 22,
+            "hash": "cf6dab196c721f6911ff99cc4f910897f978599a2d289971a316a5fc33091f94"
+        },
+        {
+            "type": "file",
+            "name": "resources/js/bootstrap.js",
+            "size": 1569,
+            "hash": "f88729a22c108c2c0c8bc9f9a88f463813c5a6663b8ae4cc9555d7ce97d9d8d7"
+        },
+        {
+            "type": "file",
+            "name": "resources/tickets/index.blade.php",
+            "size": 3367,
+            "hash": "ef23abfce9ecbaba750836c289f588b062221b9d92264b616c501c428cfeb670"
+        },
+        {
+            "type": "file",
+            "name": "resources/tickets/show.blade.php",
+            "size": 4535,
+            "hash": "0ef397a7b740e632e1dce30d8b212e60ee87b37e0523bcb719b8c063446237fb"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/auth"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/dashboard"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/genealogy"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/layouts"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/loans"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/members"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/offline.blade.php",
+            "size": 6633,
+            "hash": "37ee21d76984313e400ef3ee40ea8adcb106faad5fde53ccb8e8e669d79b4361"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/partials"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/profile"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/shop"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/staff"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/wallet"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/welcome-register.blade.php",
+            "size": 14482,
+            "hash": "ebdb0dd2cce2f880abc8cb3d4f9f7d69c46ca7785cb79acfdc9a9e2924cbd296"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/welcome.blade.php",
+            "size": 34929,
+            "hash": "284dda58189c858e574a21633f44566505fe1cfc1cfee6152be815e244f2ed3f"
+        },
+        {
+            "type": "file",
+            "name": "storage/app/.gitignore",
+            "size": 23,
+            "hash": "854903e02936ef3c773a96e83c67b3dfe14d5bea3d4d2224adbfc596976c6994"
+        },
+        {
+            "type": "folder",
+            "name": "storage/app/public"
+        },
+        {
+            "type": "file",
+            "name": "storage/framework/.gitignore",
+            "size": 119,
+            "hash": "2d452d65596636197757afa17df52331c84da7bb74ee0f3462fd5be4eb6afdc6"
+        },
+        {
+            "type": "folder",
+            "name": "storage/framework/cache"
+        },
+        {
+            "type": "folder",
+            "name": "storage/framework/sessions"
+        },
+        {
+            "type": "folder",
+            "name": "storage/framework/testing"
+        },
+        {
+            "type": "folder",
+            "name": "storage/framework/views"
+        },
+        {
+            "type": "file",
+            "name": "storage/logs/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "file",
+            "name": "storage/photos/68676778b3551.png",
+            "size": 14607,
+            "hash": "f6e498926c78f6be9027f157cfbd053e4f35d6205424229c9ca93acce6c53337"
+        },
+        {
+            "type": "file",
+            "name": "storage/photos/687462b807944.png",
+            "size": 4590,
+            "hash": "7da48376c60aed4fcff78d0eef71c99bdfa3e3a8bd66b4a2a47c6b53290d1a37"
+        },
+        {
+            "type": "file",
+            "name": "storage/photos/6883f968c7bae.png",
+            "size": 2904,
+            "hash": "576c4ea2d01f651c1bf82d62749436339104ffafcbff1a2dba2465769bbdaf21"
+        },
+        {
+            "type": "file",
+            "name": "storage/photos/default-profile.png",
+            "size": 42532,
+            "hash": "4b5acfc02c672ef9eb35ce71196e2838efc4ce7dc37716ac9f0b48c338be83ea"
+        },
+        {
+            "type": "file",
+            "name": "tests/Feature/ExampleTest.php",
+            "size": 380,
+            "hash": "8104193c55d0372299a012da410eb20e94269ac73e2bbebb666d731425ac0ca1"
+        },
+        {
+            "type": "file",
+            "name": "tests/Feature/ReferralConfigurationTest.php",
+            "size": 4846,
+            "hash": "3f5d46fa2b6f7d4de77b4fa03a1e331637966bbd227f95cde43e9f5e57f62855"
+        },
+        {
+            "type": "file",
+            "name": "tests/Unit/ExampleTest.php",
+            "size": 264,
+            "hash": "80f73478049930f5adbe3d676ef70dd5f53f68f19c16c368439d091180506c52"
+        },
+        {
+            "type": "file",
+            "name": ".git/objects/pack/pack-69ba8f9559c833ca2be3723a611477943d286a42.idx",
+            "size": 17536,
+            "hash": "9b31cf217f9307f41f2651952d88f0ed8561b33dd9b0db288b53f319cc93ff99"
+        },
+        {
+            "type": "file",
+            "name": ".git/objects/pack/pack-69ba8f9559c833ca2be3723a611477943d286a42.rev",
+            "size": 2404,
+            "hash": "30b55962f2fd31aaf5ef91c1a9e99b6e0439ea68d503c4563f2d75e187825995"
+        },
+        {
+            "type": "file",
+            "name": ".git/objects/pack/pack-69ba8f9559c833ca2be3723a611477943d286a42.pack",
+            "size": 881658,
+            "hash": "ce7216b613f8c7744b167eae6ab06a6e511b68376058c22940b909184853b5ea"
+        },
+        {
+            "type": "folder",
+            "name": ".git/logs/refs/heads"
+        },
+        {
+            "type": "folder",
+            "name": ".git/logs/refs/remotes"
+        },
+        {
+            "type": "file",
+            "name": ".git/refs/heads/main",
+            "size": 41,
+            "hash": "d382d92c78bfcb18eb29da678353ce51c7ef98b0bb20e8ee0c45b42658e030cd"
+        },
+        {
+            "type": "folder",
+            "name": ".git/refs/remotes/origin"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/BackfillAllWallets.php",
+            "size": 1301,
+            "hash": "e9f7ca93341d7deba85b325927b32d9a67227bd4a7184661bea47c6645449f43"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/BackfillOrderItemCashback.php",
+            "size": 930,
+            "hash": "40198477ffb0fe2dc0060e64e678f4b60392aba073c378f4938de4cb039e6656"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/BackfillReferralBonuses.php",
+            "size": 4333,
+            "hash": "81366aaa51c375c7130976ee4256897b8d4a10b3665978c8ae30dd8df68683b1"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/BackfillWalletTransactionMemberId.php",
+            "size": 1026,
+            "hash": "0edf217f33efdfb6dcbd46abe264d1e75b63bc35b371dada971bb56cf18cb0da"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/CreateSponsorMember.php",
+            "size": 3540,
+            "hash": "932bfd96a8662b836a5f980a1c0e6ac044036b25f46be0fa0e8c68a1539e52ff"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/BackfillWallets.php",
+            "size": 884,
+            "hash": "dc2341b2279904a984a0ac341629b330cc782ded64e288ef4acb0b535f17655c"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/EnsureCashbackWallets.php",
+            "size": 1105,
+            "hash": "b3b344d533c5677b4294bb93429f3ddbfbbf127154d9a97a391beeee6f2f5429"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/FixProductOwnership.php",
+            "size": 2339,
+            "hash": "c2dac0fa9bbaedda45cd509a4a81a635c3984bb52c441bf7e20d79b1486d1735"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/FixUtf8Encoding.php",
+            "size": 3839,
+            "hash": "289a9242d297ef897812a20a6e8040d26fbc4553ae0e047de0d3d61f8e384322"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/ImportEbiliData.php",
+            "size": 8908,
+            "hash": "ada4f640334b1d3a37aa04a172e9d3efe7665b7520f49efcb0a73bb18987bbd9"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/IntegrateSpecificMembers.php",
+            "size": 24347,
+            "hash": "f2aeb1f79f77c2d3a964569d9663700c85f8ee90a9cdeee028115d3a919828eb"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/IntegrateEbiliData.php",
+            "size": 21589,
+            "hash": "b9c71baf7d2a441b65d591aa0a5b241dbf037cc233401e3a3ed93a944c42e625"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/MigrateWalletsToMainType.php",
+            "size": 1647,
+            "hash": "9489e5b83968283f039811914e03e23e895ec9cb6751118afe172abeb4fe8f5e"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/PrepareDeployment.php",
+            "size": 2230,
+            "hash": "8dd5e12752e87863475264fa9f892dc0138814a88165a7512655db20392bcadc"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/ResetDatabaseButKeepMembers.php",
+            "size": 1173,
+            "hash": "5ed9b067011d0d6849145036f949436a75789f7c8e17a2b2384d8eb71e94bebb"
+        },
+        {
+            "type": "file",
+            "name": "app/Console/Commands/ResetSampleData.php",
+            "size": 1557,
+            "hash": "016c22c4a7ca4fd7cd81eb5c69e4e182e39b9786e007e83cc1ba273fa71a05fc"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http/Controllers/Admin"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http/Controllers/Auth"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Controller.php",
+            "size": 361,
+            "hash": "03b82a5051ca8dd75ed2833cf29cd1747358972471d24c36f74648aaf05b5e8f"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/GenealogyController.php",
+            "size": 1314,
+            "hash": "848be3c9b43aa53b66d25cfa32015e7bee91aa6a58c78d2344652dd551f731cf"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/LoanController.php",
+            "size": 3247,
+            "hash": "731e18a599d1858376679a033a3aa3b5b0bb37e1cf419d3b944c079fd4f601fd"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/GuestRegistrationController.php",
+            "size": 7386,
+            "hash": "f540c2b7a721fdccc32589f23f067e58a58a5a0ba8600d7e51ee52bf5e3d93fc"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/LoanPaymentController.php",
+            "size": 6733,
+            "hash": "155dec41cdf75c773fd8397c0d11a6689d1ddaca0b1a5c0c9f02a05ddd265919"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http/Controllers/Member"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/MemberDashboardController.php",
+            "size": 2165,
+            "hash": "a8c61c2f17cf8e83a1b601151dfcffb8dd4d965ab1d927561fb6db9b58c158ef"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/MemberProductController.php",
+            "size": 2091,
+            "hash": "c2c810bb4f4a01970891be6f77b46a38d6f27c035e69b0ce1e7dab9f6fb4e8cd"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/MemberRegistrationController.php",
+            "size": 4558,
+            "hash": "c715d5c87172e780195c2686109948100cc06bce1a0cb60a8baa00d870d55bd2"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/MembersController.php",
+            "size": 9528,
+            "hash": "7c1fcce872d074d31bc9e3398b39a75dd46efc7eca5ddda44fcd293acf4806e1"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/OrderController.php",
+            "size": 6495,
+            "hash": "94060e3e7e8e774ced01adf1dbeee2eee02afd1b69b42e893088da371e70f8dd"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/ProfileController.php",
+            "size": 2014,
+            "hash": "554bb26ca43851bdca0c058f72865d7aab40fa1e8002dc615ce826b6d774f1c1"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/PushNotificationController.php",
+            "size": 11559,
+            "hash": "c11243a9b989b87b1d61095d596a4238223c9588ee657368342bfd4eaf0cee3e"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/ShopController.php",
+            "size": 12807,
+            "hash": "d5f1b94acbbd7fa1682ae3fae6491f2a674a9b4d28b476f8903217f0071063e8"
+        },
+        {
+            "type": "folder",
+            "name": "app/Http/Controllers/Staff"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/WalletController.php",
+            "size": 12984,
+            "hash": "095913f1b71cb41c79b33e3175449ce0b5425e241fa31b4f2b673ba8ac46b3e8"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/AdminMiddleware.php",
+            "size": 362,
+            "hash": "3d2ff598b2c6f80cdb5609ccf9bcc406b2b3084ba37730154ad53d4d3f32e0dd"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/Authenticate.php",
+            "size": 469,
+            "hash": "2c0be9f631263bbae2d83531cbb0f2068aaa0c53a000d5cc2605bf291d7dafc1"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/EncryptCookies.php",
+            "size": 307,
+            "hash": "958e86e38afd4321b443b8c4aaef17fc956bbac93410d54af2f74213c52e9b87"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/PreventRequestsDuringMaintenance.php",
+            "size": 366,
+            "hash": "63a907517beed52be7dad5dbda73e9ecd504b1cece86a80c007526998e146974"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/RedirectIfAuthenticated.php",
+            "size": 877,
+            "hash": "b5d645f77c2790f685477797fa10fb915e6564d42846a20c362ed5042789a536"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/StaffMiddleware.php",
+            "size": 387,
+            "hash": "568663e736375ca48f4b23f4527ec809dd282266fc08427a3fa3b483ccc774b8"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/TrimStrings.php",
+            "size": 381,
+            "hash": "107bf2dc8b970b2956548ab63221b350587f1fb94792f786f047723da5e2c615"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/TrustHosts.php",
+            "size": 372,
+            "hash": "1c6e9a1b0d698038bd2e54598b144275b56e9838d78bb833cbee12e567b33761"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/TrustProxies.php",
+            "size": 649,
+            "hash": "9ba084335e120f472f21ced3e062e07dca6333e8ba91029e44dfec485f9c6485"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/ValidateSignature.php",
+            "size": 460,
+            "hash": "b63174bf5ac6fbb47dc97cc29e243d68500c27fa1845961a789df1587b8a35d4"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Middleware/VerifyCsrfToken.php",
+            "size": 320,
+            "hash": "4cf686438284e60066d1851141afb196540df76bb0c923dd761d6fea82558f40"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/ViewComposers/NotificationComposer.php",
+            "size": 645,
+            "hash": "443a45dab1781a6daf411557568c2d35f4e234cf39db9f80e342f1f84aa9b21f"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/ar"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/bn"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/ca"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/de"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/en"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/es"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/fa"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/fr"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/hr"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/hu"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/id"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/it"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/ja"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/la"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/nl"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/pl"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/pt-br"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/pt-pt"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/ru"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/sk"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/sr"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/tr"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/uk"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/zh-CN"
+        },
+        {
+            "type": "folder",
+            "name": "lang/vendor/adminlte/vi"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/categories"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/codes"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/loans"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/members"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/membership-code-requests"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/notifications"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/orders"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/products"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/referral_bonuses"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/referral_configurations"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/reports"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/rewards"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/settings"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/wallet"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/admin/tickets"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/forget-password.blade.php",
+            "size": 5259,
+            "hash": "b80be466de2f9b8d7aaaba8f499f3ec7faa8707af395b7d83810127e2d0b7ab9"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/login.blade.php",
+            "size": 22864,
+            "hash": "505c0caab354e7f5441aa58969e14e55590c50910b2210c9331f006c0268c2b7"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/auth/passwords"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/register.blade.php",
+            "size": 5122,
+            "hash": "b39b0f90551650bf30e3fb0e673c76ab0ea3e8dbd4c35e7cc23902633fe972e3"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/sms-forget-password.blade.php",
+            "size": 3326,
+            "hash": "b090c4b9e6b2e275435361e76133bf8d700979c7a9db09b8e6a55d82a4742266"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/sms-reset-password.blade.php",
+            "size": 4879,
+            "hash": "56891819c95d5cc8a9998f910baa37176c70f2c59d9da59af2b53fecd62f09b1"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/verify.blade.php",
+            "size": 33,
+            "hash": "93fc4f5bf275d9d83cc72a744703a49ad7ac140ff9f54644275b09f239980211"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/dashboard/admin.blade.php",
+            "size": 10065,
+            "hash": "2a8ee8be8aba53afe263ad456f46701a62021aaf9bbfcf76b9323f25a4ec87aa"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/dashboard/member.blade.php",
+            "size": 84251,
+            "hash": "c618fba1d6499dc952f7de575d7c669f66314cacb937d5c4aa8b4d9a4c997fb0"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/dashboard/staff.blade.php",
+            "size": 9035,
+            "hash": "b1732ebca6f5abf72de91ec89756d19054eaece3c937237baa736c147d1f9929"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/genealogy/index.blade.php",
+            "size": 1001,
+            "hash": "8854eda95c5d3e7833a27b9eb24db7e523389dcaef5b4cdb0de2c02923aaf685"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/layouts/admin.blade.php",
+            "size": 116,
+            "hash": "3aa84827165d00265ec9c89229fb511322eadbb6dcba8331c61a16289aa60822"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/layouts/adminlte-base.blade.php",
+            "size": 3879,
+            "hash": "671f727b5ef501d15989c05f9ceab8258287d3d971ddf6c9c395c51674b79f5e"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/layouts/app.blade.php",
+            "size": 12279,
+            "hash": "51c7b85d092bb4159a5ab8f67307bd08917155fffc57a80d4b42fe12a07db0cc"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/layouts/cart-floating-button.blade.php",
+            "size": 420,
+            "hash": "824b81f1851647ff078f4c79f0ca2a84a498f9a735c56b11ecfae5fb1f293ccd"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/layouts/guest.blade.php",
+            "size": 3794,
+            "hash": "7fbe796a2065824aa3efa94ce04a5a70279f99e6cad378abcd557a08374f6256"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/loans/index.blade.php",
+            "size": 5616,
+            "hash": "9cf8482c56936a43c5c5da826d10d0ec86eb68e30858f91319ce54cf90b5fd01"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/loans/payment-history.blade.php",
+            "size": 2012,
+            "hash": "bbaf7a087beeecec040f93b4ca7eb64b387e6d1afd8d65ebc280ac89dfafa6ed"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/loans/payment-modal.blade.php",
+            "size": 5363,
+            "hash": "41f56f32ef1ede9187058626f7c9582528feccd6194d22f1fd78c53c1160089f"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/loans/show.blade.php",
+            "size": 4315,
+            "hash": "65b44cb610bf8569d4aac539c4fd3913270d8188974762a8c39ac39986a3c8d7"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/create.blade.php",
+            "size": 3122,
+            "hash": "c9fc0b7fd7f98c1865aa5465988176e8ff16d3359cce5c50114fa19ab95cf445"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/guest-register.blade.php",
+            "size": 19492,
+            "hash": "bf2b9e179f8b88510e8f195590163d2acdfffa62946ad95a2c6e72dfd99a9a4f"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/edit.blade.php",
+            "size": 728,
+            "hash": "dc2c2f3094cd74a5c01aa101b24f0f392d10abbec0004dd22fc43b8deb228202"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/members/membership-code-request"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/index.blade.php",
+            "size": 10861,
+            "hash": "c5393c336ef2709dfecb965c24694e54d87b81143131c2f00309261a0368a536"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/members/orders"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/members/partials"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/referral-register.blade.php",
+            "size": 22526,
+            "hash": "707fd6d4a118c8141fd8e043d38f8d0f2744af9cfdc165a963692a8d9b9bb5bd"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/register.blade.php",
+            "size": 7254,
+            "hash": "f13526db568442c4cf9ff9bbdd55f93ab8caeb586a2332a7b3d5685fb4342e0d"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/rewards.blade.php",
+            "size": 2643,
+            "hash": "ce847905833dcb8365dca70a1655954239c94ca6cc23fc55eb78294c762d8b17"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/referral-summary.blade.php",
+            "size": 14032,
+            "hash": "11080eda42c80bf67e82d016edcbed5e1847bec970e3b72f00f6fcaf2383bb4d"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/members/tickets"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/borrow-modal.blade.php",
+            "size": 2682,
+            "hash": "b6813b2ddbee93367ffc946d5856e053718aff4dbbcc67e447b93ce5d28008db"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/cart-drawer.blade.php",
+            "size": 2697,
+            "hash": "e2dfcd2fdd35e99bcc8fc3b7264aba8dd5f3fc3da8782aee3eee14efee261009"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/cart-floating-button.blade.php",
+            "size": 528,
+            "hash": "193263966e666c7eef6437547a40490fc42a29533b23bdf0cddcf18b3f19b1da"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/cart-modal.blade.php",
+            "size": 5292,
+            "hash": "a53c522c3331a4dbed232d6762542ad86aa3c1cc6273e1fa852f3b0b9535f454"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/cashin-modal.blade.php",
+            "size": 5165,
+            "hash": "61b2091d98c4304c06d6015bc18c63f6eaba89286b08e60691f02e7befee47a8"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/dashboard-widgets.blade.php",
+            "size": 3236,
+            "hash": "d7cc21f5ae7606a16b4b8df098096667abcaeeeec538fcb94e730ed6694578bf"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/footer.blade.php",
+            "size": 2802,
+            "hash": "db3a3302016cb96823a2d40c8493a50db640879376179a35fdd7f38c12ba66ba"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/logout-form.blade.php",
+            "size": 148,
+            "hash": "43e8535c06253394a715c5ac88cac151a7749ecdfc0c1099ccc236ab94701cad"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/mobile-footer.blade.php",
+            "size": 7257,
+            "hash": "022936bd73efb7e3794d8c601f76f8e775f30820fa5db28d2fcc56ffcbd89917"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/guest-mobile-footer.blade.php",
+            "size": 2288,
+            "hash": "492367e0dd2604ba23cf934fdebc38ac02a5e80587ac111b4deebd1c6d576179"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/notification-bell.blade.php",
+            "size": 2880,
+            "hash": "a5999778de77188d77ca5c45506ae2ea88d16a5cb087bb05d1b892119b108f6a"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/pwa-install-button.blade.php",
+            "size": 2602,
+            "hash": "fd27365f622b04a244799aa10d9c0c6c3b3beb027f27338ab7bb99a312ab826e"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/reusable-mobile-footer.blade.php",
+            "size": 10888,
+            "hash": "c63a954aed5933634fce03c61d8bc55e31cdf3397329a9bf5720849bbf99cf80"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/send-modal.blade.php",
+            "size": 2617,
+            "hash": "8c0d07c2fc555575239d1cf08cc07ab8ea3f67d10bb25cb4c53d841e2428ff58"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/wallet-modals.blade.php",
+            "size": 14383,
+            "hash": "bae92fbc1a86e769b7961a1b7b904b3da37d15d0f9c15360bdbf6ca0b2906bbf"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/partials/sidebar-logout.blade.php",
+            "size": 393,
+            "hash": "75b1f678db8ff7cb9a065bf95212415aa250db00a8cb70ac7c25443a926579ff"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/shop/cart.blade.php",
+            "size": 17098,
+            "hash": "2570ebdf236b99170f4692c7fbb24b4ea5c3a02775c735bb8f804bf577e09e90"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/profile/edit.blade.php",
+            "size": 7268,
+            "hash": "bba9ae8d81bbd08e8b89a6aba755ac787eb628bf2907917cd1d673823588fae4"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/shop/checkout-form.blade.php",
+            "size": 8057,
+            "hash": "0d939aa9f67956dce27684d3347700c076ff26c89e2dda7c8bb982a786a9c8a5"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/shop/checkout.blade.php",
+            "size": 8453,
+            "hash": "fad9ab8752e4324e1279a673b3cb0f0660e04239c2432b31f78df56dca236490"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/shop/index.blade.php",
+            "size": 21269,
+            "hash": "0759e4e512d3b81061f527a31be0e57dfc02edab0bcb55a0242caad5a6ee4e87"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/shop/partials"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/shop/show.blade.php",
+            "size": 14892,
+            "hash": "6d9d0a51718a51b584084f035b806fa5c2ab1c11c03a3b8272eb3bb88223f6ef"
+        },
+        {
+            "type": "folder",
+            "name": "resources/views/staff/products"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/wallet/history.blade.php",
+            "size": 6099,
+            "hash": "4f1a07a968e4b3ad38e227a7cd8007ae1f9139464790c73814abf4303dc9e248"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/wallet/index.blade.php",
+            "size": 10559,
+            "hash": "162b7e9cf0887b2a3c8b049ea35f79da47556c79a2940d0c9a7bce670ba2fbdb"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/wallet/payment-request.blade.php",
+            "size": 10908,
+            "hash": "3c5cfbf5c9794b4608c2e4e6ab48fbc94f3d66faba2476f244db98826eddae82"
+        },
+        {
+            "type": "file",
+            "name": "storage/app/public/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "file",
+            "name": "storage/framework/cache/.gitignore",
+            "size": 21,
+            "hash": "32f79194633ddb34f013c6ee8819d112104ff822357adf308ec385b46a7f42f6"
+        },
+        {
+            "type": "folder",
+            "name": "storage/framework/cache/data"
+        },
+        {
+            "type": "file",
+            "name": "storage/framework/sessions/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "file",
+            "name": "storage/framework/testing/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "file",
+            "name": "storage/framework/views/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "file",
+            "name": ".git/logs/refs/heads/main",
+            "size": 229,
+            "hash": "431c9b9c17fe4cd8f852431819da6f1285310627ebcabe936d6e76aa9a416677"
+        },
+        {
+            "type": "folder",
+            "name": ".git/logs/refs/remotes/origin"
+        },
+        {
+            "type": "file",
+            "name": ".git/refs/remotes/origin/main",
+            "size": 41,
+            "hash": "d382d92c78bfcb18eb29da678353ce51c7ef98b0bb20e8ee0c45b42658e030cd"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/AdminDashboardController.php",
+            "size": 419,
+            "hash": "e397802d1f83c330c808c8d8aa384cc3475c0e6c1d758057ec144c609f9c4956"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/AdminWalletController.php",
+            "size": 2931,
+            "hash": "89595efd37243f6dbeed01f3e598f89f6ac68d22c799e86569b0266a01351b7c"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/CashInApprovalController.php",
+            "size": 2966,
+            "hash": "5ea3c3f00a38799f3def702b0eb0f841e7e5eb834c95794ce309a703d1530f54"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/CategoryController.php",
+            "size": 2208,
+            "hash": "ee24cb89c139766029f320648baa9633928b1510b7e5f58b590afc2e1ff04f2c"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/LoanApprovalController.php",
+            "size": 1939,
+            "hash": "06a12f00e710c9cd9fa82708be61c84f72d07fd277d4edcdc7a4a3f9c1015e4d"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/LoanManagementController.php",
+            "size": 5209,
+            "hash": "6f7c00b38bba1ab498fa069dc1094777fe27774a3686fd23e1abee7b9695430f"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/MemberApprovalController.php",
+            "size": 2534,
+            "hash": "375e67e5790bba53f1e4e3e79d72ba5001a113ae079f95911f4603432970edab"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/MembershipCodeController.php",
+            "size": 834,
+            "hash": "1e0b3c839ec6ee46c49698bd3540e55e73426f135d2d50c86f92373349a4d54c"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/MembershipCodeRequestController.php",
+            "size": 6623,
+            "hash": "e22b939b82894ffc4347cd5b0a5f40da90bfdbc890beec3e922106b3b23fe9ea"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/NotificationController.php",
+            "size": 21647,
+            "hash": "c9c76517782474852efc74520d8f8c75ebb3476f7fc9b05c3a9c56ce42166901"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/OrderReportController.php",
+            "size": 11994,
+            "hash": "e11546fad51e62b5dc4d429e3d20d3d88e4907e5dc8695fcf429bec847ac067b"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/ProductController.php",
+            "size": 8525,
+            "hash": "c2ee79c366bfc786cac1adb95fb422deba8639bb08c70ec294167a33137a1347"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/ReferralBonusController.php",
+            "size": 1947,
+            "hash": "b11427873f8528bce5145b44cc8a638372ce336ab5daf8ff2650aceec2f813c3"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/ReferralConfigurationController.php",
+            "size": 5896,
+            "hash": "2d3ffc29febda9682287eafc517c446874234b6aca1d88bc18bdc10d8b7bb51c"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/ReferralReportController.php",
+            "size": 714,
+            "hash": "3e03270a4b4503336dcfe19a3a31461a200c99d5ffc46c74e89736b2cd28b437"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/RewardController.php",
+            "size": 3429,
+            "hash": "a40ffee0eef40c79611cfc682d925ecf5e8cc7e96a6af73614245547500409bd"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/SettingsController.php",
+            "size": 915,
+            "hash": "532e89ca943a5ffa0edca35ce691bad7178599e0f75eec94eb687e8a7fe2347b"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Admin/TicketController.php",
+            "size": 2082,
+            "hash": "95c3da303a5ac6f8475f265d5636f8019abcbbdbcfaccb562609edb40375049b"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/AliexpressAuthController.php",
+            "size": 4433,
+            "hash": "fb25b082280f5f44a26c4f4c02babe9f8f41805ef92f13e7146882625150521e"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/ForgotPasswordController.php",
+            "size": 729,
+            "hash": "3437d7413d44e2f426ce4954477066fbd713f0ad9f3a450875385b008b83a10e"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/LoginController.php",
+            "size": 1879,
+            "hash": "e4207fd40bdf62d53388a12173b8a5631748293a95b0ca3f142e416a106f783a"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/ForgotPasswordSmsController.php",
+            "size": 1276,
+            "hash": "5b9affae988631834020be6f277283422206d63e6de8c5cdee957ad9280831d2"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/OtpLoginController.php",
+            "size": 6035,
+            "hash": "eb23dc8dedbf7349642ccdee1b9a10d76174465d5b7791a619e6512d5c08c2ef"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/ResetPasswordController.php",
+            "size": 2132,
+            "hash": "ce71f341894a42f1e44e7bc3ee54c4116f12da09f6a5d8e0ba3a52ae30001a95"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/SmsForgotPasswordController.php",
+            "size": 3313,
+            "hash": "8943a8e23c6e044f17c051ea11893bb3037d1e327573f44ab1352b7cd6d0b6e0"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Auth/SocialLoginController.php",
+            "size": 4593,
+            "hash": "af03c2e103d3363ce297cd28bd8581b8579376b67d48762d23127f9f1454d26e"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Member/MembershipCodeRequestController.php",
+            "size": 5933,
+            "hash": "bee0c2b1d9420eff8f8ea82486de3cdbe77205bc2b70779a71eeafc770421c31"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Member/ReferralController.php",
+            "size": 5813,
+            "hash": "3e9972cc9b8e3b441a101af42402b70658328e5e504c0dbfe937a93213f6e85a"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Member/RewardHistoryController.php",
+            "size": 486,
+            "hash": "2346b22a28afa79783c1e011db15b88141094baa5383be5607ff4391fe35d566"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Member/TicketController.php",
+            "size": 1821,
+            "hash": "2481175cde89b4448498859f2edff6ab6e67c3d94724eb69acb385ff2ca845bc"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Staff/ProductController.php",
+            "size": 14931,
+            "hash": "6db674805b2d7ad8d9938795197aae5486c698c30d20bfc0407f594553ebd466"
+        },
+        {
+            "type": "file",
+            "name": "app/Http/Controllers/Staff/StaffDashboardController.php",
+            "size": 1079,
+            "hash": "06f3245cad94041eb5539596aa145bf44e83298e141b19ff8fab0fbf95408da1"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/bn/adminlte.php",
+            "size": 2659,
+            "hash": "02ad0f139a8b7af7a6a72c363534f0f26ef01ba556042b0928bc6b0d7b520edc"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/bn/iframe.php",
+            "size": 907,
+            "hash": "7c3b0bec220a540958f351c154fdd5c034f150c08fb59fc46ee43e62bfdeedc9"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/bn/menu.php",
+            "size": 733,
+            "hash": "438e54ab44c3244d550a9dbae31376f12b0ca28b4560100f46fcb82f705ee494"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/ca/adminlte.php",
+            "size": 827,
+            "hash": "e637955bc8b3b22990a27abcf94e2d36eee1f1e4e0f6e03d7ab0ea30097b651d"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/ar/adminlte.php",
+            "size": 1049,
+            "hash": "20408ddcec70202ac2b1e64f0296c41ef22b3638a36b35afcf6be42b181a8bf7"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/de/adminlte.php",
+            "size": 1438,
+            "hash": "dcaf2a6f7190686cce052257d814e703b1754228a7afdf137bc090ccd2f4de38"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/de/iframe.php",
+            "size": 718,
+            "hash": "1c41a4ade9605cf3ba4e4d8e5979f03728681ea9d9e5a968ce7723683cfeec89"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/de/menu.php",
+            "size": 481,
+            "hash": "171223ed186cf6fc1482df2e8dce512a6780223edc5cf2d4aa3a3020c94fed88"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/en/adminlte.php",
+            "size": 1333,
+            "hash": "13bedb5b9ef623e73f7c41237743097d82aa16bc61e316d7a2c7384e2551a3a2"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/en/iframe.php",
+            "size": 693,
+            "hash": "87318640f73bc0828421db9612e14ffd0f53567f428a05a4be0d92e3f5de9c8a"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/en/menu.php",
+            "size": 477,
+            "hash": "8ea2c52fc596291047264a9826781b7eb2a7a32f7c15f65b4f6e73ed31a90d01"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/es/adminlte.php",
+            "size": 1464,
+            "hash": "b7a38e8291e1e3b8be2f8fd6c421302713b16839dc538562b0925dadad2d2082"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/es/iframe.php",
+            "size": 713,
+            "hash": "c67699d69ccccfbc3242228dc6118a6557912ab24489c51efd1136159e25f6dc"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/es/menu.php",
+            "size": 495,
+            "hash": "70f56506232e30095faeea12bcb1bc767f5cc08376ae6eed0a084c0d636c5b95"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/fa/adminlte.php",
+            "size": 1738,
+            "hash": "b0fd523b1f33462c65177abfa377396366f7079b4fc94c877faddd8670752588"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/fa/iframe.php",
+            "size": 773,
+            "hash": "63135dc83845c7527bd1f91d41721e135ac987cfaea79ee57caa4a4a65cbd38d"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/fa/menu.php",
+            "size": 542,
+            "hash": "9daf43fb26ec28af254923ba40162386d8a0a2f5d0b0bcbbf2cc705ef743a545"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/fr/adminlte.php",
+            "size": 1548,
+            "hash": "8da3b5fd14a9093ac16ff4a9f0b30ec3fa5eb8eab964a2d88d55b08a8a349d26"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/fr/iframe.php",
+            "size": 725,
+            "hash": "c08bef0091a0ef66d7b02b0131144de089a652c77be9282a7e1cca0336c24f42"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/fr/menu.php",
+            "size": 492,
+            "hash": "9b7a924019149f9174fe600e8f0dbae5a8b58b54f29c18d39913682d1c0a8d16"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/hr/adminlte.php",
+            "size": 725,
+            "hash": "66153ab7a6f0d7f306b1dd0c9bba2e2bfebc4b902fa82460209791a91fb52113"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/hu/adminlte.php",
+            "size": 827,
+            "hash": "75aa47052fe2877b805472bddd8f2033e00c50c85af15d531bb18054e9b3e0e8"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/id/adminlte.php",
+            "size": 1263,
+            "hash": "da725d6b16b5dc600937c6f8dc2446251725d406a4ae9476229bb92051e57ef6"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/id/menu.php",
+            "size": 474,
+            "hash": "612911a16743d692816f4a8bc960a89905662a5b34c2394f07644891deb18844"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/it/adminlte.php",
+            "size": 815,
+            "hash": "d68f19818a1989d9e71e51a5eb87c1d8c96d3b1a03e0ee98bf341bf345c81829"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/it/iframe.php",
+            "size": 712,
+            "hash": "396361f46eddda25a2550998e362b0d4e3a6c928d1d0127533b4d021e9a1ba20"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/it/menu.php",
+            "size": 502,
+            "hash": "5b417a55e3667c682aeafcfd146c81cd71153ffe1c70429de1380cac50adb32c"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/ja/menu.php",
+            "size": 536,
+            "hash": "8053884cb14cefa67cbbae260a0578f6f851935475021f17b478b123cb55a9b3"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/ja/adminlte.php",
+            "size": 1409,
+            "hash": "9f0388364a0dc81be9d98cf7b8056b4630dedaa772eae93ce002b134d1c5c397"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/la/adminlte.php",
+            "size": 1208,
+            "hash": "91853ed822c1b6b4fec324b25ae9aa632e67c52f64be19c26a0ce447429836d8"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/la/menu.php",
+            "size": 648,
+            "hash": "1c4336b2086c064c649006dc32cff2815fbc6ee4ac1385cb2ca0c97318269e7a"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/nl/adminlte.php",
+            "size": 860,
+            "hash": "5d2cee8ba4a8717f51ce680c34f062c4bd0ec21999fe1172a929dfc4fae01c3c"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/pl/adminlte.php",
+            "size": 1282,
+            "hash": "50317ec2fabb85390153b1e7c10cc50e31720f321a58ddfc37b33d9a9cadfc2e"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/pl/menu.php",
+            "size": 487,
+            "hash": "1501f9447ff9c54f0eea571dd95194277660152e9820607c63ae78244cbcdf83"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/pt-br/adminlte.php",
+            "size": 1262,
+            "hash": "af4a7952bf03bb66d3c3bb47f1dd5fdacce86bac7c6b5885b81b79b181fe5585"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/pt-br/menu.php",
+            "size": 494,
+            "hash": "cc4bb13e0413c54563c1dc3c1e2486c91349f0dfbe24ac1623c5c65d9a9401d6"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/pt-pt/adminlte.php",
+            "size": 1316,
+            "hash": "d5bc99569b73acf5479f86066527ac9ce27f3f31d0907b0452800f5539533a94"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/pt-pt/iframe.php",
+            "size": 719,
+            "hash": "03cf7c927c29dd66d2eda107163d6d1b79b35b58026f16cb182d6eb32e176462"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/pt-pt/menu.php",
+            "size": 502,
+            "hash": "709aa355f068d6745c6772bf653cbcdb9a3316b8ba10a4f3911759ed08e173db"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/ru/adminlte.php",
+            "size": 1084,
+            "hash": "39d44e72fefe018e0e1c32867f2e77abf29b5cefbeac9d301eefc5971505be2c"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/ru/menu.php",
+            "size": 614,
+            "hash": "0aa5bfd0f3169d1e32a90c08d51a533277dd0db4348fef22ccb5374cf5b7dae9"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/sk/adminlte.php",
+            "size": 1407,
+            "hash": "eadf25cf8170a235fc3de427c8b55bd1f28b23a410cdfe13ed19051969b12cdd"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/sk/iframe.php",
+            "size": 720,
+            "hash": "630239159943b5a61f442958301eeba487442e65d4a1651e81ab3656ca94989c"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/sk/menu.php",
+            "size": 498,
+            "hash": "25feecd80be0bc7366c61f6e5e38a9766223d18c6592d61058deff73f686ed33"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/sr/adminlte.php",
+            "size": 1304,
+            "hash": "121fdc2c15f0f4265a9e8cd67d64dfd9ef47c65d41809b06f6301b5784036bd0"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/sr/menu.php",
+            "size": 529,
+            "hash": "137801be84095bd52019ca2db460223cc4304c806b761652c98befd64a6f56c6"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/tr/adminlte.php",
+            "size": 1377,
+            "hash": "3e27a2ae00880ec40da1e66938f2ed605a62ded95940897cb8cc0d1bddf8956c"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/tr/menu.php",
+            "size": 476,
+            "hash": "7bd9090e86e563d9b9b1b297da6caef3ccc30d20614eb6f6bfef850283a87d12"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/uk/adminlte.php",
+            "size": 1062,
+            "hash": "fc1506818f90d62d27d42d63b334b1afb4ba13e26e4fc84db4a760386e85bd77"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/uk/menu.php",
+            "size": 608,
+            "hash": "f31367da465578cb150019735edc129f29c8ba7f8585ca369e3fb6ec04cace81"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/zh-CN/adminlte.php",
+            "size": 692,
+            "hash": "22a0ba2abd5cb4ea9fe44354967b8a6d411e1959b4cdac7fde51d334028da199"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/zh-CN/menu.php",
+            "size": 464,
+            "hash": "ed516b436a7f5e188a95cd49f596f18dc86bd2df68a46d2455ef90587d61a7e7"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/vi/adminlte.php",
+            "size": 905,
+            "hash": "cf1340deadfb6bdd93e1a2ade00579ce0fbfa4be86f3fe2a0faa324c294d9573"
+        },
+        {
+            "type": "file",
+            "name": "lang/vendor/adminlte/vi/menu.php",
+            "size": 519,
+            "hash": "5cdb914b445ed932e7af3dbe9cb64aedac64f1a82cea67968c79c533bbee721f"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/categories/index.blade.php",
+            "size": 6934,
+            "hash": "5f36d8707445bf9fbe255750f50b1838338e4aa67867c05882331ea38b2a469d"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/codes/index.blade.php",
+            "size": 4977,
+            "hash": "ed91cd0f4fae5079c274c7af09c7afa2ba7e8c650080ecf5851010b78294fc1b"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/loans/index.blade.php",
+            "size": 5702,
+            "hash": "514543bcf6e6098baeb8c338a82aa089c701229748db36887bed06e956935f4f"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/loans/management.blade.php",
+            "size": 14794,
+            "hash": "5887abfc4ea8a0ba3cfcf0694e8b28d8225b951390dc4e645f60b6697269bb32"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/loans/payments.blade.php",
+            "size": 5834,
+            "hash": "cf3a069c39952c736b23a2112d730fec5cf0f6ec0eb01bc8f7ac621e66d01a84"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/loans/reports.blade.php",
+            "size": 8951,
+            "hash": "bfeaa27cbfe6c4d38107441cb463e4c4e4bd4a83004bee8d78c29d0244b70700"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/loans/show.blade.php",
+            "size": 23678,
+            "hash": "6a4c0fe7ca8e29fb9bbc7f23b1a9b61ab589996a38f6379b4a21b4048ced6bbe"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/members/create.blade.php",
+            "size": 3185,
+            "hash": "9a9994fd14a8717118164730e97e70f5f44499582b383fd535fc40e04fdfa19a"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/members/pending.blade.php",
+            "size": 7553,
+            "hash": "de85afa919884830a5ae9e00b1df5fd9b55317612227d10e9affedd3cb6921e8"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/membership-code-requests/index.blade.php",
+            "size": 14820,
+            "hash": "f15bb9e39bd77395387dc57ff7afa6420868e54524c2746abf2cddca1bdd3ba3"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/notifications/device-tokens.blade.php",
+            "size": 37233,
+            "hash": "e2d8feaec1f9610f77848bfb9e852e30553618bee0ccf39bce19c194049ea4f3"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/notifications/index.blade.php",
+            "size": 16956,
+            "hash": "6c54698ae07a4e9aa1cdde043ab3c54d0028c0beb6312a1644c1cd84b066574f"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/notifications/push.blade.php",
+            "size": 24249,
+            "hash": "0c1e9f033fbee49fcf416f59bda8aa1c7006c50043e4842f9cd883ef24455b3e"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/notifications/sms-history.blade.php",
+            "size": 29263,
+            "hash": "be5f61213b34c2aaa5b04bf17953789c8974eca01b484720440a3f755128f9dd"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/notifications/sms.blade.php",
+            "size": 23198,
+            "hash": "11110d1447069b1941b18f4d0c683eda01f51282d00c15071afc5d3192fbaaa2"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/orders/_order_list.blade.php",
+            "size": 7968,
+            "hash": "87fb09548835dd121bc1156cbb0613596bc74d2c9daa522edc384b591e07b970"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/orders/index.blade.php",
+            "size": 2465,
+            "hash": "46b11052e36b3bf02c56580fe9a1d02a87087c7a11ec2e5f6bc33ea38b05d317"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/orders/invoice.blade.php",
+            "size": 4980,
+            "hash": "80d41e7b0fbd99f0cc7e543ccfde835f8c6c39e92a5b6bdb93d0aa2779369f27"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/orders/report-pdf.blade.php",
+            "size": 3291,
+            "hash": "8f38014d09f5951f98a8d12d48790bfc4ace9fe21a05409ef169bbb7ac1c09c5"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/orders/report.blade.php",
+            "size": 7321,
+            "hash": "d4a90b4eda05b3cca7be77312700a34f5b85300adf69841f0103e45b0c0015fb"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/products/create.blade.php",
+            "size": 21209,
+            "hash": "f03409676a305338c3af4143fbf05399910e7d3a4478b1d78658293d7b118a85"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/products/edit.blade.php",
+            "size": 20494,
+            "hash": "936bb2d13133c00cdfdcbb7eb3af9f98d446a12fb76432a036a35a5e9d56748c"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/products/index.blade.php",
+            "size": 5546,
+            "hash": "d0e2b99189104cddb808c3d5f2a953c42b76902bf5ecef0ba2843c63706b0479"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/products/show.blade.php",
+            "size": 8330,
+            "hash": "07809bdddaa38af8ccd6ff414f2f5f5592bb7ad7a8ca7f826dc73b42918b6e6e"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/referral_bonuses/index.blade.php",
+            "size": 3353,
+            "hash": "0603cbe4c2a393d73a3049b12e5977bd2a5e67c8f7e6c937d732b1f44a6182a9"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/referral_configurations/create.blade.php",
+            "size": 8703,
+            "hash": "b17704c8660784025a7f1e4bca8ccbab870bca79b333f468c989043d42ff3ef6"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/referral_configurations/edit.blade.php",
+            "size": 9175,
+            "hash": "e5d209859fec777314f467cf1d7288fbb0153a6c9ea2da6bcd422a771a6ac342"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/referral_configurations/index.blade.php",
+            "size": 4480,
+            "hash": "00586bf582dadb4d2f5de179d6300c9637a3678b1e67b7765cc3300a9ce218aa"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/reports/referral.blade.php",
+            "size": 4298,
+            "hash": "2cc65b13dce1fdbe820271fb107f531762ff44ac6146336d24941f4ba4cd7d2d"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/rewards/create.blade.php",
+            "size": 1636,
+            "hash": "6f01ea49af4936f522f7c86ab67de049c4c4f627ab615614e3349908ec8c2f90"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/rewards/index.blade.php",
+            "size": 2439,
+            "hash": "a390822b2410cb2de382bab831a8eb5cd8001d887d631f29fe35b60cc248f0b8"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/rewards/preview.blade.php",
+            "size": 7450,
+            "hash": "fcbf9f138e3ac083a424fbf6bbce292463b80f8a5cc2adc650af928ed8a80425"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/rewards/winners.blade.php",
+            "size": 4024,
+            "hash": "21fd27ccc1efe32cb260992edfccdf6bec6fb2fa419ab4010a9659c7d292a9bf"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/settings/index.blade.php",
+            "size": 2991,
+            "hash": "f26329fbd039eb3728cbcdcaeb69239dd4ce6ea548e07142b13cdde0dedb1765"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/wallet/cashin-approvals.blade.php",
+            "size": 12029,
+            "hash": "c642c4772a7a379b292aad0296336994ea69543388d802a50f9673ddaad7bc09"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/wallet/topup.blade.php",
+            "size": 6420,
+            "hash": "00ab66a2f4d9c328482f32c141b7986cbe89010cf511413db19b6bf3eaf64fda"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/tickets/index.blade.php",
+            "size": 3374,
+            "hash": "e2d83950ea145041f6074171b3ab6629a47b3f5d435424dbfea7661de9031c23"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/admin/tickets/show.blade.php",
+            "size": 4569,
+            "hash": "e7dd87f9c18a96aff9fc6854e1cf3fd5f78da8d9e22cb2d1f86752efa6e4dba3"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/passwords/email.blade.php",
+            "size": 42,
+            "hash": "e2c7e3a8e20434cd2afc4494620c55eabec3299ff677bf9e3b586c53ec00db91"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/passwords/confirm.blade.php",
+            "size": 44,
+            "hash": "d1697eecc4aee7a91507c9c30009d3f5882d81cac7e508f0b03936e27e7fe857"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/auth/passwords/reset.blade.php",
+            "size": 42,
+            "hash": "4534157db9fad9ee06b4ee7773fc3a79269bf2d2a28c79046a0f2f238b75efee"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/membership-code-request/create.blade.php",
+            "size": 32328,
+            "hash": "41ac0d888498d9eb6839e7d444c9e3f11f957de12938b135c9fd4db95cd38799"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/membership-code-request/index.blade.php",
+            "size": 8613,
+            "hash": "8d12e7939adb4309fa679a86f542dff40e92dbcfa92e4930b39cc56c9b5e9e7e"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/orders/index.blade.php",
+            "size": 13126,
+            "hash": "b13ec272f4b702eda1f92d0258aa3b5020641606b1e56db9a27d91874d57cb4f"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/orders/invoice.blade.php",
+            "size": 2423,
+            "hash": "fa807e7d509d5b94b87b0c0761b026769f02d9fa0ed4900fd2c19c0d87cdfd76"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/orders/show.blade.php",
+            "size": 1459,
+            "hash": "b49a9b4c725d85b725da165ef9f7a6e4d8c166344d127e5cce5f10d4e30d27e2"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/orders/track.blade.php",
+            "size": 1211,
+            "hash": "36631fffa2218c95b1e3161682fa5663f1fb3a4534afc85c4824dbfdb421d7ef"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/partials/form.blade.php",
+            "size": 11948,
+            "hash": "8604cf4f5ae4d7e82f18e2fe34723e05c4e17eab091001e0faae54077d1bb582"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/tickets/index.blade.php",
+            "size": 5951,
+            "hash": "f2460bf30589350d8c8eb98e9edfbcdfa3a94bd22301635da7a2e84c8d681364"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/members/tickets/show.blade.php",
+            "size": 4570,
+            "hash": "73e40424f221258d637c0fee5cf451254eb62f8b1bc7c1b479812f66c829bc30"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/shop/partials/product-grid.blade.php",
+            "size": 2682,
+            "hash": "37ea95c2d4120662115f07199fda789786e14f8f60d818727622b0420a96e50d"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/staff/products/create.blade.php",
+            "size": 19969,
+            "hash": "fda1fbedff351aa0432791f16fa9fc7ed8ea09799547fa1f97d9ff4177aa734a"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/staff/products/edit.blade.php",
+            "size": 21396,
+            "hash": "1b7fc183df44d29bd805ac96d63408874780430f869e43d992fa660cc939e699"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/staff/products/index.blade.php",
+            "size": 8973,
+            "hash": "22dbb251fbb07dae573dc2f7100a0f1f022a9914365a03376c694838e47ac57c"
+        },
+        {
+            "type": "file",
+            "name": "resources/views/staff/products/show.blade.php",
+            "size": 10273,
+            "hash": "ee9710ff32859b7857944c83f8b06b210adef613ce8915ce508fa4a8074037a9"
+        },
+        {
+            "type": "file",
+            "name": "storage/framework/cache/data/.gitignore",
+            "size": 14,
+            "hash": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+        },
+        {
+            "type": "file",
+            "name": ".git/logs/refs/remotes/origin/main",
+            "size": 339,
+            "hash": "3ee5566def97b0de88d9f74210db1b79593bd265a1682ac41cb1e5078341b909"
+        }
+    ]
+}

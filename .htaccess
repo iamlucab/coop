@@ -1,9 +1,13 @@
-DirectoryIndex public/index.php
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
-    # Redirect everything to public folder
-    RewriteRule ^$ public/ [L]
-    RewriteRule (.*) public/$1 [L]
+
+    # --- Allow PWA files directly ---
+    RewriteCond %{REQUEST_URI} ^/manifest.json$ [OR]
+    RewriteCond %{REQUEST_URI} ^/service-worker.js$
+    RewriteRule .* - [L]
+
+    # --- Laravel Front Controller ---
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
 </IfModule>
