@@ -20,7 +20,7 @@ public function login(Request $request)
 
     // Determine if login is email or mobile number
     $loginField = filter_var($credentials['login'], FILTER_VALIDATE_EMAIL) ? 'email' : 'mobile_number';
-    
+
     // Attempt authentication
     if (Auth::attempt([
         $loginField => $credentials['login'],
@@ -55,12 +55,19 @@ public function login(Request $request)
 
 public function logout(Request $request)
 {
-    Auth::logout();
+    // Only process logout for POST requests (with CSRF protection)
+    if ($request->isMethod('post')) {
+        Auth::logout();
 
-    $request->session()->invalidate();
-    $request->session()->regenerateToken();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-    return redirect('/'); // or route('login') if preferred
+        // Redirect to welcome page after logout
+        return redirect('/welcome.php')->with('success', 'You have been logged out successfully.');
+    }
+
+    // For GET requests, redirect to home page
+    return redirect('/');
 }
 
 
