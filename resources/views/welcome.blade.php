@@ -27,28 +27,28 @@
     {{-- Bootstrap + Icons --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    
+
     {{-- Google Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
     :root,
     [data-bs-theme="light"] {
         --bs-body-bg: #f2f4f8;
         --bs-body-color: #000000;
-    
+
         /* New blues */
         --primary-blue: #0084fe;
         --secondary-blue: #0b2f6c;
         --accent-color: #0b2f6c;
         --light-bg: #f2f4f8;
         --dark-text: #000000;
-    
+
         /* Optionally tie into Bootstrap's primary */
         --bs-primary: var(--primary-blue);
         --bs-primary-hover: var(--secondary-blue);
     }
-    
+
     /* Uniform button sizing for mobile */
     @media (max-width: 767px) {
         .product-action-btn {
@@ -58,17 +58,17 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        
+
         .product-action-btn .btn-text {
             display: block;
             font-size: 0.75rem;
         }
-        
+
         .product-action-btn .btn-icon {
             font-size: 1rem;
         }
     }
-    
+
     /* Ensure buttons have uniform height */
     .btn-uniform {
         display: flex;
@@ -78,12 +78,12 @@
         height: 50px;
         padding: 5px;
     }
-    
+
     .btn-uniform .btn-icon {
         font-size: 1.2rem;
         line-height: 1;
     }
-    
+
     .btn-uniform .btn-text {
         font-size: 0.7rem;
         line-height: 1.2;
@@ -135,15 +135,15 @@ body {
     h4 { font-size: 1.25rem !important; }
     h5 { font-size: 1.15rem !important; }
     h6 { font-size: 1.1rem !important; }
-    
+
     p, div, span {
         font-size: 0.95rem !important;
     }
-    
+
     .small, small {
         font-size: 0.85rem !important;
     }
-    
+
     .btn {
         font-size: 1rem !important;
     }
@@ -426,9 +426,9 @@ body {
 <div class="container text-center px-4 flex-grow-1 d-flex flex-column justify-content-center">
     {{-- Logo --}}
     <div class="logo-container">
-        <img src="{{ asset('storage/icons/ebili-logo.png') }}" alt="eBILI Logo" style="width: 100px; height: 100px; object-fit: contain;">
+        <img src="{{ asset('storage/icons/ebili-logo.png') }}" alt="Amigos Tayo Logo" style="width: 100px; height: 100px; object-fit: contain;">
     </div>
-    
+
     <h2 class="mb-2 fw-bold" style="color: var(--primary-blue);">Amigos '98 Community Online</h2>
     <p class="slogan text-success">Buy to Save, Share to Earn</p>
 
@@ -568,7 +568,7 @@ body {
             <span>Offers</span>
         </div>
     </div>
-    
+
     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 my-4">
         <a href="{{ route('login') }}" class="btn btn-lg btn-primary px-5 py-2">
             🔒 Login
@@ -768,7 +768,7 @@ function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.getAttribute('data-bs-theme') === 'dark';
     html.setAttribute('data-bs-theme', isDark ? 'light' : 'dark');
-    
+
     // Toggle icon and label
     const toggleBtn = document.querySelector('.btn-toggle i');
     const toggleText = document.querySelector('.btn-toggle');
@@ -802,7 +802,7 @@ function updateSwiper() {
     const slideWidth = slides[0].offsetWidth + 15; // width + margin
     const visibleSlides = Math.floor(wrapper.parentElement.offsetWidth / slideWidth);
     const maxSlide = Math.max(0, totalSlides - visibleSlides);
-    
+
     currentSlide = Math.min(currentSlide, maxSlide);
     wrapper.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 }
@@ -824,10 +824,10 @@ document.getElementById('productsWrapper').addEventListener('touchmove', (e) => 
 document.getElementById('productsWrapper').addEventListener('touchend', (e) => {
     if (!isDragging) return;
     isDragging = false;
-    
+
     const endX = e.changedTouches[0].clientX;
     const diff = startX - endX;
-    
+
     if (Math.abs(diff) > 50) {
         if (diff > 0 && currentSlide < totalSlides - 1) {
             currentSlide++;
@@ -844,7 +844,7 @@ setInterval(() => {
     const slideWidth = slides[0].offsetWidth + 15;
     const visibleSlides = Math.floor(wrapper.parentElement.offsetWidth / slideWidth);
     const maxSlide = Math.max(0, totalSlides - visibleSlides);
-    
+
     currentSlide = (currentSlide + 1) % (maxSlide + 1);
     updateSwiper();
 }, 4000);
@@ -861,14 +861,14 @@ const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', function () {
     let st = window.pageYOffset || document.documentElement.scrollTop;
-    
+
     // Show back to top if scrolled down enough
     if (st > 200) {
         backToTop.style.display = 'block';
     } else {
         backToTop.style.display = 'none';
     }
-    
+
     lastScrollTop = st <= 0 ? 0 : st;
 });
 
