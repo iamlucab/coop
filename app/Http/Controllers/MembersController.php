@@ -73,7 +73,7 @@ class MembersController extends Controller
         // Create user account
         $user = \App\Models\User::create([
             'name' => $validated['first_name'] . ' ' . $validated['last_name'],
-            'email' => $validated['mobile_number'] . '@ebili.online',
+            'email' => $validated['mobile_number'] . '@amigostayo.com',
             'mobile_number' => $validated['mobile_number'],
             'password' => \Hash::make('password123'), // Default password
             'role' => $validated['role'],
@@ -123,13 +123,13 @@ class MembersController extends Controller
             'exists:membership_codes,code',
             function ($attribute, $value, $fail) use ($member) {
                 $code = \App\Models\MembershipCode::where('code', $value)->first();
-                
+
                 // If the member already has this code, it's valid
                 $currentCode = $member->membershipCode ? $member->membershipCode->code : null;
                 if ($value === $currentCode) {
                     return;
                 }
-                
+
                 // Otherwise, check if the code is unused
                 if (!$code || $code->used) {
                     $fail('The membership code is invalid or already used.');
@@ -137,7 +137,7 @@ class MembersController extends Controller
             },
         ],
     ];
-    
+
     $validated = $request->validate($rules);
 
     // Handle photo update
@@ -190,10 +190,10 @@ class MembersController extends Controller
 
         $user->update($updateData);
     }
-    
+
     // Handle membership code
     $currentCode = $member->membershipCode ? $member->membershipCode->code : null;
-    
+
     // If the code is different from the current one, update it
     if ($request->membership_code !== $currentCode) {
         // If there's a current code, release it
@@ -201,7 +201,7 @@ class MembersController extends Controller
             \App\Models\MembershipCode::where('code', $currentCode)
                 ->update(['used' => false, 'used_by' => null, 'used_at' => null]);
         }
-        
+
         // Assign the new code
         $code = \App\Models\MembershipCode::where('code', $request->membership_code)->first();
         if ($code && $user) {
