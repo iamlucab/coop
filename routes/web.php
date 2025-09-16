@@ -29,7 +29,7 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\Admin\ReferralBonusController;
 use App\Http\Controllers\MemberProductController;
-use App\Http\Controllers\OrderController;    
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\OrderReportController;
@@ -81,7 +81,7 @@ use App\Http\Controllers\Admin\AdminWalletController;
             Route::delete('/tokens/{tokenId}', [\App\Http\Controllers\PushNotificationController::class, 'removeToken'])->name('tokens.remove');
         });
 
-       
+
 
     // 🛒 Cart & Order Routes (Member Only)
 Route::middleware(['auth', 'can:member-only'])->group(function () {
@@ -110,7 +110,7 @@ Route::patch('/shop/cart/{id}/update', [ShopController::class, 'updateQuantity']
         Route::get('/register-member', [MemberRegistrationController::class, 'create'])->name('member.register');
         Route::post('/register-member', [MemberRegistrationController::class, 'store'])->name('member.store');
 
-   
+
         // Password Reset Flow
         Route::get('reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
         Route::post('reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
@@ -162,7 +162,7 @@ Route::patch('/shop/cart/{id}/update', [ShopController::class, 'updateQuantity']
                 return redirect()->route('home');
             });
 
- 
+
 Route::get('storage/photos/{filename}', function ($filename) {
     $path = storage_path('photos/' . $filename);
 
@@ -223,13 +223,13 @@ Route::get('/check-mobile', [MemberRegistrationController::class, 'checkMobile']
 
 
             // Route::resource('admin/loans', \App\Http\Controllers\LoanController::class);
- 
+
         // ✅ Wallet Management
         Route::middleware('auth')->group(function () {
             Route::get('/wallet', [WalletController::class, 'index'])->name('wallet.index');
             Route::post('/wallet/transfer', [WalletController::class, 'transfer'])->name('wallet.transfer');
             Route::post('/wallet/cashin', [WalletController::class, 'cashin'])->name('wallet.cashin');
-            
+
             // Payment Request QR Code Routes
             Route::get('/payment-request/{walletId}', [WalletController::class, 'showPaymentRequest'])->name('payment.request');
             Route::post('/payment-request/{walletId}/send', [WalletController::class, 'processPaymentRequest'])->name('payment.request.send');
@@ -251,7 +251,7 @@ Route::get('/wallet/cashback-history', [WalletController::class, 'cashbackHistor
 
 
 
-// Admin Wallet Top-Up 
+// Admin Wallet Top-Up
 Route::post('/admin/wallet/topup', [WalletController::class, 'adminTopUp'])->name('admin.wallet.topup');
 
 Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->group(function () {
@@ -259,7 +259,7 @@ Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->group(function (
     Route::post('/wallet/topup', [AdminWalletController::class, 'processTopup'])->name('admin.wallet.topup.store');
 });
 
-    
+
 
 
 
@@ -302,7 +302,7 @@ Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->group(function (
             // 🔹 Loan Payments: Pay Now (Multiple Payment Methods)
             Route::post('/loan-payments/{id}/pay-now', [LoanPaymentController::class, 'payNow'])
                 ->name('loan-payments.pay-now');
-                
+
             // 🔹 Loan Payments: Show Payment Modal
             Route::get('/loan-payments/{id}/payment-modal', [LoanPaymentController::class, 'showPaymentModal'])
                 ->name('loan-payments.payment-modal');
@@ -323,7 +323,7 @@ Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->group(function (
             Route::post('/cashin-approvals/{id}/approve', [CashInApprovalController::class, 'approve'])->name('admin.cashin.approve');
             Route::post('/cashin-approvals/{id}/reject', [CashInApprovalController::class, 'reject'])->name('admin.cashin.reject');
             Route::post('/cashin-approvals/{id}/reviewed', [CashInApprovalController::class, 'markAsReviewed'])->name('admin.cashin.reviewed');
-            
+
         });
 
 
@@ -344,7 +344,7 @@ Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->group(function (
             Route::get('/loans/{loan}', [LoanManagementController::class, 'show'])->name('loans.show');
             Route::post('/loans/{loan}/approve', [LoanManagementController::class, 'approve'])->name('loans.approve');
             Route::post('/loans/{loan}/reject', [LoanManagementController::class, 'reject'])->name('loans.reject');
-            
+
             // Payment Management
             Route::post('/payment/{id}/verify', [LoanPaymentController::class, 'verifyPayment'])->name('payment.verify');
             Route::post('/payment/store', [LoanPaymentController::class, 'storeManual'])->name('payment.store');
@@ -362,7 +362,7 @@ Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->group(function (
         Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->group(function () {
             Route::get('/membership-codes', [\App\Http\Controllers\Admin\MembershipCodeController::class, 'index'])->name('admin.membership-codes.index');
             Route::post('/membership-codes/generate', [\App\Http\Controllers\Admin\MembershipCodeController::class, 'generate'])->name('admin.membership-codes.generate');
-            
+
             // Admin Membership Code Request Management
             Route::get('/membership-code-requests', [\App\Http\Controllers\Admin\MembershipCodeRequestController::class, 'index'])->name('admin.membership-code-requests.index');
             Route::put('/membership-code-requests/{membershipCodeRequest}', [\App\Http\Controllers\Admin\MembershipCodeRequestController::class, 'update'])->name('admin.membership-code-requests.update');
@@ -433,7 +433,7 @@ Route::middleware(['auth', 'can:admin-only'])->prefix('admin')->name('admin.')->
     Route::get('members/pending', [MemberApprovalController::class, 'index'])->name('members.pending');
     Route::post('members/approve/{id}', [MemberApprovalController::class, 'approve'])->name('members.approve');
     Route::post('members/reject/{id}', [MemberApprovalController::class, 'reject'])->name('members.reject');
-    
+
     // Push Notification Admin Routes (Legacy - keeping for API compatibility)
     Route::prefix('notifications')->name('notifications.')->group(function () {
         Route::post('/send-to-user', [\App\Http\Controllers\PushNotificationController::class, 'sendToUser'])->name('send.user');
@@ -448,21 +448,21 @@ Route::middleware(['auth', 'can:admin-only'])->prefix('admin')->name('admin.')->
         Route::get('/sms', [\App\Http\Controllers\Admin\NotificationController::class, 'smsBlasting'])->name('sms');
         Route::get('/sms-history', [\App\Http\Controllers\Admin\NotificationController::class, 'smsHistory'])->name('sms.history');
         Route::get('/device-tokens', [\App\Http\Controllers\Admin\NotificationController::class, 'deviceTokens'])->name('devices');
-        
+
         // POST routes for sending notifications
         Route::post('/send-push', [\App\Http\Controllers\Admin\NotificationController::class, 'sendPushNotification'])->name('send.push');
         Route::post('/send-sms', [\App\Http\Controllers\Admin\NotificationController::class, 'sendSmsBlast'])->name('send.sms');
-        
+
         // AJAX routes
         Route::post('/test-push', [\App\Http\Controllers\Admin\NotificationController::class, 'testPushNotification'])->name('test.push');
         Route::post('/test-sms', [\App\Http\Controllers\Admin\NotificationController::class, 'testSms'])->name('test.sms');
         Route::get('/sms-balance', [\App\Http\Controllers\Admin\NotificationController::class, 'getSmsBalance'])->name('sms.balance');
         Route::post('/cleanup-tokens', [\App\Http\Controllers\Admin\NotificationController::class, 'cleanupTokens'])->name('cleanup.tokens');
-        
+
         // SMS Log Management
         Route::post('/sms/{id}/retry', [\App\Http\Controllers\Admin\NotificationController::class, 'retrySms'])->name('sms.retry');
         Route::delete('/sms/{id}', [\App\Http\Controllers\Admin\NotificationController::class, 'deleteSmsLog'])->name('sms.delete');
-        
+
         // Notification Management Routes
         Route::post('/{id}/mark-as-read', [\App\Http\Controllers\Admin\NotificationController::class, 'markAsRead'])->name('mark-as-read');
         Route::post('/mark-all-as-read', [\App\Http\Controllers\Admin\NotificationController::class, 'markAllAsRead'])->name('mark-all-as-read');
@@ -531,7 +531,7 @@ Route::middleware(['auth', 'can:member-only'])->group(function () {
     // Shop browsing (MemberProductController)
     Route::get('/shop', [MemberProductController::class, 'index'])->name('shop.index');
     Route::get('/shop/{product}', [MemberProductController::class, 'show'])->name('shop.show');
-    
+
     // Cart & Order (ShopController)
     Route::post('/shop/order/{product}', [ShopController::class, 'order'])->name('shop.order');
     Route::get('/shop/cart', [ShopController::class, 'cart'])->name('shop.cart');
@@ -585,10 +585,10 @@ Route::prefix('admin')->middleware(['auth', 'can:admin-only'])->name('admin.')->
     // 🧾 Order Report & Detail
     Route::get('orders/report', [OrderReportController::class, 'index'])->name('orders.index');
     Route::get('orders/{order}', [OrderReportController::class, 'show'])->name('orders.show');
-    
+
     // 📄 Invoice
     Route::get('orders/invoice/{order}', [OrderReportController::class, 'invoice'])->name('orders.invoice');
-    
+
     Route::post('/orders/{id}/update-status', [OrderReportController::class, 'updateStatus'])->name('orders.updateStatus');
     Route::post('/order-items/{id}/update-status', [OrderReportController::class, 'updateItemStatus'])->name('orders.updateItemStatus');
 });
