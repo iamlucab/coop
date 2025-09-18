@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Amigos Community Online Marketplace for Community</title>
+    <title>Amigos 98 Community Online Marketplace for Community</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -429,7 +429,7 @@ body {
         <img src="{{ asset('storage/icons/ebili-logo.png') }}" alt="Amigos Tayo Logo" style="width: 100px; height: 100px; object-fit: contain;">
     </div>
 
-    <h2 class="mb-2 fw-bold" style="color: var(--primary-blue);">Amigos Community Online</h2>
+    <h2 class="mb-2 fw-bold" style="color: var(--primary-blue);">Amigos '98 Community Online</h2>
     <p class="slogan text-success">Buy to Save, Share to Earn</p>
 
     {{-- Get Started Button --}}
@@ -553,7 +553,7 @@ body {
     <div class="d-flex justify-content-around text-center feature-icons mb-4">
         <div role="button" data-bs-toggle="modal" data-bs-target="#whyModal">
             <i class="bi bi-info-circle"></i>
-            <span>Why Amigos Community</span>
+            <span>Why Amigos 98 Community</span>
         </div>
         <div role="button" data-bs-toggle="modal" data-bs-target="#programsModal">
             <i class="bi bi-stars"></i>
@@ -579,11 +579,11 @@ body {
     </div>
 
     <hr style="border-color: var(--primary-blue); opacity: 0.3;">
-    <p class="small" style="color: var(--primary-blue);"> More than just a member. Be an Amigo. &copy; 2025</p>
+    <p class="small" style="color: var(--primary-blue);"> More than just a member. Be an Amigos 98 Community. &copy; 2025</p>
 </div>
 
 {{-- Reusable Modals --}}
-@foreach (['why' => 'Why Amigos Community', 'rewards' => 'Rewards System', 'offers' => 'Exclusive Offers'] as $id => $title)
+@foreach (['why' => 'Why Amigos 98 Community', 'rewards' => 'Rewards System', 'offers' => 'Exclusive Offers'] as $id => $title)
 <div class="modal fade" id="{{ $id }}Modal" tabindex="-1" aria-labelledby="{{ $id }}ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content text-center">
@@ -600,8 +600,8 @@ body {
                 <h5 class="mb-3 fw-bold">{{ $title }}</h5>
                 @if ($id === 'why')
                     <p class="text-muted">
-                        <strong>Amigos Community</strong> is derived from the Spanish word for "friends."<br><br>
-                        At Amigos Community online community, we believe in friendship with purpose — built on trust, cooperation, and shared goals.<br>
+                        <strong>Amigos 98 Communitys</strong> is derived from the Spanish word for "friends."<br><br>
+                        At Amigos 98 Community online community, we believe in friendship with purpose — built on trust, cooperation, and shared goals.<br>
                         <strong>One community. One purpose. Helping each other thrive.</strong><br><br>
                         It's more than an app — it's a digital bayanihan, empowering members to support and uplift one another.
                     </p>
@@ -614,7 +614,7 @@ body {
                 @elseif ($id === 'offers')
                     <p class="text-muted">
                         <strong>Everyone has something to give.</strong><br><br>
-                        Whether it's your skills, stories, time, or talents — Amigos Community is a platform where you can share what you have to offer, connect with others, and even earn while doing so.<br>
+                        Whether it's your skills, stories, time, or talents — Amigos 98 Communitys is a platform where you can share what you have to offer, connect with others, and even earn while doing so.<br>
                         We believe in <strong>value exchange within the community</strong>.
                     </p>
                 @endif
@@ -641,7 +641,7 @@ body {
     <div class="modal-content">
       <div class="modal-header border-0 justify-content-center">
         <h5 class="modal-title fw-bold text-white" id="programsModalLabel">
-          Amigos Community: Bayanihan-Inspired Programs
+          Amigos 98 Communitys: Bayanihan-Inspired Programs
         </h5>
       </div>
       <div class="modal-body">
@@ -677,10 +677,10 @@ body {
         <div class="tab-content swipe-tabs" id="programTabsContent">
           <div class="tab-pane fade show active p-3" id="vision" role="tabpanel">
             <h6 class="fw-bold">🌟 Our Vision</h6>
-            <p>To build a bayanihan-style, friends-of-friends cooperative group united by shared interests, values, and advocacies. This is Amigos Community — not just a group, but with purpose-driven individuals becoming one under the name "Amigos Community".</p>
+            <p>To build a bayanihan-style, friends-of-friends cooperative group united by shared interests, values, and advocacies. This is Amigos 98 Communitys — not just a group, but with purpose-driven individuals becoming one under the name "Amigos 98 Community".</p>
           </div>
           <div class="tab-pane fade p-3" id="membership" role="tabpanel">
-            <h6 class="fw-bold">🔑 Amigos Community Membership</h6>
+            <h6 class="fw-bold">🔑 Amigos 98 Community Membership</h6>
             <p>Enjoy member discounts, sell or offer services, and support each other in a growing community marketplace.</p>
           </div>
           <div class="tab-pane fade p-3" id="rewards" role="tabpanel">
@@ -693,7 +693,7 @@ body {
           </div>
           <div class="tab-pane fade p-3" id="showcase" role="tabpanel">
             <h6 class="fw-bold">📣 Skills & Business Showcase</h6>
-            <p>Promote your skills, products, or services within the app and earn from your fellow Amigos Community.</p>
+            <p>Promote your skills, products, or services within the app and earn from your fellow Amigos 98 Communitys.</p>
           </div>
           <div class="tab-pane fade p-3" id="referral" role="tabpanel">
             <h6 class="fw-bold">📈 Referral Earnings</h6>
