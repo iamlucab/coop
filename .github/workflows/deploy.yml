@@ -1,7 +1,6 @@
-# this must be the first line of the file
-# This file is part of the Coop Management System project.
+# This workflow deploys only models, controllers, views, and routes to GoDaddy
 
-name: Deploy to GoDaddy (branch + tag)
+name: Deploy Laravel Code (Models, Controllers, Views, Routes)
 
 on:
   push:
@@ -17,15 +16,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set deployment version file
-        run: |
-          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
-            echo "${GITHUB_REF#refs/tags/}" > DEPLOY_VERSION.txt
-          else
-            echo "${GITHUB_REF#refs/heads/}-$(git rev-parse --short HEAD)" > DEPLOY_VERSION.txt
-          fi
-
-      - name: Deploy via FTP
+      - name: Deploy selected folders/files via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -33,24 +24,12 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           local-dir: ./
-          # server-dir: /public_html/coop/
           server-dir: /
           exclude: |
-            node_modules
-            resources
-            tests
-            .git
-            .github
-            .env
-            package.json
-            package-lock.json
-            deploy.php
-            public/build
-            public/hot
-            public/storage
-            storage/*.key
-            vendor
-            .fleet
-            .idea
-            .vscode
+            *
+            !app/Models/**
+            !app/Http/Controllers/**
+            !resources/views/**
+            !routes/**
           security: loose
+          dangerous-clean-slate: false
