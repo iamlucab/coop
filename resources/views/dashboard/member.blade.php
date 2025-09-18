@@ -1515,7 +1515,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Data URL created, length:', dataURL.length);
 
                     const link = document.createElement('a');
-                    link.download = 'ebili-payment-qr-{{ auth()->user()->mobile_number }}.png';
+                    link.download = 'QR_{{ auth()->user()->mobile_number }}.png';
                     link.href = dataURL;
 
                     // Add to DOM temporarily for Firefox compatibility
