@@ -84,7 +84,7 @@ class MemberRegistrationController extends Controller
 
         $createdUser = User::create([
             'name'          => $member->first_name . ' ' . $member->last_name,
-            'email'         => $request->mobile_number . '@ebili.online', //
+            'email'         => $request->mobile_number . '@amigostayo.com', //
             'mobile_number' => $request->mobile_number,
             'password'      => Hash::make('secret123'),
             'role'          => $request->role,
